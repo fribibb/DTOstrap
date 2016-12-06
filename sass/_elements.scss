@@ -1,0 +1,260 @@
+// Elements
+
+//  Buttons
+.btn {
+  border-radius: $radius-small;
+}
+.btn-default {
+  background-color: $grey;
+  color: #fff;
+}
+.btn-primary {
+  background-color: $primary-alt;
+  color: #fff;
+}
+.btn-success {
+  background-color: $green;
+  color: #fff;
+}
+.btn-info {
+  background-color: $grey-dark;
+  color: #fff;
+}
+.btn-warning {
+  background-color: $maron;
+  color: #fff;
+}
+.btn-danger {
+  background-color: $red;
+  color: #fff;
+}
+
+
+// Labels
+.label {
+  font-weight: $font-weight-normal;
+}
+.label-default {
+  background-color: $grey;
+}
+.label-primary {
+  background-color: $primary;
+}
+.label-success {
+  background-color: $green;
+}
+.label-info {
+  background-color: $grey-dark;
+}
+.label-warning {
+  background-color: $maron;
+}
+.label-danger {
+  background-color: $red;
+}
+
+
+// Progress bars
+.progress-bar {
+  background-color: $blue-bright;
+}
+.progress-bar-default {
+  background-color: $grey;
+}
+.progress-bar-primary {
+  background-color: $primary;
+}
+.progress-bar-success {
+  background-color: $green;
+}
+.progress-bar-info {
+  background-color: $grey-dark;
+}
+.progress-bar-warning {
+  background-color: $maron;
+}
+.progress-bar-danger {
+  background-color: $red;
+}
+
+// Badges
+.badge {
+  background-color: $grey;
+}
+
+
+// alert
+.alert {
+  border-radius: $radius-small;
+  margin: 1.6em 0.8em;
+  padding: 1.2em 1.2em 1.2em 1.6em;
+  box-shadow: 0 0 8px #bbbbbb;
+  color: $grey-dark;
+  background: transparent;
+  border: none;
+}
+.alert-default {
+
+}
+.alert-primary {
+  border-left: 0.4em solid $primary;
+  padding-left: 1.2em;
+}
+.alert-success {
+  border-left: 0.4em solid $green;
+  padding-left: 1.2em;
+}
+.alert-info {
+  border-left: 0.4em solid $grey-dark;
+  padding-left: 1.2em;
+}
+.alert-warning {
+  border-left: 0.4em solid $maron;
+  padding-left: 1.2em;
+}
+.alert-danger {
+  border-left: 0.4em solid $red;
+  padding-left: 1.2em;
+}
+
+
+
+
+
+
+
+.container {
+  .jumbotron,
+  .well {
+    border-radius: $radius-small;
+    border: 0;
+    background-color: $blue-light;
+  }
+}
+.container {
+  .jumbotron{
+    h1 {
+      font-size: 230%;
+    }
+  }
+}
+
+
+.page-header {
+  border-bottom: 1px solid $grey-light;
+}
+
+
+
+
+
+// inline list of links
+.nav-tabs,
+.nav-pills {
+  border-bottom: 1px solid $grey;
+  margin: 3.2em 0;
+  li {
+    font-size: $font-size-large;
+    a {
+      border-radius: 0;
+      border: none;
+      border-bottom: solid 4px transparent;
+      &:active,
+      &:focus,
+      &:hover {
+        background-color: $blue-bright;
+        border-bottom-color: $primary;
+        border-bottom: 4px solid $primary;  // can't just do colour because of .nav-tabs
+      }
+    }
+    &.active {
+      a {
+        color: $primary;
+        background-color: $blue-light;
+        margin-right: 0;
+        border: none;
+        border-bottom: 4px solid $primary;  // can't just do colour because of .nav-tabs
+        &:active,
+        &:focus,
+        &:hover {
+          color: $primary;
+          background-color: $blue-light;
+          border: none;
+          border-bottom: 4px solid $primary;  // can't just do colour because of .nav-tabs
+        }
+      }
+    }
+    & + li {
+      margin-left: 0;
+    }
+  }
+}
+
+
+
+
+
+
+// forms
+form {
+  [type='text']:invalid,
+  [type='number']:invalid,
+  [type='tel']:invalid,
+  [type='email']:invalid,
+  [type='password']:invalid,
+  textarea:invalid,
+  input[type='radio']:invalid,
+  input[type='checkbox']:invalid,
+  .invalid[type='text'],
+  .invalid[type='number'],
+  .invalid[type='tel'],
+  .invalid[type='email'],
+  .invalid[type='password'],
+  textarea.invalid,
+  input.invalid[type='radio'],
+  input.invalid[type='checkbox'] {
+      outline: 2px solid $red;
+  }
+}
+
+
+// Tables
+.table-striped>tbody>tr:nth-of-type(odd) {
+    background-color: $grey-light;
+}
+.table {
+  & > thead,
+  & > tbody,
+  & > tfoot {
+    & > tr {
+      &>td,
+      &>th {
+        border-top: 1px solid $grey-light;
+      }
+    }
+  }
+  & > thead > tr > th {
+    vertical-align: bottom;
+    border-bottom: 2px solid $grey-light;
+  }
+}
+.table-bordered {
+  border: 1px solid $grey-light;
+  & > thead,
+  & > tbody,
+  & > tfoot {
+    & > tr {
+      &>td,
+      &>th {
+        border: 1px solid $grey-light;
+      }
+    }
+  }
+}
+
+
+
+// Images
+.img-thumbnail {
+  border: 1px solid $grey-border;
+}

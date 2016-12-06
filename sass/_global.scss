@@ -1,0 +1,47 @@
+// Header, Footer and other global styles
+
+header {
+  background-color: #043751;
+  background: linear-gradient(to top right, #043751, #2B819D);
+  color: #fff;
+  padding: 1.6em 0;
+  a {
+    color: #fff;
+  }
+  .navbar-brand,
+  .brand-name {
+    margin: 0;
+    a {
+      &:hover,
+      &:active,
+      &:focus {
+        color: #fff;
+        opacity: 0.9;
+      }
+      img {
+        display: inline-block;
+        // background: #fff;
+        margin-right: 20px;
+      }
+    }
+  }
+  &.navbar {
+    border-radius: 0;
+    .nav > li > a {
+      line-height: calc(70px / 2);    // 70px is the img height
+    }
+  }
+}
+
+
+
+
+
+
+
+// footer
+
+footer {
+  background-color: $grey-light;
+  border-top: 6px solid #043751;
+}
