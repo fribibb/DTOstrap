@@ -13,6 +13,7 @@
   &:focus {
     background-color: darken($grey, 10%);
     border-color: darken($grey, 10%);
+    color: #fff;
   }
 }
 .btn-primary {
@@ -299,4 +300,56 @@ form {
 // Images
 .img-thumbnail {
   border: 1px solid $grey-border;
+}
+
+
+// Panels
+.panel {
+  border-radius: $radius;
+  .panel-heading {
+    color: #fff;
+  }
+}
+.panel-default {
+  border-color: $blue-light;
+  .panel-heading {
+    color: $grey-dark;
+    border-color: $blue-light;
+    background-color: $blue-light;
+  }
+}
+.panel-primary {
+  border-color: $primary;
+  .panel-heading {
+    background-color: $primary;
+    border-color: $primary;
+  }
+}
+.panel-success {
+  border-color: $green;
+  .panel-heading {
+    background-color: $green;
+    border-color: $green;
+  }
+}
+.panel-info {
+  border-color: $grey-dark;
+  .panel-heading {
+    background-color: $grey-dark;
+    border-color: $grey-dark;
+  }
+}
+.panel-warning {
+  border-color: $maron;
+  .panel-heading {
+    background-color: $maron;
+    border-color: $maron;
+  }
+}
+.panel-danger {
+  border-color: $red;
+  .panel-heading {
+    background-color: $red;
+    border-color: $red;
+  }
 }
