@@ -353,3 +353,13 @@ form {
     border-color: $red;
   }
 }
+
+
+
+// List groups
+.list-group {
+  border-radius: $radius;
+  .list-group-item.active {
+    background-color: $primary;
+  }
+}
