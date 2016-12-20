@@ -1,47 +1,57 @@
 // Header, Footer and other global styles
 
-header {
-  background-color: #043751;
-  background: linear-gradient(to top right, #043751, #2B819D);
-  color: #fff;
-  padding: 1.6em 0;
-  a {
+body {
+  // page header
+  & > header {
+    background-color: $gradient-dark;
+    background: linear-gradient(200deg, $gradient-light, $gradient-dark 80%);
     color: #fff;
-  }
-  .navbar-brand,
-  .brand-name {
-    margin: 0;
+    padding: 1.6em 0;
     a {
-      &:hover,
-      &:active,
-      &:focus {
-        color: #fff;
-        opacity: 0.9;
-      }
-      img {
-        display: inline-block;
-        // background: #fff;
-        margin-right: 20px;
+      color: #fff;
+    }
+    .navbar-brand,
+    .brand-name {
+      margin: 0;
+      a {
+        &:hover,
+        &:active,
+        &:focus {
+          color: #fff;
+          opacity: 0.9;
+        }
+        img {
+          display: inline-block;
+          margin-right: 20px;
+        }
       }
     }
-  }
-  &.navbar {
-    border-radius: 0;
-    .nav > li > a {
-      line-height: calc(70px / 2);    // 70px is the img height
+    &.navbar {
+      border-radius: 0;
     }
   }
-}
 
 
 
-
-
-
-
-// footer
-
-footer {
-  background-color: $grey-light;
-  border-top: 6px solid #043751;
+  // footer
+  & > footer {
+    margin-top: 3.2em;
+    padding: 1.6em 0;
+    background-color: $grey-light;
+    border-top: 6px solid #043751;
+    .row {
+      padding-bottom: 3em;
+      margin-bottom: 3em;
+      border-bottom: 1px solid $grey-border;
+      &:last-of-type {
+        padding-bottom: 0;
+        margin-bottom: 0;
+        border-bottom: 0;
+      }
+    }
+    small {
+      display: inline-block;
+      margin-top: 2.5em;
+    }
+  }
 }

@@ -1,5 +1,6 @@
 // Elements
 
+
 //  Buttons
 .btn {
   border-radius: $radius-small;
@@ -39,14 +40,14 @@
   }
 }
 .btn-info {
-  background-color: $grey-dark;
-  border-color: darken($grey-dark, 10%);
+  background-color: $blue-dark;
+  border-color: darken($blue-dark, 10%);
   color: #fff;
   &:hover,
   &:active,
   &:focus {
-    background-color: darken($grey-dark, 10%);
-    border-color: darken($grey-dark, 10%);
+    background-color: darken($blue-dark, 10%);
+    border-color: darken($blue-dark, 10%);
   }
 }
 .btn-warning {
@@ -71,6 +72,20 @@
     border-color: darken($red, 10%);
   }
 }
+.btn-primary.disabled.focus,
+.btn-primary.disabled:focus,
+.btn-primary.disabled:hover,
+.btn-primary[disabled].focus,
+.btn-primary[disabled]:focus,
+.btn-primary[disabled]:hover,
+fieldset[disabled] .btn-primary.focus,
+fieldset[disabled] .btn-primary:focus,
+fieldset[disabled] .btn-primary:hover {
+    background-color: #337ab7;
+    background-color: darken( lighten($primary, 10%), 10% );
+    border-color: $primary;
+}
+
 
 
 // Labels
@@ -87,7 +102,7 @@
   background-color: $green;
 }
 .label-info {
-  background-color: $grey-dark;
+  background-color: $blue-dark;
 }
 .label-warning {
   background-color: $maron;
@@ -111,7 +126,7 @@
   background-color: $green;
 }
 .progress-bar-info {
-  background-color: $grey-dark;
+  background-color: $blue-dark;
 }
 .progress-bar-warning {
   background-color: $maron;
@@ -129,38 +144,51 @@
 // alert
 .alert {
   border-radius: $radius-small;
-  margin: 1.6em 0.8em;
-  padding: 1.2em 1.2em 1.2em 1.6em;
+  // margin: 1.6em 0.8em;
+  padding: 1.2em;
   box-shadow: 0 0 8px #bbbbbb;
   color: $grey-dark;
   background: transparent;
   border: none;
 }
 .alert-default {
-
+  padding-left: 1.6em;
 }
 .alert-primary {
   border-left: 0.4em solid $primary;
-  padding-left: 1.2em;
 }
 .alert-success {
   border-left: 0.4em solid $green;
-  padding-left: 1.2em;
 }
 .alert-info {
-  border-left: 0.4em solid $grey-dark;
-  padding-left: 1.2em;
+  border-left: 0.4em solid $blue-dark;
 }
 .alert-warning {
   border-left: 0.4em solid $maron;
-  padding-left: 1.2em;
 }
 .alert-danger {
   border-left: 0.4em solid $red;
-  padding-left: 1.2em;
 }
 
-
+// basically the p tag equiv of above
+.text-muted {
+  color: $grey;
+}
+.text-primary {
+  color: $primary;
+}
+.text-success {
+  color: $green;
+}
+.text-info {
+  color: $blue-dark;
+}
+.text-warning {
+  color: $maron;
+}
+.text-danger {
+  color: $red;
+}
 
 
 
@@ -225,6 +253,10 @@
           border: none;
           border-bottom: 4px solid $primary;  // can't just do colour because of .nav-tabs
         }
+        .badge {
+          background-color: $primary;
+          color: #fff;
+        }
       }
     }
     & + li {
@@ -259,6 +291,44 @@ form {
       outline: 2px solid $red;
   }
 }
+.has-success .checkbox,
+.has-success .checkbox-inline,
+.has-success .control-label,
+.has-success .help-block,
+.has-success .radio,
+.has-success .radio-inline,
+.has-success.checkbox label,
+.has-success.checkbox-inline label,
+.has-success.radio label,
+.has-success.radio-inline label {
+  color: $green;
+}
+.has-warning .checkbox,
+.has-warning .checkbox-inline,
+.has-warning .control-label,
+.has-warning .help-block,
+.has-warning .radio,
+.has-warning .radio-inline,
+.has-warning.checkbox label,
+.has-warning.checkbox-inline label,
+.has-warning.radio label,
+.has-warning.radio-inline label {
+  color: $maron;
+}
+.has-error .checkbox,
+.has-error .checkbox-inline,
+.has-error .control-label,
+.has-error .help-block,
+.has-error .radio,
+.has-error .radio-inline,
+.has-error.checkbox label,
+.has-error.checkbox-inline label,
+.has-error.radio label,
+.has-error.radio-inline label {
+  color: $red;
+}
+
+
 
 
 // Tables
@@ -298,8 +368,35 @@ form {
 
 
 // Images
+.img-circle,
+.img-rounded,
 .img-thumbnail {
-  border: 1px solid $grey-border;
+  border: 1px solid $grey-light;
+}
+.img-rounded,
+.img-thumbnail {
+  border-radius: $radius;
+}
+
+// thumbnails
+.thumbnail {
+  padding: 0;
+  border: 1px solid $grey-light;
+  .caption {
+    padding: 9px 13px;
+    .meta,
+    time,
+    small {
+      color: $grey;
+      padding: 0.8em 0;
+      display: inline-block;
+    }
+  }
+}
+
+// media
+.media-heading {
+  margin-bottom: 10px;
 }
 
 
@@ -333,10 +430,10 @@ form {
   }
 }
 .panel-info {
-  border-color: $grey-dark;
+  border-color: $blue-dark;
   .panel-heading {
-    background-color: $grey-dark;
-    border-color: $grey-dark;
+    background-color: $blue-dark;
+    border-color: $blue-dark;
   }
 }
 .panel-warning {
@@ -362,4 +459,23 @@ form {
   .list-group-item.active {
     background-color: $primary;
   }
+}
+
+
+
+// forms
+.input-group-addon {
+    border-radius: $radius;
+}
+.input-group-addon {
+  color: $grey;
+  background-color: $grey-light;
+  border: 1px solid $grey-border;
+}
+.form-control {
+  color: $grey;
+  border: 1px solid $grey-border;
+}
+select.form-control {
+  margin-bottom: 10px;
 }
