@@ -29,6 +29,9 @@ body {
     &.navbar {
       border-radius: 0;
     }
+    .navbar-right {
+      margin-top: 0.5em;  // vertically center the menu, assuming default logo size is used. TODO: do this smarter.
+    }
   }
 
 
@@ -51,7 +54,7 @@ body {
     }
     small {
       display: inline-block;
-      margin-top: 2em;
+      margin-top: 2.2em;
     }
   }
 }

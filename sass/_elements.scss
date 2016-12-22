@@ -234,7 +234,8 @@ fieldset[disabled] .btn-primary:hover {
   border-bottom: 1px solid $grey;
   margin: 3.2em 0;
   li {
-    font-size: $font-size-large;
+    //font-size: $font-size-large;
+    list-style: none;
     a {
       border-radius: 0;
       border: none;
