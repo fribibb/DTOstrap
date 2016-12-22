@@ -470,6 +470,9 @@ form {
     background-color: $primary;
   }
 }
+.list-group-item {
+  border: 1px solid $grey-border;
+}
 
 
 
@@ -488,4 +491,9 @@ form {
 }
 select.form-control {
   margin-bottom: 10px;
+}
+
+
+.caret {
+  border-top-color: $primary-dark;
 }
