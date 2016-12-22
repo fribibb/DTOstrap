@@ -465,13 +465,16 @@ form {
 
 // List groups
 .list-group {
-  border-radius: $radius;
+  //border-radius: $radius;
+  border-radius: 0;
   .list-group-item.active {
     background-color: $primary;
   }
 }
 .list-group-item {
   border: 1px solid $grey-border;
+  border-left: none;
+  border-right: none;
 }
 
 
