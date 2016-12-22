@@ -475,6 +475,10 @@ form {
   border: 1px solid $grey-border;
   border-left: none;
   border-right: none;
+  &:first-child,
+  &:last-child {
+      border-radius: 0;
+  }
 }
 
 
