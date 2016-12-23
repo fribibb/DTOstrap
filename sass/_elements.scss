@@ -51,14 +51,14 @@
   }
 }
 .btn-warning {
-  background-color: $maron;
-  border-color: darken($maron, 10%);
+  background-color: $maroon;
+  border-color: darken($maroon, 10%);
   color: #fff;
   &:hover,
   &:active,
   &:focus {
-    background-color: darken($maron, 10%);
-    border-color: darken($maron, 10%);
+    background-color: darken($maroon, 10%);
+    border-color: darken($maroon, 10%);
   }
 }
 .btn-danger {
@@ -105,7 +105,7 @@ fieldset[disabled] .btn-primary:hover {
   background-color: $blue-dark;
 }
 .label-warning {
-  background-color: $maron;
+  background-color: $maroon;
 }
 .label-danger {
   background-color: $red;
@@ -129,7 +129,7 @@ fieldset[disabled] .btn-primary:hover {
   background-color: $blue-dark;
 }
 .progress-bar-warning {
-  background-color: $maron;
+  background-color: $maroon;
 }
 .progress-bar-danger {
   background-color: $red;
@@ -164,7 +164,7 @@ fieldset[disabled] .btn-primary:hover {
   border-left: 0.4em solid $blue-dark;
 }
 .alert-warning {
-  border-left: 0.4em solid $maron;
+  border-left: 0.4em solid $maroon;
 }
 .alert-danger {
   border-left: 0.4em solid $red;
@@ -184,7 +184,7 @@ fieldset[disabled] .btn-primary:hover {
   color: $blue-dark;
 }
 .text-warning {
-  color: $maron;
+  color: $maroon;
 }
 .text-danger {
   color: $red;
@@ -323,7 +323,7 @@ form {
 .has-warning.checkbox-inline label,
 .has-warning.radio label,
 .has-warning.radio-inline label {
-  color: $maron;
+  color: $maroon;
 }
 .has-error .checkbox,
 .has-error .checkbox-inline,
@@ -447,10 +447,10 @@ form {
   }
 }
 .panel-warning {
-  border-color: $maron;
+  border-color: $maroon;
   .panel-heading {
-    background-color: $maron;
-    border-color: $maron;
+    background-color: $maroon;
+    border-color: $maroon;
   }
 }
 .panel-danger {
