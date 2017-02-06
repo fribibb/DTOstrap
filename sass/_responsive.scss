@@ -1,0 +1,74 @@
+// Responsive styles
+
+// breakpoint for mobile/hamburger menu
+@media (max-width: 768px) {
+
+  // Main menu
+  .navbar-toggle {
+    border: 1px solid #fff;
+    margin-top: 1.05em;
+    border-radius: $radius-small;
+    .icon-bar {
+      background-color: #fff;
+      transition: color 0.2s, opacity 0.4s, transform 0.6s
+    }
+    &:not(.collapsed) {
+      .icon-bar {
+        &:nth-of-type(2) {
+          opacity: 0;
+        }
+        &:nth-of-type(4) {
+          transform: rotate(45deg);
+          margin-top: -2px !important;
+          margin-bottom: 6px;
+        }
+        &:nth-of-type(3) {
+          transform: rotate(-225deg);
+          margin-top: 6px;
+          // if we want a "^" instead, tweaks thsese:
+          // margin-top: -2px !important;
+          // margin-bottom: 6px;
+          // margin-left: 8px;
+        }
+      }
+    }
+  }
+  .navbar-collapse {
+    border-top: none;
+    box-shadow: none;
+    margin-top: 1em;
+    background-color: rgba(#fff, 0.1);
+    @include blurBG();
+    li a {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      color: #fff;
+      &:hover,
+      &:active,
+      &:focus {
+        color: $grey-dark;
+      }
+    }
+    .dropdown {
+      .divider {
+        background-color: rgba(#fff, 0.5);
+      }
+    }
+    .dropdown.open {
+      color: $grey-dark;
+      background-color: rgba(#fff, 0.3);
+      li a {
+        padding-top: 15px;
+        padding-bottom: 15px;
+      }
+    }
+    .dropdown.open > a,
+    .dropdown > a:hover {
+      color: $grey-dark;
+    }
+    .dropdown-header {
+      color: $blue-light;
+      margin-left: -10px;
+    }
+  }
+}

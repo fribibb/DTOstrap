@@ -8,34 +8,29 @@ html {
   font-weight: $font-weight-normal;
 }
 body {
-  // font-size: rem(16);
   font-size: 17px;
   line-height: 1.6em;
-  // font-size: 1.0625rem;
+  font-family: $font-family-base;
 }
 
 
 
 // Heading text
 h1 {
-  // font-size: $font-size-large;
   font-weight: $font-weight-bold;
 }
 h2 {
-  // font-size: $font-size-huge;
   font-weight: $font-weight-normal;
   margin-top: 1.6em;
   margin-bottom: 1em;
 }
 h3 {
-  // font-size: $font-size-large;
   font-weight: $font-weight-bold;
 }
 h4,
 h5,
 h6 {
   font-weight: $font-weight-bold;
-  // font-size: $font-size-small;
 }
 
 h1,
@@ -50,14 +45,6 @@ h6 {
 }
 
 
-
-// standard
-// p,
-// ul:not(.nav) li,
-// ol {
-//   line-height: 1.6em;
-//   font-size: 17px;
-// }
 
 // base for a link
 a {
@@ -114,14 +101,11 @@ body > footer {
 
 
 // Other typography elements
-
 p {
   font-weight: $font-weight-normal;
 }
-
 .jumbotron p,
 .lead {
-  // font-size: 1.5rem;
   $font-size-large: 150%;
   font-weight: $font-weight-normal;
 }
@@ -131,26 +115,26 @@ p {
 
 // Blockquotes
 blockquote {
-  // margin: $medium-spacing 0;
-  // padding: $small-spacing ($base-spacing + $small-spacing);
-  // background-color: $background-secondary-colour;
+  background-color: $grey-light;
   font-family: $font-serif;
   quotes: '\201C''\201D''\2018''\2019';
+  border-left: none;
+  padding: 20px 30px;
   &.pullquote {
     padding: 0;
-    // background-color: $background-colour;
+    background-color: #fff;
     p {
-      font-size: rem(24);
-      line-height: $base-leading;
       text-align: center;
-      font-weight: $font-weight-normal;
-      // margin-top: $base-spacing;
     }
     // Support: IE7 does not properly support pseudo elements `:before`/`:after`: http://caniuse.com/#feat=css-sel2
     &::before,
     &::after {
       text-align: center;
       margin: 0;
+      font-size: 5em;
+    }
+    &::after {
+      bottom: -0.5em;
     }
   }
   &::before,
@@ -158,24 +142,26 @@ blockquote {
     display: block;
     height: 0;
     font-family: $font-serif;
-    font-size: rem(43);
-    color: $blue-bright;
+    font-size: 3em;
+    color: $primary;
   }
   &::before {
-    // margin-left: -($small-spacing * 0.75);
-    // padding-bottom: $tiny-spacing;
     content: open-quote;
+    margin-left: -0.3em;
+    padding-bottom: 0.4em;
+    top: 0.1em;
+    position: relative;
   }
   &::after {
-    // margin-right: -($small-spacing * 0.75);
-    // margin-top: -($small-spacing);
-    // padding-bottom: $medium-spacing;
     text-align: right;
     content: close-quote;
+    margin-right: -0.3em;
+    margin-top: -0.8em;
+    padding-bottom: 1.2em;
+    bottom: -1.2em;
+    position: relative;
   }
   footer {
-    // margin-top: $medium-spacing;
-    // padding-top: $tiny-spacing;
     border-top: 1px solid $grey-light;
   }
   cite {
@@ -187,6 +173,7 @@ blockquote {
       font-variant: small-caps;
       letter-spacing: 1px;
       color: $grey-dark;
+      font-family: $font-sans-serif;
     }
   }
   // So that nested blockquotes do not break the vertical rhythm.
@@ -203,8 +190,8 @@ q {
 }
 cite {
   font-style: normal;
+  font-family: $font-sans-serif;
 }
-
 article {
   h1:first-of-type {
     margin-top: 0;

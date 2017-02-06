@@ -7,6 +7,7 @@ body {
     background: linear-gradient(200deg, $gradient-light, $gradient-dark 80%);
     color: #fff;
     padding: 1.6em 0;
+    margin-bottom: 1.6em;
     a {
       color: #fff;
     }
@@ -26,14 +27,38 @@ body {
         }
       }
     }
+    .brand {
+      padding-left: 15px;
+    }
+    a {
+      &:hover,
+      &:active,
+      &:focus {
+        .caret {
+          border-top-color: $primary-dark;
+        }
+      }
+    }
     &.navbar {
       border-radius: 0;
     }
     .navbar-right {
       margin-top: 0.5em;  // vertically center the menu, assuming default logo size is used. TODO: do this smarter.
     }
+    .caret {
+      border-top-color: #fff;
+    }
+    // Inverted colour scheme
+    .inverse {
+
+    }
   }
 
+
+  // page header
+  .page-header {
+    margin-top: 100px;
+  }
 
 
   // footer

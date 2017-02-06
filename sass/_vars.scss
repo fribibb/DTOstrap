@@ -1,25 +1,33 @@
 // Variables
 
 // Colours
-$primary: #18788d;             // the favourite
-$primary-alt: #27798B;         // as above but for use on bgs like $blue-light
-$primary-dark: #043751;        // as above but super dark, use sparingly
+$primary: #18788d;                  // the favourite
+$primary-alt: #27798b;              // as above but for use on bgs like $blue-light
+$primary-dark: #043751;             // as above but super dark, use sparingly
 
-$gradient-light: #25819E;      // used only in header background gradient
-$gradient-dark: $primary-dark; // used only in header background gradient
+$darker-aqua: #115361;
+$dark-aqua: #146577;
+$light-aqua: #5BCBE3;
 
-$blue-light: #DFF4F8;          // light blue, used as a background colour
-$blue-bright: #53C4EC;         // "Picton Blue", used to highlight
-$blue-dark: #0B3850;           // navy blue
+$gradient-light: #25819e;           // used only in header background gradient
+$gradient-dark: $primary-dark;      // used only in header background gradient
 
-$grey-light: #F0F3F5;          // faint background colour
-$grey-border: #BBBBBB;         // a lighter grey mainly for borders for borders
-$grey: #6E6E6E;                // lightest a11y compliant body text
-$grey-dark: #313131;           // near black text
+$blue-light: #dff4f8;               // light blue, used as a background colour
+// $blue-bright: #53c4ec;           // "Picton Blue", used to highlight
+$blue-bright: #00bfe9;              // used to highlight
+$blue-dark: #0b3850;                // navy-ish blue
 
-$green: #007554;               // done
-$red: #C60315;                 // error
-$maroon: #880e48;               // used for 'beta' label in their example
+$grey-light: #f0f3f5;               // faint background colour
+$grey-border: #bbb;                 // a lighter grey mainly for borders for borders
+$grey: #6e6e6e;                     // lightest a11y compliant body text
+$grey-dark: #313131;                // near black text
+
+$success: #007554;                  // done
+$info: $blue-bright;                     // blue
+$danger: #cc0000;                   // error
+$warning: #f9c642;                  // warning
+// $warning-dark: darken($warning, 10%);    // warning things that need contrast for light text
+$maroon: #880e48;                   // used for 'beta' label in their example
 
 
 // border-radius

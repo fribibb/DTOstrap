@@ -6,84 +6,43 @@
   border-radius: $radius-small;
 }
 .btn-default {
-  background-color: $grey;
-  border-color: darken($grey, 10%);
-  color: #fff;
+  // can't use mixin here as its different pattern to the others - has a transparent bg, etc.
+  background-color: transparent;
+  color: $dark-aqua;
+  border-color: $dark-aqua;
   &:hover,
   &:active,
   &:focus {
-    background-color: darken($grey, 10%);
-    border-color: darken($grey, 10%);
+    background-color: $darker-aqua;
     color: #fff;
+    border-color: darken($darker-aqua, 10%);
+  }
+  &.disabled,
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &.focus,
+    &:focus {
+      background-color: #fff;
+      color: $dark-aqua;
+      border-color: $dark-aqua;
+    }
   }
 }
 .btn-primary {
-  background-color: $primary-alt;
-  border-color: darken($primary-alt, 10%);
-  color: #fff;
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: darken($primary-alt, 10%);
-    border-color: darken($primary-alt, 10%);
-  }
+  @include button-colours($darker-aqua, #fff);
 }
 .btn-success {
-  background-color: $green;
-  border-color: darken($green, 10%);
-  color: #fff;
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: darken($green, 10%);
-    border-color: darken($green, 10%);
-  }
+  @include button-colours($success, #fff);
 }
 .btn-info {
-  background-color: $blue-dark;
-  border-color: darken($blue-dark, 10%);
-  color: #fff;
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: darken($blue-dark, 10%);
-    border-color: darken($blue-dark, 10%);
-  }
+  @include button-colours($info, $grey-dark);
 }
 .btn-warning {
-  background-color: $maroon;
-  border-color: darken($maroon, 10%);
-  color: #fff;
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: darken($maroon, 10%);
-    border-color: darken($maroon, 10%);
-  }
+  @include button-colours($warning, $grey-dark);
 }
 .btn-danger {
-  background-color: $red;
-  border-color: darken($red, 10%);
-  color: #fff;
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: darken($red, 10%);
-    border-color: darken($red, 10%);
-  }
-}
-.btn-primary.disabled.focus,
-.btn-primary.disabled:focus,
-.btn-primary.disabled:hover,
-.btn-primary[disabled].focus,
-.btn-primary[disabled]:focus,
-.btn-primary[disabled]:hover,
-fieldset[disabled] .btn-primary.focus,
-fieldset[disabled] .btn-primary:focus,
-fieldset[disabled] .btn-primary:hover {
-    background-color: #337ab7;
-    background-color: darken( lighten($primary, 10%), 10% );
-    border-color: $primary;
+  @include button-colours($danger, #fff);
 }
 
 
@@ -99,22 +58,22 @@ fieldset[disabled] .btn-primary:hover {
   background-color: $primary;
 }
 .label-success {
-  background-color: $green;
+  background-color: $success;
 }
 .label-info {
-  background-color: $blue-dark;
+  background-color: $info;
 }
 .label-warning {
-  background-color: $maroon;
+  background-color: $warning;
 }
 .label-danger {
-  background-color: $red;
+  background-color: $danger;
 }
 
 
 // Progress bars
 .progress-bar {
-  background-color: $blue-bright;
+  background-color: $maroon;  // ...I needed another colour ¯\_(ツ)_/¯
 }
 .progress-bar-default {
   background-color: $grey;
@@ -123,16 +82,16 @@ fieldset[disabled] .btn-primary:hover {
   background-color: $primary;
 }
 .progress-bar-success {
-  background-color: $green;
+  background-color: $success;
 }
 .progress-bar-info {
-  background-color: $blue-dark;
+  background-color: $info;
 }
 .progress-bar-warning {
-  background-color: $maroon;
+  background-color: $warning;
 }
 .progress-bar-danger {
-  background-color: $red;
+  background-color: $danger;
 }
 
 // Badges
@@ -144,9 +103,8 @@ fieldset[disabled] .btn-primary:hover {
 // alert
 .alert {
   border-radius: $radius-small;
-  // margin: 1.6em 0.8em;
   padding: 1.2em;
-  box-shadow: 0 0 8px #bbbbbb;
+  box-shadow: 0 0 8px $grey-border;
   color: $grey-dark;
   background: transparent;
   border: none;
@@ -158,16 +116,16 @@ fieldset[disabled] .btn-primary:hover {
   border-left: 0.4em solid $primary;
 }
 .alert-success {
-  border-left: 0.4em solid $green;
+  border-left: 0.4em solid $success;
 }
 .alert-info {
-  border-left: 0.4em solid $blue-dark;
+  border-left: 0.4em solid $info;
 }
 .alert-warning {
-  border-left: 0.4em solid $maroon;
+  border-left: 0.4em solid $warning;
 }
 .alert-danger {
-  border-left: 0.4em solid $red;
+  border-left: 0.4em solid $danger;
 }
 
 // basically the p tag equiv of above
@@ -178,16 +136,16 @@ fieldset[disabled] .btn-primary:hover {
   color: $primary;
 }
 .text-success {
-  color: $green;
+  color: $success;
 }
 .text-info {
-  color: $blue-dark;
+  color: darken($info, 15%);  // darker for a11y
 }
 .text-warning {
-  color: $maroon;
+  color: darken($warning, 15%); // darker to atempt a11y - but please, just don't use this
 }
 .text-danger {
-  color: $red;
+  color: $danger;
 }
 
 
@@ -199,7 +157,7 @@ fieldset[disabled] .btn-primary:hover {
   .well {
     border-radius: $radius-small;
     border: 0;
-    background-color: $blue-light;
+    background-color: $grey-light;
     h1,
     h2,
     h3,
@@ -234,7 +192,6 @@ fieldset[disabled] .btn-primary:hover {
   border-bottom: 1px solid $grey;
   margin: 3.2em 0;
   li {
-    //font-size: $font-size-large;
     list-style: none;
     a {
       border-radius: 0;
@@ -298,44 +255,50 @@ form {
   textarea.invalid,
   input.invalid[type='radio'],
   input.invalid[type='checkbox'] {
-      outline: 2px solid $red;
+      outline: 2px solid $danger;
   }
 }
-.has-success .checkbox,
-.has-success .checkbox-inline,
-.has-success .control-label,
-.has-success .help-block,
-.has-success .radio,
-.has-success .radio-inline,
-.has-success.checkbox label,
-.has-success.checkbox-inline label,
-.has-success.radio label,
-.has-success.radio-inline label {
-  color: $green;
+.has-success {
+  .checkbox,
+  .checkbox-inline,
+  .control-label,
+  .help-block,
+  .radio,
+  .radio-inline,
+  &.checkbox label,
+  &.checkbox-inline label,
+  &.radio label,
+  &.radio-inline label {
+    color: $success;
+  }
 }
-.has-warning .checkbox,
-.has-warning .checkbox-inline,
-.has-warning .control-label,
-.has-warning .help-block,
-.has-warning .radio,
-.has-warning .radio-inline,
-.has-warning.checkbox label,
-.has-warning.checkbox-inline label,
-.has-warning.radio label,
-.has-warning.radio-inline label {
-  color: $maroon;
+.has-warning {
+  .checkbox,
+  .checkbox-inline,
+  .control-label,
+  .help-block,
+  .radio,
+  .radio-inline,
+  &.checkbox label,
+  &.checkbox-inline label,
+  &.radio label,
+  &.radio-inline label {
+    color: $warning;
+  }
 }
-.has-error .checkbox,
-.has-error .checkbox-inline,
-.has-error .control-label,
-.has-error .help-block,
-.has-error .radio,
-.has-error .radio-inline,
-.has-error.checkbox label,
-.has-error.checkbox-inline label,
-.has-error.radio label,
-.has-error.radio-inline label {
-  color: $red;
+.has-error {
+  .checkbox,
+  .checkbox-inline,
+  .control-label,
+  .help-block,
+  .radio,
+  .radio-inline,
+  &.checkbox label,
+  &.checkbox-inline label,
+  &.radio label,
+  &.radio-inline label {
+    color: $danger;
+  }
 }
 
 
@@ -408,21 +371,70 @@ form {
 .media-heading {
   margin-bottom: 10px;
 }
-
-
-// Panels
-.panel {
-  border-radius: $radius;
-  .panel-heading {
-    color: #fff;
+.media-left {
+  a {
+    border-bottom: 0;
+    display: inline-block;
   }
 }
+
+
+// Panels / accordions / collapsible navigation
+.panel {
+  .panel-heading,
+  .panel-footer {
+    background-color: $grey-light;
+  }
+  .panel-heading {
+    color: #fff;
+    padding: 0;
+    border-top-left-radius: $radius-small;
+    border-top-right-radius: $radius-small;
+    .panel-title {
+      padding: 1.5em 1em;
+    }
+    a.panel-title { // yes, that's right - the a tag is the title. heading needs to be nested unless http://caniuse.com/#feat=css-has or silimar car be used
+      display: block;
+      border-bottom: none;
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $grey-border;
+      }
+      &:after {   // ">" symbol
+        font-family:'Glyphicons Halflings';
+        content: "\e113";
+        float: right;
+        color: $grey;
+      }
+      &.collapsed:after {
+        content: "\e114";
+      }
+      & > * {   // stop the h4 etc from stuffing up the ">" symbol location
+        display: inline;
+      }
+    }
+  }
+  .panel-body {
+    padding: 1.5em 1em;
+  }
+  .panel-footer {
+    border-top: 1px solid $grey-border;
+    padding: 1.2em 1em;
+    border-bottom-right-radius: $radius-small;
+    border-bottom-left-radius: $radius-small;
+  }
+}
+
+// each type
 .panel-default {
-  border-color: $blue-light;
+  border-color: $grey-border;
   .panel-heading {
     color: $grey-dark;
-    border-color: $blue-light;
-    background-color: $blue-light;
+    border: none;
+  }
+  .panel-body {
+    border-top: 1px solid $grey-border !important;
   }
 }
 .panel-primary {
@@ -433,31 +445,33 @@ form {
   }
 }
 .panel-success {
-  border-color: $green;
+  border-color: $success;
   .panel-heading {
-    background-color: $green;
-    border-color: $green;
+    background-color: $success;
+    border-color: $success;
   }
 }
 .panel-info {
-  border-color: $blue-dark;
+  border-color: $info;
   .panel-heading {
-    background-color: $blue-dark;
-    border-color: $blue-dark;
+    background-color: $info;
+    border-color: $info;
+    color: $grey-dark;  // for a11y
   }
 }
 .panel-warning {
-  border-color: $maroon;
+  border-color: $warning;
   .panel-heading {
-    background-color: $maroon;
-    border-color: $maroon;
+    background-color: $warning;
+    border-color: $warning;
+    color: $grey-dark;  // for a11y
   }
 }
 .panel-danger {
-  border-color: $red;
+  border-color: $danger;
   .panel-heading {
-    background-color: $red;
-    border-color: $red;
+    background-color: $danger;
+    border-color: $danger;
   }
 }
 
@@ -465,7 +479,6 @@ form {
 
 // List groups
 .list-group {
-  //border-radius: $radius;
   border-radius: 0;
   .list-group-item.active {
     background-color: $primary;
@@ -501,6 +514,45 @@ select.form-control {
 }
 
 
+
+
+// dropdowns
+.dropdown-menu {
+  li {
+    margin: 0;
+    padding: 0;
+    a {
+      padding: 1em;
+      margin: 0;
+      color: $primary-dark;
+    }
+    &.dropdown-header {
+      padding: 15px 20px 5px 0.5em;
+    }
+  }
+}
+
+
+
 .caret {
   border-top-color: $primary-dark;
+}
+
+
+//  code snippets
+pre,
+code {
+  background-color: $grey-light;
+}
+kbd {
+  display: inline-block;
+  border: solid 1px $light-aqua;
+  border-radius: 3px;
+  box-shadow: 0 1px 0 0 $light-aqua;
+  background-color: $grey-light;
+  color: $dark-aqua;
+  text-align: center;
+  font-size: 87.5%;
+  padding: 0 0.8em;
+  margin: 0 0.4em;
 }
