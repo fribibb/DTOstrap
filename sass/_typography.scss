@@ -71,14 +71,14 @@ body > footer {
       color: $grey-dark;
       text-decoration: none;
       outline: none;
-      border-bottom: solid 1px $blue-bright;
+      border-bottom: solid 1px $light-aqua;
       transition: 0.1s all ease-in-out;
       padding: 1px;
       &:hover,
       &:focus,
       &:active {
         color: $grey-dark;
-        background-color: #5bcbe3;
+        background-color: $light-aqua;
         text-decoration: none;
       }
     }
