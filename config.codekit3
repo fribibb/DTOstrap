@@ -28,6 +28,9 @@
 		"ma": 0,
 		"oA": 2,
 		"oAP": "\/css\/demo-min.css",
+		"oF": 0,
+		"oS": 0
+		},
 	"\/css\/dto.css": {
 		"aP": 0,
 		"bl": 0,
@@ -260,6 +263,7 @@
 		"oS": 0,
 		"uL": 1
 		},
+	"\/sass\/_mixins.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
