@@ -14,7 +14,7 @@ $(function() {
   var ToC =
     "<nav class='index-links'>" +
       "<h1>On this page</h1>" +
-      "<ol class='list-unstyled'>";
+      "<ol>";
 
   var newLine, el, title, link;
 
@@ -43,7 +43,7 @@ $(function() {
 
 
   // Smooth Scrolling
-  $('a[href*=\\#]:not([href=\\#])').click(function() {
+  $('a[href*=\\#]:not([href=\\#]):not(.panel-title)').click(function() {
     jQuery('.anchorHighlight').removeClass('anchorHighlight');
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') || location.hostname === this.hostname) {
       var target = $(this.hash);

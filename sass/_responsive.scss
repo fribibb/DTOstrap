@@ -71,4 +71,17 @@
       margin-left: -10px;
     }
   }
-}
+} // max 768px
+
+
+
+
+@media screen and (min-width: 768px) {
+  form input[type='radio']+label::before,
+  form input[type='checkbox']+label::before {
+      top:9px
+  }
+  form input[type='radio']:checked+label::after {
+      top:14px
+  }
+} // min 768px

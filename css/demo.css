@@ -20,6 +20,9 @@ h6 .label {
   width: 64px;
   height: 64px; }
 
+.img-circle {
+  margin: 0 2em; }
+
 .coloured-background {
   background-color: #f0f3f5;
   margin-top: 1em;
@@ -35,8 +38,6 @@ h6 .label {
   margin-top: 1em; }
   .ToC h1 {
     margin-bottom: 0.5em; }
-  .ToC li:not(:last-of-type) {
-    margin-bottom: 1.5em; }
 
 .anchorHighlight {
   -moz-animation: flash 2s ease-out;

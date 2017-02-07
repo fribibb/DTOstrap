@@ -81,6 +81,12 @@
 .label-danger {
   background-color: $danger;
 }
+.label-alpha {
+  background-color: $grey-dark;
+}
+.label-beta {
+  background-color: $maroon;
+}
 
 
 // Progress bars
@@ -288,6 +294,23 @@
 
 // forms
 form {
+  [type='text'],
+  [type='number'],
+  [type='tel'],
+  [type='email'],
+  [type='password'],
+  input[type='radio'],
+  input[type='checkbox']
+  select,
+  optgroup,
+  textarea {
+    font: inherit;
+    padding: 1.1em 0.7em;
+    &:active,
+    &:focus {
+      outline: 2px solid $light-aqua;
+    }
+  }
   [type='text']:invalid,
   [type='number']:invalid,
   [type='tel']:invalid,
@@ -306,6 +329,9 @@ form {
   input.invalid[type='checkbox'] {
       outline: 2px solid $danger;
   }
+}
+.help-block {
+  color: $grey;
 }
 .has-success {
   .checkbox,
@@ -349,13 +375,108 @@ form {
     color: $danger;
   }
 }
+.form-control {
+  border-radius: $radius-small;
+}
+
+// Custom styled radio btns and checkboxes
+// form input {
+//   &[type='radio'],
+//   &[type='checkbox'] {
+//     height: 1px;
+//     left: -10000px;
+//     position: absolute;
+//     visibility: visible;
+//     width: 1px;
+//   }
+//   &[type='radio']:focus + label,
+//   &[type='checkbox']:focus + label {
+//     outline: 1px solid $grey-border;
+//   }
+//   &[type='radio']:invalid + label,
+//   &[type='checkbox']:invalid + label {
+//     color: $danger;
+//   }
+//   &[type='radio']:invalid + label:before,
+//   &[type='checkbox']:invalid + label:before {
+//     border-color: $danger;
+//   }
+//   &[type='radio'] + label,
+//   &[type='checkbox'] + label {
+//     display: inline-block;
+//     float: left;
+//     width: 100%;
+//     margin-left: 0.8em;
+//   }
+//   &[type='radio'] + label:before,
+//   &[type='checkbox'] + label:before {
+//     display: inline-block;
+//     float: left;
+//     height: 27px;
+//     width: 27px;
+//     text-align: center;
+//     margin-right: 14px;
+//   }
+//   &[type='radio'] {
+//     + label:before {
+//       border: 2px solid $grey-dark;
+//       border-radius: 50%;
+//       content: '';
+//       left: 18px;
+//     }
+//     &:checked + label {
+//       font-weight: bold;
+//       &:before {
+//         border-radius: 50%;
+//         content: "";
+//       }
+//       &:after {
+//         width: 17px;
+//         height: 17px;
+//         background-color: $grey-dark;
+//         border: 1px solid transparent;
+//         border-radius: 50%;
+//         content: '';
+//         float: left;
+//         margin-left: -36px;
+//         margin-top: 5px;
+//       }
+//     }
+//   }
+//   &[type='checkbox'] {
+//     + label:before {
+//       border: 2px solid $grey-dark;
+//       content: "";
+//     }
+//     &:checked + label {
+//       font-weight: bold;
+//       &:before {
+//         font-size: 18px;
+//         content: "";
+//       }
+//       &:after {
+//         width: 17px;
+//         height: 17px;
+//         background-color: $grey-dark;
+//         border: 1px solid transparent;
+//         content: '';
+//         float: left;
+//         margin-left: -36px;
+//         margin-top: 5px;
+//       }
+//     }
+//   }
+// }
+
 
 
 
 
 // Tables
-.table-striped>tbody>tr:nth-of-type(odd) {
+.table {
+  &>tbody>tr:nth-of-type(even) {
     background-color: $grey-light;
+  }
 }
 .table {
   & > thead,
@@ -365,12 +486,13 @@ form {
       &>td,
       &>th {
         border-top: 1px solid $grey-light;
+        padding: 1em;
       }
     }
   }
   & > thead > tr > th {
     vertical-align: bottom;
-    border-bottom: 2px solid $grey-light;
+    border-bottom: solid 2px $grey;
   }
 }
 .table-bordered {
@@ -610,7 +732,7 @@ kbd {
 }
 
 
-// this isn't boostrap, but may be useful
+// this isn't bootstrap, but may be useful
 .index-links {
   margin: 3.2em 0 1.6em 0;
   border-left: 0.4em solid $grey-light;
@@ -629,5 +751,17 @@ kbd {
   }
   a {
     font-weight: bold;
+  }
+  ul,
+  ol {
+    padding-left: 0;
+    list-style: none;
+    ul,
+    ol {
+      padding-left: 2em;  // in case nested
+    }
+  }
+  li:not(:last-of-type) {
+    margin-bottom: 1.5em;
   }
 }
