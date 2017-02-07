@@ -50,15 +50,17 @@ h6 {
       filter: sepia(90%) hue-rotate(100deg) saturate(4);
     }
   }
+  .page-header {
+    margin: 0;
+  }
 }
 
 .ToC {
-  margin-bottom: 3em;
-  h1,
-  li {
+  margin-top: 1em;
+  h1 {
     margin-bottom: 0.5em;
   }
-  li {
+  li:not(:last-of-type) {
     margin-bottom: 1.5em;
   }
 }

@@ -28,13 +28,14 @@ h6 .label {
     filter: sepia(90%) hue-rotate(10deg) saturate(4); }
   .coloured-background .row > div:nth-of-type(2) .thumbnail img {
     filter: sepia(90%) hue-rotate(100deg) saturate(4); }
+  .coloured-background .page-header {
+    margin: 0; }
 
 .ToC {
-  margin-bottom: 3em; }
-  .ToC h1,
-  .ToC li {
+  margin-top: 1em; }
+  .ToC h1 {
     margin-bottom: 0.5em; }
-  .ToC li {
+  .ToC li:not(:last-of-type) {
     margin-bottom: 1.5em; }
 
 .anchorHighlight {

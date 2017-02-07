@@ -161,16 +161,6 @@
 		"oAP": "\/Icon\r",
 		"oF": 0
 		},
-	"\/img\/arrow-right.svg": {
-		"ft": 2097152,
-		"miP": 0,
-		"oA": 2,
-		"oAP": "\/img\/arrow-right.svg",
-		"oF": 0,
-		"opt": 0,
-		"plM": 3758088159,
-		"prP": 0
-		},
 	"\/img\/coas.svg": {
 		"ft": 2097152,
 		"miP": 0,
@@ -216,6 +206,26 @@
 		"oAP": "\/img\/govicon.png",
 		"oF": 0,
 		"opt": 1
+		},
+	"\/img\/icons\/arrow-right.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/arrow-right.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/icons\/external-link--aqua.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/icons\/external-link--aqua.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/index.html": {
 		"ft": 8192,

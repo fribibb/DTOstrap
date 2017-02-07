@@ -252,28 +252,33 @@
   .active {
     color: $grey-dark;
   }
-  &.dto li {
-    &:not(:last-child) {
-      // background-image: url(https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/img/icons/arrow-right.svg);
-      background-image: url(../img/arrow-right.svg);
-      padding-right: 1.4em;
-      background-repeat: no-repeat;
-      background-position: right;
-      background-size: 0.4em auto;
-    }
+  // &.dto li {
+  //   &:not(:last-child) {
+  //     // background-image: url(https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/img/icons/arrow-right.svg);
+  //     background-image: url(../img/icons/arrow-right.svg);
+  //     padding-right: 1.4em;
+  //     background-repeat: no-repeat;
+  //     background-position: right;
+  //     background-size: 0.4em auto;
+  //   }
+  //   &+li:before {
+  //     content: "";
+  //   }
+  // }
+  // &.alt {
+  //   li+li:before {
+  //     content: "\0203A";
+  //     color: $grey;
+  //     padding: 0 15px;
+  //   }
+  // }
+  li {
+    margin-bottom: 2px;
     &+li:before {
-      content: "";
-    }
-  }
-  &.alt {
-    li+li:before {
       content: "\0203A";
       color: $grey;
       padding: 0 15px;
     }
-  }
-  li {
-    margin-bottom: 2px;
   }
 }
 
@@ -601,5 +606,28 @@ kbd {
   margin: 1px 0.4em;
   kbd {
     border: none;
+  }
+}
+
+
+// this isn't boostrap, but may be useful
+.index-links {
+  margin: 3.2em 0 1.6em 0;
+  border-left: 0.4em solid $grey-light;
+  padding: 0 0 1.2em 1.2em;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 1em;
+    margin-top: 1.6em;
+    padding-bottom: 1.2em;
+    color: $grey;
+    font-weight: 400;
+  }
+  a {
+    font-weight: bold;
   }
 }

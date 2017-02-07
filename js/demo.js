@@ -12,10 +12,9 @@ $(function() {
 
 
   var ToC =
-    "<nav role='navigation' class='table-of-contents'>" +
+    "<nav class='index-links'>" +
       "<h1>On this page</h1>" +
-      "<div class='col-sm-4'>" +
-      "<ol class='list-unstyled well'>";
+      "<ol class='list-unstyled'>";
 
   var newLine, el, title, link;
 
@@ -37,8 +36,7 @@ $(function() {
   });
 
   ToC +=
-      "</ol>" +
-     "</div>" +
+    "</ol>" +
     "</nav>";
 
   $(".ToC").prepend(ToC);
