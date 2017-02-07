@@ -28,3 +28,58 @@ h6 .label {
     filter: sepia(90%) hue-rotate(10deg) saturate(4); }
   .coloured-background .row > div:nth-of-type(2) .thumbnail img {
     filter: sepia(90%) hue-rotate(100deg) saturate(4); }
+
+.ToC {
+  margin-bottom: 3em; }
+  .ToC h1,
+  .ToC li {
+    margin-bottom: 0.5em; }
+  .ToC li {
+    margin-bottom: 1.5em; }
+
+.anchorHighlight {
+  -moz-animation: flash 2s ease-out;
+  -moz-animation-iteration-count: 1;
+  -webkit-animation: flash 2s ease-out;
+  -webkit-animation-iteration-count: 1;
+  -ms-animation: flash 2s ease-out;
+  -ms-animation-iteration-count: 1; }
+
+@-webkit-keyframes flash {
+  0% {
+    color: #313131; }
+  50% {
+    color: #00bfe9;
+    border-bottom-color: #00bfe9; }
+  75% {
+    color: #00bfe9;
+    border-bottom-color: #bbb; }
+  100% {
+    color: #313131;
+    border-bottom-color: #bbb; } }
+
+@-moz-keyframes flash {
+  0% {
+    color: #313131; }
+  50% {
+    color: #00bfe9;
+    border-bottom-color: #00bfe9; }
+  75% {
+    color: #00bfe9;
+    border-bottom-color: #bbb; }
+  100% {
+    color: #313131;
+    border-bottom-color: #bbb; } }
+
+@-ms-keyframes flash {
+  0% {
+    color: #313131; }
+  50% {
+    color: #00bfe9;
+    border-bottom-color: #00bfe9; }
+  75% {
+    color: #00bfe9;
+    border-bottom-color: #bbb; }
+  100% {
+    color: #313131;
+    border-bottom-color: #bbb; } }
