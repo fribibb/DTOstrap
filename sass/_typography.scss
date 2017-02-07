@@ -83,22 +83,45 @@ body > footer {
       }
 
       // external links
+      // &[rel~='external'] {
+      //   // display: inline;
+      //   position: relative;
+      //   margin-right: 1.6em;
+      // }
       &[rel~='external'] {
-        // display: inline;
-        position: relative;
-        margin-right: 1.6em;
-      }
-      &[rel~='external']::after {
-        background-size: 0.9em auto;
-        content: '';
-        position: absolute;
-        // display: inline;
-        width: 1.2em;
-        height: 1.2em;
-        background-repeat: no-repeat;
-        background-position: right 0.4em;
-        // border-bottom: 1px solid transparent;
-        background-image: url('../img/icons/external-link--aqua.svg');
+        &:after {
+          // DTO way, with svg.
+            // background-size: 0.9em auto;
+            // content: '';
+            // position: absolute;
+            // // display: inline;
+            // width: 1.2em;
+            // height: 1.2em;
+            // background-repeat: no-repeat;
+            // background-position: right 0.4em;
+            // border-bottom: 1px solid transparent;
+            // background-image: url('../img/icons/external-link--aqua.svg');
+          // ...but assuming Boostrap has loaded the font icons anyway
+          content: "\e164"; // external link icon
+          position: relative;
+          top: 1px;
+          display: inline-block;
+          font-family: 'Glyphicons Halflings';
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1;
+          padding-left: 5px;
+          padding-right: 2px;
+          -webkit-font-smoothing: antialiased;
+          color: $blue-bright;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+          &:after {
+            color: $grey-dark;  // if using the font icon method
+          }
+        }
       }
 
     }
