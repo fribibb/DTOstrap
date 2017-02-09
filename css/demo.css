@@ -39,6 +39,9 @@ h6 .label {
   .ToC h1 {
     margin-bottom: 0.5em; }
 
+body > footer {
+  margin-top: 5.5em; }
+
 .anchorHighlight {
   -moz-animation: flash 2s ease-out;
   -moz-animation-iteration-count: 1;

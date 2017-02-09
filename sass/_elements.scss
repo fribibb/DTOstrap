@@ -57,6 +57,21 @@
   }
 }
 
+// large forms (commentted out = super large, full width form)
+.input-group-lg> {
+  // width: 100%;
+  .form-control,
+  .input-group-addon,
+  .input-group-btn > .btn {
+    // height: 70px;
+    // font-size: 28px;
+    border-radius: $radius;
+  }
+  // .btn {
+  //   padding: 10px 26px;
+  // }
+}
+
 
 
 // Labels
@@ -290,6 +305,80 @@
 
 
 
+// pagination
+.pagination,
+.pager {
+  & > li {
+    & > a,
+    & > span {
+      color: $primary;
+      background-color: #fff;
+      border: 1px solid $grey-border;
+      &:hover,
+      &:active,
+      &:focus {
+        color: $grey-dark;
+        color: $darker-aqua;
+        // background-color: $light-aqua;
+        background-color: $grey-light;
+        border: 1px solid $dark-aqua;
+      }
+      &:active,
+      &:focus {
+        background-color: $blue-light;
+        color: $grey-dark;
+        background-color: $light-aqua;
+        border-color: $grey;
+      }
+    }
+    &:first-child > {
+      a,
+      span {
+        border-top-left-radius: $radius-small;
+        border-bottom-left-radius: $radius-small;
+      }
+    }
+    &:last-child > {
+      a,
+      span {
+        border-top-right-radius: $radius-small;
+        border-bottom-right-radius: $radius-small;
+      }
+    }
+    &.active {
+      a,
+      span {
+        background-color: $darker-aqua;
+        border-color: $darker-aqua;
+        &:hover,
+        &:active,
+        &:focus {
+          color: #fff;
+          background-color: $darker-aqua;
+          border-color: $darker-aqua;
+        }
+      }
+    }
+    &.disabled {
+      a,
+      span {
+        color: $grey;
+        background-color: #fff;
+        border-color: $grey-border;
+      }
+    }
+  }
+}
+.pager {
+  li {
+    a,
+    span {
+      border-radius: $radius-small;
+    }
+  }
+}
+
+
 
 
 // forms
@@ -487,6 +576,9 @@ form {
       &>th {
         border-top: 1px solid $grey-light;
         padding: 1em;
+      }
+      & > td {
+        border-bottom: solid 1px $grey-border;
       }
     }
   }
@@ -763,5 +855,17 @@ kbd {
   }
   li:not(:last-of-type) {
     margin-bottom: 1.5em;
+  }
+}
+
+
+// Slider / Carousel
+.carousel {
+  .carousel-control {
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: transparent;
+    }
   }
 }

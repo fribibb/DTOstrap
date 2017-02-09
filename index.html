@@ -101,7 +101,7 @@
 
 
       <div class="page-header">
-        <h1>Heading levels</h1>
+        <h1>Headings</h1>
       </div>
       <h1 class="CoT-ignore">
         Heading 1
@@ -121,10 +121,54 @@
       <h6>
         Heading 6
       </h6>
+
       <p>
         Paragraph text here. Paragraph inline <a href="#">link</a> here. Paragraph text here. Paragraph text here. <a href="https://www.w3.org/WAI/intro/aria" rel="external">an external link</a>.
       </p>
 
+      <h1 class="CoT-ignore">
+        Heading 1 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
+      </h1>
+      <h2>
+        Heading 2 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
+      </h2>
+      <h3>
+        Heading 3 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
+      </h3>
+      <h4>
+        Heading 4 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
+      </h4>
+      <h5>
+        Heading 5 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
+      </h5>
+      <h6>
+        Heading 6 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
+      </h6>
+      <p>
+        Paragraph text that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
+      </p>
+
+      <h1 class="CoT-ignore">
+        <a href="#">Linked heading 1 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
+      </h1>
+      <h2>
+        <a href="#">Linked heading 2 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
+      </h2>
+      <h3>
+        <a href="#">Linked heading 3 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
+      </h3>
+      <h4>
+        <a href="#">Linked heading 4 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
+      </h4>
+      <h5>
+        <a href="#">Linked heading 5 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
+      </h5>
+      <h6>
+        <a href="#">Linked heading 6 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
+      </h6>
+      <p>
+        <a href="#">Linked paragraph text that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
+      </p>
 
 
       <div class="page-header">
@@ -675,7 +719,15 @@
       <div class="page-header">
         <h1>List groups</h1>
       </div>
-      <h2>Stacked</h2>
+      <h2>Inline list</h2>
+      <ul class="list-inline">
+        <li><a href="#">Page item</a></li>
+        <li><a href="#">Page item</a></li>
+        <li><a href="#">Page item</a></li>
+        <li><a href="#">Page item</a></li>
+        <li><a href="#">Page item</a></li>
+      </ul>
+      <h2>Stacked list</h2>
       <div class="row">
         <div class="col-sm-4">
           <ul class="list-group">
@@ -713,9 +765,16 @@
             </a>
           </div>
         </div><!-- /.col-sm-4 -->
-      </div>
-      <h2>Inline (uncomplete)</h2>
-      <h2>{http://guides.service.gov.au/design-guide/components/link-styles/index.html#block-of-inline-links}</h2>
+      </div><!-- /.row -->
+      <h2>Table of contents</h2>
+      <nav class="index-links">
+        <h2>Contents</h2>
+        <ul>
+          <li><a href="#">Page item</a></li>
+          <li><a href="#">Page item</a></li>
+          <li><a href="#">Page item</a></li>
+        </ul>
+      </nav>
 
 
 
@@ -1038,19 +1097,17 @@ response.</textarea>
           </label>
         </div>
       </div>
-
-
-      <div class="page-header">
-        <h1>Table of contents</h1>
-      </div>
-      <nav class="index-links">
-        <h2>Contents</h2>
-        <ul>
-          <li><a href="#">Page item</a></li>
-          <li><a href="#">Page item</a></li>
-          <li><a href="#">Page item</a></li>
-        </ul>
-      </nav>
+      <h2>Input groups</h2>
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="input-group">
+            <input type="text" class="form-control" placeholder="Search for&hellip;">
+            <span class="input-group-btn">
+              <button class="btn btn-default" type="button">Go!</button>
+            </span>
+          </div><!-- /input-group -->
+        </div><!-- /.col-lg-6 -->
+      </div><!-- /.row -->
 
 
       <div class="page-header">
@@ -1062,6 +1119,40 @@ response.</textarea>
         <h1>Calendar Callout (uncomplete)</h1>
       </div>
       <h2>{http://guides.service.gov.au/design-guide/patterns/callouts/index.html}</h2>
+
+      <div class="page-header">
+        <h1>Pagination</h1>
+      </div>
+      <nav aria-label="Page navigation">
+        <ul class="pagination">
+          <li class="disabled">
+            <a href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              First
+            </a>
+          </li>
+          <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+          <li><a href="#">2</a></li>
+          <li><a href="#">3</a></li>
+          <li><a href="#">4</a></li>
+          <li><a href="#">5</a></li>
+          <li>
+            <a href="#" aria-label="Next">
+              Last
+              <span aria-hidden="true">&raquo;</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div class="page-header">
+        <h1>Pager</h1>
+      </div>
+      <nav aria-label="__">
+        <ul class="pager">
+          <li><a href="#">Previous</a></li>
+          <li><a href="#">Next</a></li>
+        </ul>
+      </nav>
 
 
       <div class="page-header">
