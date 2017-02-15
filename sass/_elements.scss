@@ -4,6 +4,7 @@
 //  Buttons
 .btn {
   border-radius: $radius-small;
+  transition: 0.16s all;
 }
 .btn-default {
   // can't use mixin here as its different pattern to the others - has a transparent bg, etc.
