@@ -7,6 +7,10 @@
 @import  'mixins';
 
 
+.nav-tabs,
+.nav-pills {
+  margin: 3.2em 0;
+}
 
 p > .btn {
   margin: 10px 0;

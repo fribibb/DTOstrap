@@ -84,4 +84,7 @@
   form input[type='radio']:checked+label::after {
       top:14px
   }
+  .nav-tabs.nav-justified>li>a {
+    border-bottom: 4px solid transparent;
+  }
 } // min 768px
