@@ -239,7 +239,7 @@
       }
     }
     &.active {
-      a {
+      & > a {
         color: $primary;
         background-color: $blue-light;
         margin-right: 0;
