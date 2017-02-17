@@ -756,7 +756,7 @@ form {
       border-radius: 0;
   }
 }
-.list-repeating-word {
+.repeat-word {
   a {
     font-size: 150%;
     font-weight: 700;
@@ -764,6 +764,16 @@ form {
     span {
       display: block;
       font-size: 65%;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    a {
+      font-size: 100%;
     }
   }
 }
