@@ -761,6 +761,7 @@ form {
     font-size: 150%;
     font-weight: 700;
     line-height: 1.4;
+    position: absolute;
     span {
       display: block;
       font-size: 65%;
@@ -772,6 +773,7 @@ form {
   h4,
   h5,
   h6 {
+    margin-top: 10px;
     a {
       font-size: 100%;
     }
