@@ -175,10 +175,10 @@ body > footer {
 @media all and (-ms-high-contrast:none)
  {
   // .foo { color: green } /* IE10 */
-   *::-ms-backdrop, .brand a:before, .brand a:after { display:none; } /* IE11 */
-   *::-ms-backdrop, .brand, .brand img { margin-top: 0; } /* IE11 */
+  *::-ms-backdrop, .brand a::before, .brand a::after { background: transparent !important; } /* IE11 */
+  *::-ms-backdrop, h2.brand, h2.brand a img { margin-top: 0; } /* IE11 */
  }
  @supports (-ms-ime-align:auto) {
-  .brand a:before, .brand a:after { display:none; } /* edge */
-  .brand, .brand img { margin-top: 0; } /* edge */
+  h2.brand a::before, h2.brand a::after { background: transparent !important; } /* edge */
+  h2.brand, h2.brand a img { margin-top: 0; } /* edge */
  }
