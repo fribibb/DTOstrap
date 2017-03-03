@@ -49,12 +49,14 @@
   color: $grey-dark;
   border-bottom: solid 1px $light-aqua;
   transition: 0.1s all ease-in-out;
-  &:hover,
-  &:focus,
-  &:active {
-    color: $grey-dark;
-    background-color: $light-aqua;
-    text-decoration: none;
+  &:not(:disabled) {
+    &:hover,
+    &:focus,
+    &:active {
+      color: $grey-dark;
+      background-color: $light-aqua;
+      text-decoration: none;
+    }
   }
 }
 
@@ -93,6 +95,7 @@
 }
 .label-warning {
   background-color: $warning;
+  color: $grey-dark;
 }
 .label-danger {
   background-color: $danger;
@@ -103,6 +106,35 @@
 .label-beta {
   background-color: $maroon;
 }
+.label-hover {
+  opacity: 0.8;
+  text-decoration: none !important;
+}
+a {
+  &:hover,
+  &:active,
+  &:focus {
+    .label {
+      @extend .label-hover;
+    }
+  }
+  &.label {
+    &:hover,
+    &:active,
+    &:focus {
+      @extend .label-hover;
+    }
+  }
+  &.label-warning[href] {
+    &:hover,
+    &:active,
+    &:focus {
+      color: $grey-dark;
+      background-color: $warning;
+    }
+  }
+}
+
 
 
 // Progress bars
