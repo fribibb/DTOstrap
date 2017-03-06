@@ -52,6 +52,11 @@ h6 {
 // base for a link
 a {
   color: darken( $blue-bright, 15% );
+  &:active,
+  &:focus,
+  &:hover {
+    text-decoration: none !important;
+  }
 }
 // your average content link (and page footer)
 body > div,
