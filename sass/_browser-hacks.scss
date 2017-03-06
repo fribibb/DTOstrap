@@ -1,0 +1,10 @@
+@media all and (-ms-high-contrast:none) {
+  .brand a::before, .brand a::after { background: transparent !important; } /* IE10 */
+  h2.brand, h2.brand a img { margin-top: 0; } /* IE10 */
+  *::-ms-backdrop, .brand a::before, .brand a::after { background: transparent !important; } /* IE11 */
+  *::-ms-backdrop, h2.brand, h2.brand a img { margin-top: 0; } /* IE11 */
+}
+@supports (-ms-ime-align:auto) {
+  h2.brand a::before, h2.brand a::after { background: transparent !important; } /* edge */
+  h2.brand, h2.brand a img { margin-top: 0; } /* edge */
+}

@@ -26,9 +26,13 @@ body {
           margin-right: 20px;
         }
       }
-    }
-    .brand {
-      padding-left: 15px;
+      .label {
+        position: relative;
+        margin-right: -3.65em;
+        padding: 0 10px;
+        margin-left: 0.3em;
+        background-color: $primary;
+      }
     }
     a {
       &:hover,
@@ -51,6 +55,43 @@ body {
     // Inverted colour scheme
     .inverse {
       // TODO
+    }
+    h2.brand.style-line {   // DTO 3 shades of blue thick underline
+      a {
+        &:before {
+          transition: 0.35s all; // nope - this doesn't work for gradient bgs!, so using opacity
+          height: 7px;
+          background-color: $gradient-light;
+          background-size: 2.4em 7px;
+          content: "";
+          position: relative;
+          bottom: -2.1em;
+          right: 5.3em;
+          float: right;
+          width: 2.4em;
+        }
+        &:after {
+          transition: 0.2s all; // nope - this doesn't work for gradient bgs!
+          height: 7px;
+          background: linear-gradient(to left, $blue-bright 0, $blue-bright 25%, $blue-light 25%, $blue-light 75%, $gradient-light 75%) no-repeat;
+          background-size: 2.4em 7px;
+          content: "";
+          position: relative;
+          bottom: -2.1em;
+          right: 2.4em;
+          float: right;
+          width: 2.9em;
+        }
+        &:hover,
+        &:active,
+        &:focus {
+          opacity: 1;
+          text-decoration: none;
+          &:before {
+            right: 7.3em;
+          }
+        }
+      }
     }
   }
 
