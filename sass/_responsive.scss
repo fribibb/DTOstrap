@@ -105,7 +105,7 @@
   // very much made to work for the specific content, so will need to tweak for other headings
   // made cooler with on hover awesomeness :) ...but not for IE - see _browser-hacks.scss
   header {
-    h2.brand.style-line {
+    .brand.style-line {
       a {
         &:before {
           transition: 0.35s all; // nope - this doesn't work for gradient bgs!, so using opacity

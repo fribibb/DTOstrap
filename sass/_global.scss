@@ -32,6 +32,7 @@ body {
         padding: 0 10px;
         margin-left: 0.3em;
         background-color: $primary;
+        transition: all 0.16s;
       }
     }
     a {
@@ -40,6 +41,10 @@ body {
       &:focus {
         .caret {
           border-top-color: $primary-dark;
+        }
+        .label {
+          background-color: $blue-bright;
+          opacity: 1;
         }
       }
     }
