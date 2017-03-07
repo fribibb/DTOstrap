@@ -32,7 +32,7 @@ body {
         padding: 0 10px;
         margin-left: 0.3em;
         background-color: $primary;
-        transition: all 0.16s;
+        transition: all 0.2s;
       }
     }
     a {
@@ -43,7 +43,7 @@ body {
           border-top-color: $primary-dark;
         }
         .label {
-          background-color: $blue-bright;
+          // background-color: $darker-aqua;
           opacity: 1;
         }
       }
