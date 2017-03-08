@@ -935,3 +935,68 @@ kbd {
     }
   }
 }
+
+
+
+// Dsahboard
+.dashboard-item {
+  margin: 1em 0 3em 0;
+  .dashboard-icon {
+    font-size: 8em;
+    color: $primary;
+    margin-bottom: 0.2em;
+  }
+  .dashboard-title {
+    margin: 0;
+  }
+  .dashboard-more-info {
+    outline: 0;
+    transition: all .2s;
+    font-size: 80%;
+    color: #fff;
+    border-bottom: none;
+    background-color: $primary;
+    border-radius: 100%;
+    width: 1.1em;
+    height: 1.1em;
+    display: inline-block;
+    top: 0.2em;
+    position: relative;
+    &:hover,
+    &:active,
+    &:focus{
+      color: $primary-alt;
+      text-decoration: none;
+      background-color: transparent;
+    }
+    i {
+      top: -0.15em;
+      position: relative;
+    }
+  }
+  .dashboard-highlight {
+    color: $primary;
+    display: block;
+    font-size: 180%;
+    margin: 0.5em 0;
+    strong {
+      font-size: 180%;
+    }
+  }
+  .dashboard-extra {
+    color: $grey-dark;
+  }
+}
+
+// Popovers
+.popover {
+  border-radius: $radius;
+  &.right > .arrow {
+    left: -11px;
+  }
+  .popover-title {
+    background-color: $grey-light;
+    color: $primary-dark;
+    font-weight: 500;
+  }
+}

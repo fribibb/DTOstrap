@@ -44,7 +44,7 @@ $(function() {
 
   // Smooth Scrolling
   $('a[href*=\\#]:not([href=\\#]):not(.panel-title)').click(function() {
-    jQuery('.anchorHighlight').removeClass('anchorHighlight');
+    $('.anchorHighlight').removeClass('anchorHighlight');
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') || location.hostname === this.hostname) {
       var target = $(this.hash);
       target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
@@ -52,11 +52,19 @@ $(function() {
         $('html,body').animate({
           scrollTop: target.offset().top - 10
         }, 500);
-        jQuery('#' + this.hash.slice(1)).parent().addClass('anchorHighlight');
+        $('#' + this.hash.slice(1)).parent().addClass('anchorHighlight');
         return false;
       }
     }
   });
+
+
+	$(function () {
+		$('[data-toggle=popover]').popover()
+	    .focus(function () { $(this).trigger('mouseover'); })
+	    .blur(function () { $(this).trigger('mouseout'); });
+	})
+
 
 
 }); //jQuery

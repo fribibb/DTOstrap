@@ -144,3 +144,11 @@
     }
   }
 } // min 768px
+
+
+
+@media (min-width:400px) {
+  .popover-title {
+    min-width: 200px;
+  }
+}
