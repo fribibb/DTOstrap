@@ -948,6 +948,7 @@ kbd {
   }
   .dashboard-title {
     margin: 0;
+    padding-bottom: 0.5em;
   }
   .dashboard-more-info {
     outline: 0;
@@ -979,6 +980,15 @@ kbd {
     display: block;
     font-size: 180%;
     margin: 0.5em 0;
+    a {
+      padding: 0.5em 0.1em 0;
+      color: $primary;
+      &:hover,
+      &:active,
+      &:focus{
+        color: $grey-dark;
+      }
+    }
     strong {
       font-size: 180%;
     }

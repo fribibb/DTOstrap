@@ -7,7 +7,7 @@
 		"uuidString": "4DD66D05-F34D-4DAC-B315-7A7FC4F40CD5"
 		}
 	],
-"creatorBuild": "25568",
+"creatorBuild": "25704",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -50,90 +50,112 @@
 	"\/favicon\/favicon-114.png": {
 		"ft": 32768,
 		"iS": 19271,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-114.png",
 		"oF": 0,
-		"opt": 1
+		"opt": 1,
+		"q": 100
 		},
 	"\/favicon\/favicon-120.png": {
 		"ft": 32768,
 		"iS": 20484,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-120.png",
 		"oF": 0,
-		"opt": 1
+		"opt": 1,
+		"q": 100
 		},
 	"\/favicon\/favicon-144.png": {
 		"ft": 32768,
 		"iS": 28061,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-144.png",
 		"oF": 0,
-		"opt": 1
+		"opt": 1,
+		"q": 100
 		},
 	"\/favicon\/favicon-152.png": {
 		"ft": 32768,
 		"iS": 30305,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-152.png",
 		"oF": 0,
-		"opt": 1
+		"opt": 1,
+		"q": 100
 		},
 	"\/favicon\/favicon-16.png": {
 		"ft": 32768,
 		"iS": 1614,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-16.png",
 		"oF": 0,
-		"opt": 1
+		"opt": 1,
+		"q": 100
 		},
 	"\/favicon\/favicon-256.png": {
 		"ft": 32768,
 		"iS": 69066,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-256.png",
 		"oF": 0,
-		"opt": 1
+		"opt": 1,
+		"q": 100
 		},
 	"\/favicon\/favicon-32.png": {
 		"ft": 32768,
 		"iS": 3660,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-32.png",
 		"oF": 0,
-		"opt": 1
+		"opt": 1,
+		"q": 100
 		},
 	"\/favicon\/favicon-48.png": {
 		"ft": 32768,
 		"iS": 5807,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-48.png",
 		"oF": 0,
-		"opt": 1
+		"opt": 1,
+		"q": 100
 		},
 	"\/favicon\/favicon-57.png": {
 		"ft": 32768,
 		"iS": 7239,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-57.png",
 		"oF": 0,
-		"opt": 1
+		"opt": 1,
+		"q": 100
 		},
 	"\/favicon\/favicon-64.png": {
 		"ft": 32768,
 		"iS": 8209,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-64.png",
 		"oF": 0,
-		"opt": 1
+		"opt": 1,
+		"q": 100
 		},
 	"\/favicon\/favicon-72.png": {
 		"ft": 32768,
 		"iS": 9542,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-72.png",
 		"oF": 0,
-		"opt": 1
+		"opt": 1,
+		"q": 100
 		},
 	"\/favicon\/favicon.html": {
 		"ft": 8192,
@@ -174,10 +196,12 @@
 	"\/img\/govicon-gradient.png": {
 		"ft": 32768,
 		"iS": 4406,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/govicon-gradient.png",
 		"oF": 0,
-		"opt": 1
+		"opt": 1,
+		"q": 100
 		},
 	"\/img\/govicon-gradient.svg": {
 		"ft": 2097152,
@@ -202,10 +226,12 @@
 	"\/img\/govicon.png": {
 		"ft": 32768,
 		"iS": 25225,
+		"l": 1,
 		"oA": 0,
 		"oAP": "\/img\/govicon.png",
 		"oF": 0,
-		"opt": 1
+		"opt": 1,
+		"q": 100
 		},
 	"\/index.html": {
 		"ft": 8192,
@@ -382,7 +408,7 @@
 	"displayValue": "DTOstrap",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "\/img\/govicon.png",
-	"lastBuiltDate": 510535972
+	"lastBuiltDate": 511056440
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
@@ -1054,6 +1080,10 @@
 			"active": 1,
 			"optionString": ""
 			},
+		"no-compare-neg-zero": {
+			"active": 0,
+			"optionString": ""
+			},
 		"no-cond-assign": {
 			"active": 1,
 			"optionString": "'except-parens'"
@@ -1533,6 +1563,10 @@
 		"no-with": {
 			"active": 0,
 			"optionString": ""
+			},
+		"nonblock-statement-body-position": {
+			"active": 0,
+			"optionString": "'beside'"
 			},
 		"object-curly-newline": {
 			"active": 0,
@@ -2133,7 +2167,8 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"quality": 100
 		},
 	"languageDefaultsJS": {
 		"autoOutputAction": 0,
@@ -2226,7 +2261,9 @@
 		"autoOutputPathRelativePath": "",
 		"autoOutputPathReplace1": "",
 		"autoOutputPathReplace2": "",
-		"autoOutputPathStyle": 0
+		"autoOutputPathStyle": 0,
+		"enableLossy": 1,
+		"quality": 100
 		},
 	"languageDefaultsPUG": {
 		"autoOutputAction": 0,
