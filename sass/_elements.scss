@@ -991,6 +991,9 @@ kbd {
     }
     strong {
       font-size: 180%;
+      a {
+        padding: 0;
+      }
     }
   }
   .dashboard-extra {
