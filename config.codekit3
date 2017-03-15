@@ -281,7 +281,7 @@
 		"rFN": 0,
 		"uCM": 0
 		},
-	"\/sass\/_browser-hacks.scss": {
+	"\/sass\/_dtostrap-browser-hacks.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -289,12 +289,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/css\/_browser-hacks.css",
+		"oAP": "\/css\/_dtostrap-browser-hacks.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/_elements.scss": {
+	"\/sass\/_dtostrap-elements.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -302,12 +302,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/css\/_elements.css",
+		"oAP": "\/css\/_dtostrap-elements.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/_global.scss": {
+	"\/sass\/_dtostrap-global.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -315,12 +315,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/css\/_global.css",
+		"oAP": "\/css\/_dtostrap-global.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/_mixins.scss": {
+	"\/sass\/_dtostrap-mixins.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -328,12 +328,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/css\/_mixins.css",
+		"oAP": "\/css\/_dtostrap-mixins.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/_responsive.scss": {
+	"\/sass\/_dtostrap-responsive.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -341,12 +341,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/css\/_responsive.css",
+		"oAP": "\/css\/_dtostrap-responsive.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/_typography.scss": {
+	"\/sass\/_dtostrap-typography.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -354,12 +354,12 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/css\/_typography.css",
+		"oAP": "\/css\/_dtostrap-typography.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
 		},
-	"\/sass\/_vars.scss": {
+	"\/sass\/_dtostrap-vars.scss": {
 		"aP": 0,
 		"bl": 0,
 		"dP": 10,
@@ -367,7 +367,7 @@
 		"ft": 4,
 		"ma": 0,
 		"oA": 1,
-		"oAP": "\/css\/_vars.css",
+		"oAP": "\/css\/_dtostrap-vars.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1
@@ -385,7 +385,7 @@
 		"oS": 3,
 		"uL": 1
 		},
-	"\/sass\/dto.scss": {
+	"\/sass\/dtostrap.scss": {
 		"aP": 1,
 		"bl": 1,
 		"dP": 10,

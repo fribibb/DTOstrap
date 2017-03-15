@@ -1,7 +1,7 @@
 // Header, Footer and other global styles
 
 body {
-  // page header
+  // Page header
   & > header {
     background-color: $gradient-dark;
     background: linear-gradient(200deg, $gradient-light, $gradient-dark 80%);
@@ -58,12 +58,11 @@ body {
     }
     // Inverted colour scheme
     .inverse {
-      // TODO
+      // TODO ********************
     }
-    h2.brand.style-line {   // DTO 3 shades of blue thick underline
+    h2.brand.style-line {   // DTO 3 shades of $blue thick underline
       a {
         &:before {
-          transition: 0.35s all; // nope - this doesn't work for gradient bgs!, so using opacity
           height: 7px;
           background-color: $gradient-light;
           background-size: 2.4em 7px;
@@ -75,7 +74,6 @@ body {
           width: 2.4em;
         }
         &:after {
-          transition: 0.2s all; // nope - this doesn't work for gradient bgs!
           height: 7px;
           background: linear-gradient(to left, $blue-bright 0, $blue-bright 25%, $blue-light 25%, $blue-light 75%, $gradient-light 75%) no-repeat;
           background-size: 2.4em 7px;
@@ -100,13 +98,13 @@ body {
   }
 
 
-  // page header
+  // Page header
   .page-header {
     margin-top: 100px;
   }
 
 
-  // footer
+  // Footer
   & > footer {
     margin-top: 3.2em;
     padding: 1.6em 0;

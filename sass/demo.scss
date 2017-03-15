@@ -1,9 +1,9 @@
-// these styles are just for the demo pages - you don't need them
+// These styles are just for the demo pages - you don't need them
 
-//  Variables
+// Variables
 @import  'vars';
 
-// mixins
+// Mixins
 @import  'mixins';
 
 
@@ -70,14 +70,14 @@ h6 {
   }
 }
 
-// bit more space before the page footer
+// Add a bit more space before the page footer
 body > footer {
   margin-top: 5.5em;
 }
 
 
 
-// for jump to Flash animation
+// For the anchor jump with flash animation
 .anchorHighlight {
   -moz-animation: flash 2s ease-out;
   -moz-animation-iteration-count: 1;

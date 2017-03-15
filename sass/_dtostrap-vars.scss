@@ -13,8 +13,7 @@ $gradient-light: #25819e;                   // used only in header background gr
 $gradient-dark: $primary-dark;              // used only in header background gradient
 
 $blue-light: #dff4f8;                       // light blue, used as a background colour
-// $blue-bright: #53c4ec;                   // "Picton Blue", used to highlight
-$blue-bright: #00bfe9;                      // used to highlight
+$blue-bright: #00bfe9;                      // "Picton Blue", used to highlight
 $blue-dark: #0b3850;                        // navy-ish blue
 
 $grey-light: #f0f3f5;                       // faint background colour
@@ -26,11 +25,10 @@ $success: #007554;                          // done
 $info: $blue-bright;                        // blue
 $danger: #cc0000;                           // error
 $warning: #f9c642;                          // warning
-// $warning-dark: darken($warning, 10%);    // warning things that need contrast for light text
 $maroon: #880e48;                           // used for 'beta' label in their example
 
 
-// border-radius
+// Border radius options
 $radius-small: 1px;                         // wells etc
 $radius: 3px;                               // default
 $radius-large: ($radius * 4);               // for labels
@@ -45,13 +43,6 @@ $font-family-base: $font-sans-serif;
 // Font weights
 $font-weight-normal: 400;
 $font-weight-bold: 700;
-
-// Font sizes
-//$font-size-tiny: 62.5%;
-//$font-size-small: 87.5%;
-//$font-size-large: 122%;
-//$font-size-huge: 150%;
-
 
 // Leading/line-height.
 $base-leading: 1.6;

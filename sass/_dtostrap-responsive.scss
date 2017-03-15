@@ -1,25 +1,23 @@
 // Responsive styles
 
 @media (min-width: 992px) {
-  // It's lovely to have, but not worth the effort to get it aligned on small screens atm...
   .navbar-header {
     width: 50%
   }
 } // min-width: 992px
 
+
 @media (max-width: 991px) {
-  // It's lovely to have, but not worth the effort to get it aligned on small screens atm...
   .brand {
     width: 100%;
     &.style-line a {
       &:before,
       &:after {
-        display: none;
+        display: none;  // It's lovely to have, but not worth the effort to get it aligned on small screens atm...
       }
     }
   }
 } // max-width: 991px
-
 
 
 @media (min-width: 768px) {
@@ -34,15 +32,8 @@
   }
 }
 
-// almost the breakpoint for mobile/hamburger menu, but not
-// @media (min-width: 768px) and (min-width: 769px) {
-//   header .navbar-header {
-//     width: 45%;
-//   }
-// }
 
-
-// breakpoint for mobile/hamburger menu
+// Breakpoint for mobile/hamburger menu
 @media (max-width: 767px) {
   // Main menu
   .navbar-toggle {
@@ -66,7 +57,7 @@
         &:nth-of-type(3) {
           transform: rotate(-225deg);
           margin-top: 6px;
-          // if we want a "^" instead, tweaks thsese:
+          // If we want a "^" instead, tweaks thsese:
           // margin-top: -2px !important;
           // margin-bottom: 6px;
           // margin-left: 8px;
@@ -131,10 +122,10 @@
   }
   form input[type='radio']+label::before,
   form input[type='checkbox']+label::before {
-      top:9px
+    top:9px
   }
   form input[type='radio']:checked+label::after {
-      top:14px
+    top:14px
   }
   .nav-tabs.nav-justified>li>a {
     border-bottom: 4px solid transparent;
@@ -146,13 +137,12 @@
   }
 
   // DTO style colour bar under site title in header
-  // very much made to work for the specific content, so will need to tweak for other headings
-  // made cooler with on hover awesomeness :) ...but not for IE - see _browser-hacks.scss
+  // - very much made to work for the specific content, so will need to tweak for other headings
+  // - made cooler with on hover awesomeness :) ...but not for IE - see _browser-hacks.scss
   header {
     .brand.style-line {
       a {
         &:before {
-          transition: 0.35s all; // nope - this doesn't work for gradient bgs!, so using opacity
           height: 7px;
           background-color: $gradient-light;
           background-size: 2.4em 7px;
@@ -164,7 +154,6 @@
           width: 2.4em;
         }
         &:after {
-          transition: 0.2s all; // nope - this doesn't work for gradient bgs!
           height: 7px;
           background: linear-gradient(to left, $blue-bright 0, $blue-bright 25%, $blue-light 25%, $blue-light 75%, $gradient-light 75%) no-repeat;
           background-size: 2.4em 7px;
@@ -201,7 +190,8 @@
 } // min-width 400px
 
 
-// center align the header
+
+// Center align the header
 @media (max-width: 430px) {
   body > header {
     a {

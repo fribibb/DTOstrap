@@ -1,7 +1,7 @@
 // Elements
 
 
-//  Buttons
+// Buttons
 .btn {
   border-radius: $radius-small;
   transition: 0.16s all;
@@ -60,14 +60,12 @@
   }
 }
 
-// large forms (commentted out = super large, full width form)
+// Large forms (commentted out = super large, full width form)
 .input-group-lg> {
   // width: 100%;
   .form-control,
   .input-group-addon,
   .input-group-btn > .btn {
-    // height: 70px;
-    // font-size: 28px;
     border-radius: $radius;
   }
   // .btn {
@@ -139,7 +137,7 @@ a {
 
 // Progress bars
 .progress-bar {
-  background-color: $maroon;  // ...I needed another colour ¯\_(ツ)_/¯
+  background-color: $maroon;  //  ¯\_(ツ)_/¯ ...I needed another colour
 }
 .progress-bar-default {
   background-color: $grey;
@@ -160,13 +158,14 @@ a {
   background-color: $danger;
 }
 
+
 // Badges
 .badge {
   background-color: $grey;
 }
 
 
-// alert
+// Alert
 .alert {
   border-radius: $radius-small;
   padding: 1.2em;
@@ -194,7 +193,7 @@ a {
   border-left: 0.4em solid $danger;
 }
 
-// basically the p tag equiv of above
+// Basically the p tag equiv of above
 .text-muted {
   color: $grey;
 }
@@ -217,7 +216,7 @@ a {
 
 
 
-
+// Jumbotrons and Wells
 .container {
   .jumbotron,
   .well {
@@ -252,7 +251,7 @@ a {
 
 
 
-// inline list of links
+// Inline list of links
 .nav-tabs,
 .nav-pills {
   border-bottom: 1px solid $grey;
@@ -299,32 +298,13 @@ a {
 
 
 
-//breadcrumb
+// Breadcrumbs
 .breadcrumb {
   background-color: $grey-light;
+  margin-top: 10px;
   .active {
     color: $grey-dark;
   }
-  // &.dto li {
-  //   &:not(:last-child) {
-  //     // background-image: url(https://gov-au-ui-kit.apps.staging.digital.gov.au/latest/img/icons/arrow-right.svg);
-  //     background-image: url(../img/icons/arrow-right.svg);
-  //     padding-right: 1.4em;
-  //     background-repeat: no-repeat;
-  //     background-position: right;
-  //     background-size: 0.4em auto;
-  //   }
-  //   &+li:before {
-  //     content: "";
-  //   }
-  // }
-  // &.alt {
-  //   li+li:before {
-  //     content: "\0203A";
-  //     color: $grey;
-  //     padding: 0 15px;
-  //   }
-  // }
   li {
     margin-bottom: 2px;
     &+li:before {
@@ -337,7 +317,7 @@ a {
 
 
 
-// pagination
+// Pagination
 .pagination,
 .pager {
   & > li {
@@ -351,13 +331,11 @@ a {
       &:focus {
         color: $grey-dark;
         color: $darker-aqua;
-        // background-color: $light-aqua;
         background-color: $grey-light;
         border: 1px solid $dark-aqua;
       }
       &:active,
       &:focus {
-        background-color: $blue-light;
         color: $grey-dark;
         background-color: $light-aqua;
         border-color: $grey;
@@ -413,7 +391,7 @@ a {
 
 
 
-// forms
+// Forms
 form {
   [type='text'],
   [type='number'],
@@ -500,6 +478,7 @@ form {
   border-radius: $radius-small;
 }
 
+// TODO:
 // Custom styled radio btns and checkboxes
 // form input {
 //   &[type='radio'],
@@ -595,7 +574,7 @@ form {
 
 // Tables
 .table {
-  &>tbody>tr:nth-of-type(even) {
+  & > tbody > tr:nth-of-type(even) {
     background-color: $grey-light;
   }
 }
@@ -646,7 +625,7 @@ form {
   border-radius: $radius;
 }
 
-// thumbnails
+// Thumbnails
 .thumbnail {
   padding: 0;
   border: 1px solid $grey-light;
@@ -662,7 +641,7 @@ form {
   }
 }
 
-// media
+// Media
 .media-heading {
   margin-bottom: 10px;
 }
@@ -688,7 +667,7 @@ form {
     .panel-title {
       padding: 1.5em 1em;
     }
-    a.panel-title { // yes, that's right - the a tag is the title. heading needs to be nested unless http://caniuse.com/#feat=css-has or silimar car be used
+    a.panel-title { // Yes, that's right - the a tag is the title. Heading needs to be nested unless http://caniuse.com/#feat=css-has or silimar car be used 😒
       display: block;
       border-bottom: none;
       &:hover,
@@ -705,7 +684,7 @@ form {
       &.collapsed:after {
         content: "\e114";
       }
-      & > * {   // stop the h4 etc from stuffing up the ">" symbol location
+      & > * {   // Stop the h4 etc from stuffing up the ">" symbol location
         display: inline;
       }
     }
@@ -721,7 +700,7 @@ form {
   }
 }
 
-// each type
+// Panel types
 .panel-default {
   border-color: $grey-border;
   .panel-heading {
@@ -816,7 +795,6 @@ form {
   h4,
   h5,
   h6 {
-    // margin-top: 10px;
     a {
       font-size: 100%;
     }
@@ -845,7 +823,7 @@ select.form-control {
 
 
 
-// dropdowns
+// Dropdown Menus
 .dropdown-menu {
   li {
     margin: 0;
@@ -862,13 +840,13 @@ select.form-control {
 }
 
 
-
 .caret {
   border-top-color: $primary-dark;
 }
 
 
-//  code snippets
+
+// Code snippets
 pre,
 code {
   background-color: $grey-light;
@@ -890,7 +868,7 @@ kbd {
 }
 
 
-// this isn't bootstrap, but may be useful
+// This isn't bootstrap, but may be useful
 .index-links {
   margin: 3.2em 0 1.6em 15px;
   border-left: 0.4em solid $grey-light;
