@@ -894,7 +894,7 @@ kbd {
 .index-links {
   margin: 3.2em 0 1.6em 15px;
   border-left: 0.4em solid $grey-light;
-  padding: 0 0 1.2em 1.2em;
+  padding: 0 0 1.2em 1.2em;   // yes, this is uneven. Should be: '0 0 0 1.2em' imo, but sticking to their look.
   h1,
   h2,
   h3,
