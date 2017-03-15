@@ -23,11 +23,13 @@
 
 
 @media (min-width: 768px) {
-  header .navbar-header {
-    width: 45%;
-    .brand-name a {
-      margin-top: 0.25em;
-      display: block;
+  header {
+    .navbar-header {
+      width: 45%;
+      .brand-name a {
+        margin-top: 0.25em;
+        display: block;
+      }
     }
   }
 }

@@ -155,7 +155,13 @@ body > footer {
 // Other typography elements
 p {
   font-weight: $font-weight-normal;
-  max-width: 40em;  // for readability
+}
+#main {
+  // for readability
+  li,
+  p {
+    max-width: 40em;  
+  }
 }
 .jumbotron p,
 .lead {
