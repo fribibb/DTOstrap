@@ -760,9 +760,9 @@ form {
   &.list-group-icon {
     margin-top: 2em;
     .list-group-item {
-      font-size: 18px;  // visually like a h4
+      font-size: 18px;  // Visually like a h4
       font-weight: bold;
-      padding: 0.8em 0 1.6em 0; // extra padding ...for some reason (requested by SDT)
+      padding: 0.8em 0 1.6em 30px; // Extra padding ...for some reason (requested by SDT)
       a {
         padding: 2px;
         margin-left: 45px;
