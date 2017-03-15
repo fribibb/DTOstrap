@@ -33,6 +33,9 @@ body {
         margin-left: 0.3em;
         background-color: $primary;
         transition: all 0.2s;
+        font-size: 47%;
+        top: -0.38em;
+        padding-bottom: 0.1em;
       }
     }
     a {
@@ -70,7 +73,8 @@ body {
           content: "";
           position: relative;
           bottom: -2.1em;
-          right: 5.3em;
+          // right: 5.3em;  // normal label size
+          right: 5.7em;     // smaller, inline label size
           float: right;
           width: 2.4em;
         }
@@ -82,7 +86,8 @@ body {
           content: "";
           position: relative;
           bottom: -2.1em;
-          right: 2.4em;
+          // right: 2.4em;  // normal label size
+          right: 2.75em;    // smaller, inline label size
           float: right;
           width: 2.9em;
         }
@@ -92,7 +97,8 @@ body {
           opacity: 1;
           text-decoration: none;
           &:before {
-            right: 7.3em;
+            // right: 7.3em;  // normal label size
+            right: 7.65em;    // smaller, inline label size
           }
         }
       }

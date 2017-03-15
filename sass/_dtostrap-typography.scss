@@ -79,14 +79,14 @@ body > footer {
       color: $grey-dark;
       text-decoration: none;
       outline: none;
-      border-bottom: solid 1px $light-aqua;
+      border-bottom: solid 1px $blue-bright;
       transition: 0.1s all ease-in-out;
       padding: 1px;
       &:hover,
       &:focus,
       &:active {
         color: $grey-dark;
-        background-color: $light-aqua;
+        background-color: $blue-bright;
         text-decoration: none;
       }
 
@@ -155,10 +155,10 @@ body > footer {
 // Other typography elements
 p {
   font-weight: $font-weight-normal;
+  max-width: 48em;   // for readability
 }
 #main {
-  li,
-  p {
+  li {
     max-width: 48em;   // for readability
   }
 }
