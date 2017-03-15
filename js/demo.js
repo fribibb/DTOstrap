@@ -1,6 +1,6 @@
 $(function() {
 
-  // create slug text
+  // Create slug text
   function slug(str) {
     var $slug = '';
     var trimmed = $.trim(str);
@@ -10,35 +10,29 @@ $(function() {
     return $slug.toLowerCase();
   }
 
-
+  // Table of Contents
   var ToC =
     "<nav class='index-links'>" +
       "<h1>On this page</h1>" +
       "<ol>";
-
   var newLine, el, title, link;
-
   $("body > .container h1:not(.CoT-ignore)").each(function() {
     el = $(this);
     title = el.text();
     link = slug(title);
     $(this).attr('id', link);
     link = "#" + link;
-
     newLine =
       "<li>" +
         "<a href='" + link + "'>" +
           title +
         "</a>" +
       "</li>";
-
     ToC += newLine;
   });
-
   ToC +=
     "</ol>" +
     "</nav>";
-
   $(".ToC").prepend(ToC);
 
 
@@ -59,12 +53,11 @@ $(function() {
   });
 
 
+  // Popovers
 	$(function () {
 		$('[data-toggle=popover]').popover()
 	    .focus(function () { $(this).trigger('mouseover'); })
 	    .blur(function () { $(this).trigger('mouseout'); });
-	})
-
-
+	});
 
 }); //jQuery

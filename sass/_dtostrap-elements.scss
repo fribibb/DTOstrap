@@ -61,16 +61,12 @@
 }
 
 // Large forms (commentted out = super large, full width form)
-.input-group-lg> {
-  // width: 100%;
+.input-group-lg > {
   .form-control,
   .input-group-addon,
   .input-group-btn > .btn {
     border-radius: $radius;
   }
-  // .btn {
-  //   padding: 10px 26px;
-  // }
 }
 
 
@@ -78,6 +74,7 @@
 // Labels
 .label {
   font-weight: $font-weight-normal;
+  border-radius: $radius-large;
 }
 .label-default {
   background-color: $grey;
