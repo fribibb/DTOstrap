@@ -47,6 +47,22 @@
 		"oAP": "\/css\/dto.css.map",
 		"oF": 0
 		},
+	"\/css\/dtostrap.css": {
+		"aP": 0,
+		"bl": 0,
+		"ft": 16,
+		"ma": 0,
+		"oA": 2,
+		"oAP": "\/css\/dtostrap-min.css",
+		"oF": 0,
+		"oS": 0
+		},
+	"\/css\/dtostrap.css.map": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/css\/dtostrap.css.map",
+		"oF": 0
+		},
 	"\/favicon\/favicon-114.png": {
 		"ft": 32768,
 		"iS": 19271,
@@ -393,7 +409,7 @@
 		"ft": 4,
 		"ma": 1,
 		"oA": 0,
-		"oAP": "\/css\/dto.css",
+		"oAP": "\/css\/dtostrap.css",
 		"oF": 2,
 		"oS": 3,
 		"uL": 1
