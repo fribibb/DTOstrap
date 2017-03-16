@@ -30,7 +30,7 @@
       }
     }
   }
-}
+} // min-width: 768px
 
 
 // Breakpoint for mobile/hamburger menu
@@ -103,8 +103,17 @@
       margin-left: -10px;
     }
   }
-  body>header .brand-name {
+  body > header .brand-name {
     margin: 0 15px;
+  }
+  // Date layouts - mostly stolen from previous work on australia.gov.au
+  .calendar-list {
+    .calendar-item {
+      .calendar-title {
+        padding-bottom: 10px;
+        line-height: 1.1;
+      }
+    }
   }
 } // max-width: 768px
 
@@ -113,7 +122,7 @@
 
 @media screen and (min-width: 768px) {
   header {
-    h2.brand.has-img {
+    .brand.has-img {
       margin-top: -0.5em;
       img {
         margin-top: 0.5em;

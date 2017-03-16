@@ -13,7 +13,7 @@ $(function() {
   // Table of Contents
   var ToC =
     "<nav class='index-links'>" +
-      "<h1>On this page</h1>" +
+      "<h2>On this page</h2>" +
       "<ol>";
   var newLine, el, title, link;
   $("body > .container h1:not(.CoT-ignore)").each(function() {
@@ -33,7 +33,7 @@ $(function() {
   ToC +=
     "</ol>" +
     "</nav>";
-  $(".ToC").prepend(ToC);
+  $(".demo-ToC").prepend(ToC);
 
 
   // Smooth Scrolling

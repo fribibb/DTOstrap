@@ -157,10 +157,9 @@ p {
   font-weight: $font-weight-normal;
   max-width: 48em;   // for readability
 }
-#main {
-  li {
-    max-width: 48em;   // for readability
-  }
+.alert,
+#main li {
+  max-width: 48em;   // for readability
 }
 .jumbotron p,
 .lead {

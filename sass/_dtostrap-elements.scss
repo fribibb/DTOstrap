@@ -190,6 +190,19 @@ a {
   border-left: 0.4em solid $danger;
 }
 
+.alert-calendar {
+  border-left: 0.4em solid $primary;
+  .calendar-date,
+  .calendar-name {
+    display: block;
+    font-size: 32px;
+    line-height: 1.2;
+  }
+  .calendar-date {
+    font-weight: 700;
+  }
+}
+
 // Basically the p tag equiv of above
 .text-muted {
   color: $grey;
@@ -214,20 +227,23 @@ a {
 
 
 // Jumbotrons and Wells
-.container {
-  .jumbotron,
-  .well {
-    border-radius: $radius-small;
-    border: 0;
-    background-color: $grey-light;
-    h1,
-    h2,
-    h3,
-    h4,
-    h5,
-    h6 {
-        margin-top: 0;
-        margin-bottom: 0.8em;
+.jumbotron,
+.well {
+  border-radius: $radius-small;
+  border: 0;
+  background-color: $grey-light;
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    &:first-child {
+      margin-top: 0;
+      margin-bottom: 0.8em;
+    }
+    &:last-child {
+      margin-bottom: 0;
     }
   }
 }
@@ -631,11 +647,16 @@ form {
     .meta,
     time,
     small {
-      color: $grey;
+      @extend .meta;
       padding: 0.8em 0;
       display: inline-block;
     }
   }
+}
+
+// Misc. ".meta" text
+.meta {
+  color: $grey;
 }
 
 // Media
@@ -790,7 +811,7 @@ form {
   border-right: none;
   &:first-child,
   &:last-child {
-      border-radius: 0;
+    border-radius: 0;
   }
   h1,
   h2,
@@ -896,7 +917,7 @@ kbd {
 
 // This isn't bootstrap, but may be useful
 .index-links {
-  margin: 3.2em 0 1.6em 15px;
+  margin: 3.2em 0 1.6em 0;
   border-left: 0.4em solid $grey-light;
   padding: 0 0 1.2em 1.2em;   // yes, this is uneven. Should be: '0 0 0 1.2em' imo, but sticking to their look.
   h1,
@@ -1015,5 +1036,52 @@ kbd {
     background-color: $grey-light;
     color: $primary-dark;
     font-weight: 500;
+  }
+}
+
+
+
+// Date layout - mostly stolen from previous work on australia.gov.au
+.calendar-list {
+  max-width: 48em;
+  padding-left: 0;
+  .calendar-item {
+    display: table;
+    width: 100%;
+    background-color: $grey-light;
+    border-bottom: 1px solid #fff;
+    .calendar-number {
+      display: block;
+      margin: 6px 0;
+      color: $primary;
+      font-size: 1.8em;
+    }
+    .calendar-title {
+      padding: 0 0 0 20px;
+      line-height: 1.4;
+      padding-top: 3px;
+      font-size: 1.25em;
+    }
+    .calendar-note {
+      font-size: 14px;
+      display: block;
+      margin: 3px 0;
+      padding-right: 10px;
+      color: $grey-dark;
+    }
+    .calendar-date,
+    .calendar-name {
+      width: 70px;
+      text-align: center;
+      text-transform: uppercase;
+      line-height: 0.8;
+      padding: 12px 10px;
+      border-right: 1px solid #fff;
+    }
+    .calendar-date,
+    .calendar-title {
+      display: table-cell;
+      vertical-align: middle;
+    }
   }
 }

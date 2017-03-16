@@ -47,19 +47,13 @@
     <header class="navbar">
       <div class="container">
         <div class="navbar-header">
-          <!-- <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button> -->
-          <h2 class="brand brand-name navbar-left has-img style-line">
-           <a href="#">
+          <h1 class="brand brand-name navbar-left has-img style-line CoT-ignore">
+           <a href="/">
              <img src="./img/govicon-white.svg" alt="logo" height="70">
              DTOstrap
              <span class="label">beta</span>
            </a>
-         </h2>
+         </h1>
         </div>
         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
           <span class="sr-only">Toggle navigation</span>
@@ -69,7 +63,7 @@
         </button>
         <nav id="navbar" class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="#">Home</a></li>
+            <li class="active"><a href="/">Home</a></li>
             <li><a href="#about">About</a></li>
             <li class="dropdown">
               <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -83,18 +77,36 @@
                 <li><a href="#">One more separated link</a></li>
               </ul>
             </li>
-            <li><a href="#contact">Contact</a></li>
+            <li><a href="#footer">Footer</a></li>
           </ul>
         </nav><!--/.nav-collapse -->
       </div>
     </header>
 
+    <div class="jumbotron">
+      <div class="container" id="about">
+        <h2>
+          DTO UI-Kit Bootstrap Theme
+        </h2>
+        <p>
+          A drop-in Bootstrap 3 stylesheet in the style of the Australian Government DTO's <a href="https://gov-au-ui-kit.apps.staging.digital.gov.au/">UI-Kit</a>.
+        </p>
+        <small class="meta">
+          Last updated: March 2017
+        </small>
+      </div>
+    </div>
+
     <div class="container" role="main">
 
-
-      <div class="ToC row">
+      <div class="row">
+        <div class="demo-ToC col-md-12">
+          <!--
+            JS will populate this,
+            ...because basically, I'm too lazy (efficient?) to actually create the anchors in the content.
+          -->
+        </div>
       </div>
-
 
 
       <div class="page-header">
@@ -756,6 +768,14 @@
       <div class="page-header">
         <h1>Alerts</h1>
       </div>
+      <h2>Standard</h2>
+      <div class="alert alert-primary" role="alert">
+        <strong>Heads up!</strong> This alert needs your attention, but it's not important.
+      </div>
+      <div class="alert alert-default" role="alert">
+        <strong>Heads up!</strong> This alert needs your attention, but it's not important.
+      </div>
+      <h2>Status</h2>
       <div class="alert alert-success" role="alert">
         <strong>Well done!</strong> You successfully read this important alert message.
       </div>
@@ -768,13 +788,20 @@
       <div class="alert alert-danger" role="alert">
         <strong>Oh snap!</strong> Change a few things up and try submitting again.
       </div>
-      <div class="alert alert-default" role="alert">
-        <strong>Heads up!</strong> This alert needs your attention, but it's not important.
+      <h2>Calendar Callout<br>
+        <small>Non-standard Bootstrap class</small>
+      </h2>
+      <!-- http://guides.service.gov.au/design-guide/patterns/callouts/index.html -->
+      <div class="alert alert-calendar" role="alert">
+        <p>The next public holiday is:</p>
+        <time class="calendar-date" datetime="2017-01-01T00:00:00+00:00">Sunday 1 January</time>
+        <span class="calendar-name">New Year's Day</span>
       </div>
 
       <div class="page-header">
         <h1>Contextual colors</h1>
       </div>
+      <p>Plain paragraph text here.</p>
       <p class="text-muted">Some muted text here.</p>
       <p class="text-primary">Some primary text here.</p>
       <p class="text-success">Some success text here.</p>
@@ -880,7 +907,7 @@
                   Awesomeness
                 </a>
               </h3>
-              Other text here
+              Other text here then some other text here too.
             </li>
           </ul>
         </div><!-- /.col-sm-4 -->
@@ -982,7 +1009,7 @@
         <div class="panel panel-default">
           <div class="panel-heading">
             <a class="panel-title" data-toggle="collapse" href="#collapse1">
-              <h4>Collapsible panel</h4>
+              <h3>Collapsible panel</h3>
             </a>
           </div>
           <div id="collapse1" class="panel-collapse collapse">
@@ -1235,18 +1262,34 @@ response.</textarea>
 
       <div class="page-header">
         <h1>
-          Calendar table (uncomplete)<br>
+          Calendar table<br>
           <small>Non-standard Bootstrap class</small>
       </h1>
       </div>
-      {http://guides.service.gov.au/design-guide/patterns/calendar-table/index.html}
+      <ul class="calendar-list">
+        <li class="calendar-item">
+          <div class="calendar-date">
+            Fri
+            <span class="calendar-number">14</span>
+            Apr
+          </div>
+          <div class="calendar-title">
+            Good Friday
+          </div>
+        </li>
+        <li class="calendar-item">
+          <div class="calendar-date">
+            Sat
+            <span class="calendar-number">15</span>
+            Apr
+          </div>
+          <div class="calendar-title">
+            Easter Saturday
+            <span class="calendar-note">This is a note about this specific calendar event.</span>
+          </div>
+        </li>
+      </ul>
 
-      <div class="page-header">
-      <h1>Calendar Callout (uncomplete)<br>
-        <small>Non-standard Bootstrap class</small>
-      </h1>
-      </div>
-      {http://guides.service.gov.au/design-guide/patterns/callouts/index.html}
 
       <div class="page-header">
         <h1>Pagination</h1>
@@ -1317,7 +1360,7 @@ response.</textarea>
     </div> <!-- /container -->
 
 
-    <footer>
+    <footer id="footer">
       <h1 class="sr-only">Footer links</h1>
       <div class="container">
         <div class="row">

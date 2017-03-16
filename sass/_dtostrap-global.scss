@@ -13,7 +13,9 @@ body {
     }
     .navbar-brand,
     .brand-name {
+      font-weight: 400;
       margin: 0;
+      font-size: 30px;
       a {
         &:hover,
         &:active,
@@ -63,7 +65,7 @@ body {
     .inverse {
       // TODO ********************
     }
-    h2.brand.style-line {   // DTO 3 shades of $blue thick underline
+    .brand.style-line {   // DTO 3 shades of $blue thick underline
       a {
         &:before {
           transition: 0.35s all; // transitions don't work for gradient bgs, so using position
@@ -109,6 +111,10 @@ body {
   // Page header
   .page-header {
     margin-top: 100px;
+  }
+
+  .navbar + .jumbotron {
+    margin-top: -20px;
   }
 
 
