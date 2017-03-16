@@ -56,7 +56,9 @@ body {
       border-radius: 0;
     }
     .navbar-right {
-      margin-top: 0.5em;  // vertically center the menu, assuming default logo size is used. TODO: do this smarter.
+      // vertically center the menu, assuming default logo size is used. TODO: do this smarter.
+      // margin-top: 0.5em;
+      margin-top: 1.1em;
     }
     .caret {
       border-top-color: #fff;
