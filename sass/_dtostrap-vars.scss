@@ -36,9 +36,16 @@ $radius-large: ($radius * 4);               // for labels
 
 // Font families
 $font-serif: 'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
+// Using Web Font:
 $font-sans-serif: 'Open Sans', Verdana, 'Bitstream Vera Sans', sans-serif;
+// Using system fonts:  (https://www.smashingmagazine.com/2015/11/using-system-ui-fonts-practical-guide/)
+$font-sans-serif-system: -apple-system, BlinkMacSystemFont,
+                          "Segoe UI", "Roboto", "Oxygen",
+                          "Ubuntu", "Cantarell", "Fira Sans",
+                          "Droid Sans", "Helvetica Neue", "Open Sans", sans-serif;
 $font-monospace: 'Lucida Sans Typewriter', 'Lucida Console', Monaco, 'Bitstream Vera Sans Mono', monospace;
 $font-family-base: $font-sans-serif;
+// $font-family-base: $font-sans-serif-system;  // I like the idea but can't bring myself to add yet another inconsistancy just yet..
 
 // Font weights
 $font-weight-normal: 400;
