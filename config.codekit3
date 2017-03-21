@@ -65,7 +65,7 @@
 		},
 	"\/favicon\/favicon-114.png": {
 		"ft": 32768,
-		"iS": 19271,
+		"iS": 3498,
 		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-114.png",
@@ -75,7 +75,7 @@
 		},
 	"\/favicon\/favicon-120.png": {
 		"ft": 32768,
-		"iS": 20484,
+		"iS": 3723,
 		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-120.png",
@@ -85,7 +85,7 @@
 		},
 	"\/favicon\/favicon-144.png": {
 		"ft": 32768,
-		"iS": 28061,
+		"iS": 4418,
 		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-144.png",
@@ -95,7 +95,7 @@
 		},
 	"\/favicon\/favicon-152.png": {
 		"ft": 32768,
-		"iS": 30305,
+		"iS": 4630,
 		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-152.png",
@@ -105,7 +105,7 @@
 		},
 	"\/favicon\/favicon-16.png": {
 		"ft": 32768,
-		"iS": 1614,
+		"iS": 1213,
 		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-16.png",
@@ -115,17 +115,17 @@
 		},
 	"\/favicon\/favicon-256.png": {
 		"ft": 32768,
-		"iS": 69066,
+		"iS": 7399,
 		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-256.png",
 		"oF": 0,
-		"opt": 1,
+		"opt": 0,
 		"q": 100
 		},
 	"\/favicon\/favicon-32.png": {
 		"ft": 32768,
-		"iS": 3660,
+		"iS": 1108,
 		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-32.png",
@@ -135,7 +135,7 @@
 		},
 	"\/favicon\/favicon-48.png": {
 		"ft": 32768,
-		"iS": 5807,
+		"iS": 1570,
 		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-48.png",
@@ -145,7 +145,7 @@
 		},
 	"\/favicon\/favicon-57.png": {
 		"ft": 32768,
-		"iS": 7239,
+		"iS": 1832,
 		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-57.png",
@@ -155,7 +155,7 @@
 		},
 	"\/favicon\/favicon-64.png": {
 		"ft": 32768,
-		"iS": 8209,
+		"iS": 1990,
 		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-64.png",
@@ -165,7 +165,7 @@
 		},
 	"\/favicon\/favicon-72.png": {
 		"ft": 32768,
-		"iS": 9542,
+		"iS": 2225,
 		"l": 1,
 		"oA": 0,
 		"oAP": "\/favicon\/favicon-72.png",
@@ -173,25 +173,11 @@
 		"opt": 1,
 		"q": 100
 		},
-	"\/favicon\/favicon.html": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/favicon\/favicon.html",
-		"oF": 0
-		},
 	"\/favicon\/favicon.ico": {
 		"ft": 8192,
 		"oA": 2,
 		"oAP": "\/favicon\/favicon.ico",
 		"oF": 0
-		},
-	"\/favicon\/favicon.jade": {
-		"cOD": 1,
-		"ft": 512,
-		"oA": 0,
-		"oAP": "\/favicon\/favicon.html",
-		"oF": 0,
-		"oS": 0
 		},
 	"\/Icon\r": {
 		"ft": 8192,
@@ -208,6 +194,16 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/img\/favicon-base.png": {
+		"ft": 32768,
+		"iS": 4026,
+		"l": 1,
+		"oA": 0,
+		"oAP": "\/img\/favicon-base.png",
+		"oF": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/img\/govicon-gradient.png": {
 		"ft": 32768,
