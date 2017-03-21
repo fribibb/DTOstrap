@@ -37,7 +37,7 @@ $(function() {
 
 
   // Smooth Scrolling
-  $('a[href*=\\#]:not([href=\\#]):not(.panel-title)').click(function() {
+  $('a[href*=\\#]:not([href=\\#]):not(.panel-title):not(.carousel-control)').click(function() {
     $('.anchorHighlight').removeClass('anchorHighlight');
     if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') || location.hostname === this.hostname) {
       var target = $(this.hash);
