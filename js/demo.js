@@ -1,3 +1,4 @@
+// jQuery
 $(function() {
 
   // Create slug text
@@ -58,6 +59,7 @@ $(function() {
 		$('[data-toggle=popover]').popover()
 	    .focus(function () { $(this).trigger('mouseover'); })
 	    .blur(function () { $(this).trigger('mouseout'); });
+		$('[data-toggle=tooltip]').tooltip();
 	});
 
-}); //jQuery
+}); // end jQuery ('$(function()..')

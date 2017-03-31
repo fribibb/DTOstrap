@@ -21,7 +21,7 @@
     <!-- Optional: IE10 Tile -->
     <meta name="msapplication-TileColor" content="#ffffff"/>
     <meta name="msapplication-TileImage" content="favicon/favicon-144.png"/>
-    <!-- Optional: iOS + Androids ...-->
+    <!-- Optional: iOS + Androids &hellip;-->
     <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicon/favicon-152.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon/favicon-144.png"/>
     <link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicon/favicon-120.png"/>
@@ -29,8 +29,11 @@
     <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon/favicon-72.png"/>
     <link rel="apple-touch-icon-precomposed" href="favicon/favicon-57.png"/>
 
-    <!-- Bootstrap core CSS -->
+    <!-- Bootstrap core CSS, inclues glyphicons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Font Awesome, for social icons -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
 
     <!-- Open Sans from Google fonts -->
     <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" rel="stylesheet">
@@ -43,8 +46,7 @@
   </head>
 
   <body>
-    <!-- Fixed navbar -->
-    <header class="navbar">
+    <!-- <header class="navbar">
       <div class="container">
         <div class="navbar-header">
           <h1 class="brand brand-name navbar-left has-img style-line CoT-ignore">
@@ -61,7 +63,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
         </button>
-        <nav id="navbar" class="navbar-collapse collapse">
+        <nav class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
             <li class="active"><a href="/">Home</a></li>
             <li class="dropdown">
@@ -78,7 +80,52 @@
             </li>
             <li><a href="https://github.com/fribibb/DTOstrap">View on GitHub</a></li>
           </ul>
-        </nav><!--/.nav-collapse -->
+        </nav>
+      </div>
+    </header> -->
+
+    <header class="navbar">
+      <div class="container">
+        <div class="row vcenter">
+          <div class="col-md-6 col-xs-12">
+            <div class="navbar-header">
+               <a href="/" class="brand navbar-left has-img vcenter">
+                 <img src="./img/govicon-white.svg" alt="logo" height="70">
+                 <h1 class="brand-heading style-line CoT-ignore">
+                   DTOstrap
+                   <span class="label">beta</span>
+                 </h1>
+               </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-menu" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="navbar-collapse collapse" id="main-menu">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://github.com/fribibb/DTOstrap">View on GitHub</a></li>
+              </ul>
+            </nav><!--/.nav-collapse -->
+          </div>
+        </div>
       </div>
     </header>
 
@@ -102,81 +149,292 @@
         <div class="demo-ToC col-md-12">
           <!--
             JS will populate this,
-            ...because basically, I'm too lazy (efficient?) to actually create the anchors in the content.
+            &hellip;because basically, I'm too lazy (/efficient?) to actually create the anchors in the content.
           -->
         </div>
       </div>
 
 
       <div class="page-header">
-        <h1>Headings</h1>
+        <h1>Header options</h1>
       </div>
-      <h1 class="CoT-ignore">
-        Heading 1
-      </h1>
       <h2>
-        Heading 2
+        Small site <br>
+        <small>With small navigation beside and no search.</small>
       </h2>
-      <h3>
-        Heading 3
-      </h3>
-      <h4>
-        Heading 4
-      </h4>
-      <h5>
-        Heading 5
-      </h5>
-      <h6>
-        Heading 6
-      </h6>
+    </div> <!-- container -->
 
-      <p>
-        Paragraph text here. Paragraph inline <a href="#">link</a> here. Paragraph text here. Paragraph text here. <a href="https://www.w3.org/WAI/intro/aria" rel="external">an external link</a>.
-      </p>
+    <header class="navbar">
+      <div class="container">
+        <div class="row vcenter">
+          <div class="col-md-6 col-xs-12">
+            <div class="navbar-header">
+               <a href="/" class="brand navbar-left has-img vcenter">
+                 <img src="./img/govicon-white.svg" alt="logo" height="70">
+                 <h1 class="brand-heading style-line CoT-ignore">
+                   DTOstrap
+                   <span class="label">beta</span>
+                 </h1>
+               </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-xs-12">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#demo-menu-1" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="navbar-collapse collapse" id="demo-menu-1">
+              <ul class="nav navbar-nav navbar-right">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://github.com/fribibb/DTOstrap">View on GitHub</a></li>
+              </ul>
+            </nav><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+    </header>
 
-      <h1 class="CoT-ignore">
-        Heading 1 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
-      </h1>
+
+    <div class="container" role="main">
       <h2>
-        Heading 2 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
+        Header search <br>
+        <small>With full width navigation below.</small>
       </h2>
-      <h3>
-        Heading 3 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
-      </h3>
-      <h4>
-        Heading 4 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
-      </h4>
-      <h5>
-        Heading 5 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
-      </h5>
-      <h6>
-        Heading 6 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
-      </h6>
-      <p>
-        Paragraph text that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
-      </p>
+    </div>
 
-      <h1 class="CoT-ignore">
-        <a href="#">Linked heading 1 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
-      </h1>
+    <header class="navbar">
+      <div class="container vcenter">
+        <div class="row">
+          <div class="col-md-8 col-sm-12">
+            <div class="navbar-header">
+               <a href="/" class="brand navbar-left has-img vcenter">
+                 <img src="./img/govicon-white.svg" alt="logo" height="70">
+                 <h1 class="brand-heading style-line CoT-ignore">
+                   DTOstrap
+                   <span class="label">beta</span>
+                 </h1>
+               </a>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <form class="input-group">
+              <input type="text" class="form-control" placeholder="Search for&hellip;">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                  <i class="glyphicon glyphicon-search"></i>
+                  <span class="sr-only">Search</span>
+                </button>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-12">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#demo-menu-2" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="navbar-collapse collapse" id="demo-menu-2">
+              <ul class="nav navbar-nav nav-tabs nav-justified">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://github.com/fribibb/DTOstrap">View on GitHub</a></li>
+              </ul>
+            </nav><!--/.nav-collapse -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="container">
       <h2>
-        <a href="#">Linked heading 2 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
+        Full header branding <br>
+        <small>With navigation and search underneath.</small>
       </h2>
-      <h3>
-        <a href="#">Linked heading 3 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
-      </h3>
-      <h4>
-        <a href="#">Linked heading 4 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
-      </h4>
-      <h5>
-        <a href="#">Linked heading 5 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
-      </h5>
-      <h6>
-        <a href="#">Linked heading 6 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
-      </h6>
-      <p>
-        <a href="#">Linked paragraph text that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
-      </p>
+    </div> <!-- container -->
+
+    <header class="navbar">
+      <div class="container">
+        <div class="row vcenter">
+          <div class="col-md-6 col-sm-12">
+            <div class="navbar-header">
+               <a href="/" class="brand navbar-left has-img vcenter">
+                 <img src="./img/govicon-white.svg" alt="logo" height="70">
+                 <h1 class="brand-heading style-line CoT-ignore">
+                   DTOstrap
+                   <span class="label">beta</span>
+                 </h1>
+               </a>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12">
+            <p class="tagline text-right">
+              With a really long tagline &mdash; leaving no room for anything else.
+            </p>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="main-nav">
+      <div class="container">
+        <div class="row">
+          <div class="col-md-9">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#demo-menu-3" aria-expanded="false" aria-controls="navbar">
+              <span class="sr-only">Toggle navigation</span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </button>
+            <nav class="navbar-collapse collapse" id="demo-menu-3">
+              <ul class="nav navbar-nav nav-tabs nav-justified">
+                <li class="active"><a href="/">Home</a></li>
+                <li><a href="#">Link</a></li>
+                <li><a href="#">Link</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="dropdown-header">Nav header</li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+                <li><a href="https://github.com/fribibb/DTOstrap">View on GitHub</a></li>
+              </ul>
+            </nav><!--/.nav-collapse -->
+          </div>
+          <div class="col-md-3">
+            <form class="input-group">
+              <input type="text" class="form-control" placeholder="Search for&hellip;">
+              <span class="input-group-btn">
+                <button class="btn btn-default" type="button">
+                  <i class="glyphicon glyphicon-search"></i>
+                  <span class="sr-only">Search</span>
+                </button>
+              </span>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
+
+
+
+
+    <div class="container" role="main">
+    <div class="row">
+      <div class="col-md-12">
+        <div class="page-header">
+          <h1>Headings</h1>
+        </div>
+        <h1 class="CoT-ignore">
+          Heading 1
+        </h1>
+        <h2>
+          Heading 2
+        </h2>
+        <h3>
+          Heading 3
+        </h3>
+        <h4>
+          Heading 4
+        </h4>
+        <h5>
+          Heading 5
+        </h5>
+        <h6>
+          Heading 6
+        </h6>
+
+        <p>
+          Paragraph text here. Paragraph inline <a href="#">link</a> here. Paragraph text here. Paragraph text here. <a href="https://www.w3.org/WAI/intro/aria" rel="external">an external link</a>.
+        </p>
+
+        <h1 class="CoT-ignore">
+          Heading 1 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
+        </h1>
+        <h2>
+          Heading 2 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
+        </h2>
+        <h3>
+          Heading 3 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
+        </h3>
+        <h4>
+          Heading 4 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
+        </h4>
+        <h5>
+          Heading 5 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
+        </h5>
+        <h6>
+          Heading 6 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
+        </h6>
+        <p>
+          Paragraph text that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
+        </p>
+
+        <h1 class="CoT-ignore">
+          <a href="#">Linked heading 1 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
+        </h1>
+        <h2>
+          <a href="#">Linked heading 2 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
+        </h2>
+        <h3>
+          <a href="#">Linked heading 3 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
+        </h3>
+        <h4>
+          <a href="#">Linked heading 4 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
+        </h4>
+        <h5>
+          <a href="#">Linked heading 5 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
+        </h5>
+        <h6>
+          <a href="#">Linked heading 6 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
+        </h6>
+        <p>
+          <a href="#">Linked paragraph text that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
+        </p>
+      </div>
 
 
       <div class="page-header">
@@ -222,7 +480,7 @@
         <button type="button" class="btn btn-xs btn-link">Link</button>
       </p>
       <h2>Button groups</h2>
-      <div class="btn-group" role="group" aria-label="...">
+      <div class="btn-group" role="group" aria-label="&hellip;">
         <button type="button" class="btn btn-default">Left</button>
         <button type="button" class="btn btn-default">Middle</button>
         <button type="button" class="btn btn-default">Right</button>
@@ -404,9 +662,9 @@
       <div class="page-header">
         <h1>Images</h1>
       </div>
-      <img src="https://placehold.it/200x200/efefef/333333" class="img-rounded" alt="">
-      <img src="https://placehold.it/200x200/efefef/333333" class="img-circle" alt="">
-      <img src="https://placehold.it/200x200/efefef/333333" class="img-thumbnail" alt="A generic square placeholder image with a white border around it, making it resemble a photograph taken with an old instant camera">
+      <img src="https://placeholdit.imgix.net/~text?txtsize=19&bg=efefef&txtclr=333333&txt=200%C3%97200&w=200&h=200" class="img-rounded" alt="demo image">
+      <img src="https://placeholdit.imgix.net/~text?txtsize=19&bg=efefef&txtclr=333333&txt=200%C3%97200&w=200&h=200" class="img-circle" alt="demo image">
+      <img src="https://placeholdit.imgix.net/~text?txtsize=19&bg=efefef&txtclr=333333&txt=200%C3%97200&w=200&h=200" class="img-thumbnail" alt="demo image">
 
       <div class="page-header">
         <h1>Cards (advanced thumbnails)</h1>
@@ -414,7 +672,7 @@
       <div class="row">
         <div class="col-sm-6 col-md-3">
           <div class="thumbnail">
-            <img alt="100%x200" src="https://placehold.it/100%x200/efefef/333333?text=%20">
+            <img alt="image" src="https://placeholdit.imgix.net/~text?txtsize=50&bg=efefef&txtclr=333333&txt=image+&w=300&h=200&txttrack=0">
             <div class="caption">
               <h3>Thumbnail label</h3>
               <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -427,7 +685,7 @@
         </div>
         <div class="col-sm-6 col-md-5">
           <div class="thumbnail">
-            <img alt="100%x200" src="https://placehold.it/100%x200/efefef/333333?text=%20">
+            <img alt="image" src="https://placeholdit.imgix.net/~text?txtsize=50&bg=efefef&txtclr=333333&txt=image+&w=300&h=200&txttrack=0">
             <div class="caption">
               <h3><a href="#">Thumbnail label link</a></h3>
               <small>Subtext for header, eg meta info text</small>
@@ -440,7 +698,8 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> <!-- row -->
+    </div> <!-- container -->
 
 
     <div class="coloured-background">
@@ -451,7 +710,7 @@
           <div class="row">
             <div class="col-sm-6 col-md-3">
               <div class="thumbnail">
-                <img alt="100%x200" src="https://placehold.it/100%x200/efefef/333333?text=%20">
+                <img alt="image" src="https://placeholdit.imgix.net/~text?txtsize=50&bg=efefef&txtclr=333333&txt=image+&w=300&h=200&txttrack=0">
                 <div class="caption">
                   <h3>Thumbnail label</h3>
                   <p>Cras justo odio, dapibus ac facilisis in, egestas eget quam. Donec id elit non mi porta gravida at eget metus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
@@ -464,7 +723,7 @@
             </div>
             <div class="col-sm-6 col-md-5">
               <div class="thumbnail">
-                <img alt="100%x200" src="https://placehold.it/100%x200/efefef/333333?text=%20">
+                <img alt="image" src="https://placeholdit.imgix.net/~text?txtsize=50&bg=efefef&txtclr=333333&txt=image+&w=300&h=200&txttrack=0">
                 <div class="caption">
                   <h3><a href="#">Thumbnail label link</a></h3>
                   <small>Subtext for header, eg meta info text</small>
@@ -490,7 +749,7 @@
         <div class="col-sm-6 col-md-4">
           <div class="media">
             <div class="media-left">
-              <img alt="64x64" class="media-object" src="https://placehold.it/64x64/efefef/333333">
+              <img alt="64x64" class="media-object" src="https://placeholdit.imgix.net/~text?txtsize=8&bg=efefef&txtclr=333333&txt=64%C3%9764&w=64&h=64">
             </div>
             <div class="media-body">
               <h4 class="media-heading">Media heading</h4>
@@ -500,7 +759,7 @@
           <div class="media">
             <div class="media-left">
               <a href="#">
-                <img alt="64x64" class="media-object" src="https://placehold.it/64x64/efefef/333333">
+                <img alt="64x64" class="media-object" src="https://placeholdit.imgix.net/~text?txtsize=8&bg=efefef&txtclr=333333&txt=64%C3%9764&w=64&h=64">
               </a>
             </div>
             <div class="media-body">
@@ -508,6 +767,154 @@
               Cras sit amet nibh libero, in gravida nulla. Nulla vel metus scelerisque ante sollicitudin commodo. Cras purus odio, vestibulum in vulputate at, tempus viverra turpis. Fusce condimentum nunc ac nisi vulputate fringilla. Donec lacinia congue felis in faucibus.
             </div>
           </div>
+        </div>
+      </div>
+
+
+      <div class="page-header">
+        <h1>Social icons</h1>
+        <small>Requires Font Awesome (or similar), as glyphicons doesn't include all required icons.</small>
+      </div>
+      <h2>Circle &mdash; Icons only</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="social-media-links-circle">
+            <li>
+              <a title="Like DTOstrap on Facebook" data-toggle="tooltip" data-placement="top" href="https://facebook.com/DTOstrap">
+                <span class="sr-only">Like DTOstrap on Facebook</span>
+              </a>
+            </li>
+            <li>
+              <a title="Follow DTOstrap on Dribbble" data-toggle="tooltip" data-placement="top" href="https://dribbble.com/DTOstrap">
+                <span class="sr-only">Follow DTOstrap on Dribbble</span>
+              </a>
+            </li>
+            <li>
+              <a title="Follow DTOstrap on Pinterest" data-toggle="tooltip" data-placement="top" href="https://pinterest.com/DTOstrap">
+                <span class="sr-only">Follow DTOstrap on Pinterest</span>
+              </a>
+            </li>
+            <li>
+              <a title="Follow DTOstrap on Google Plus" data-toggle="tooltip" data-placement="top" href="https://plus.google.com/DTOstrap">
+                <span class="sr-only">Follow DTOstrap on Google Plus</span>
+              </a>
+            </li>
+            <li>
+              <a title="View DTOstrap on GitHub" data-toggle="tooltip" data-placement="top" href="https://github.com/DTOstrap">
+                <span class="sr-only">View DTOstrap on GitHub</span>
+              </a>
+            </li>
+            <li>
+              <a title="Follow DTOstrap on Tumblr" data-toggle="tooltip" data-placement="top" href="https://tumblr.com/DTOstrap">
+                <span class="sr-only">Follow DTOstrap on Tumblr</span>
+              </a>
+            </li>
+            <li>
+              <a title="Follow DTOstrap on YouTube" data-toggle="tooltip" data-placement="top" href="https://youtube.com/DTOstrap">
+                <span class="sr-only">Follow DTOstrap on YouTube</span>
+              </a>
+            </li>
+            <li>
+              <a title="Follow DTOstrap on Flickr" data-toggle="tooltip" data-placement="top" href="https://flickr.com/DTOstrap">
+                <span class="sr-only">Follow DTOstrap on Flickr</span>
+              </a>
+            </li>
+            <li>
+              <a title="Follow DTOstrap on Vimeo" data-toggle="tooltip" data-placement="top" href="https://vimeo.com/DTOstrap">
+                <span class="sr-only">Follow DTOstrap on Vimeo</span>
+              </a>
+            </li>
+            <li>
+              <a title="Follow DTOstrap on Instagram" data-toggle="tooltip" data-placement="top" href="https://instagram.com/DTOstrap">
+                <span class="sr-only">Follow DTOstrap on Instagram</span>
+              </a>
+            </li>
+            <li>
+              <a title="Follow DTOstrap on CodePen" data-toggle="tooltip" data-placement="top" href="https://codepen.io/DTOstrap">
+                <span class="sr-only">Follow DTOstrap on CodePen</span>
+              </a>
+            </li>
+            <li>
+              <a title="Follow DTOstrap on LinkedIn" data-toggle="tooltip" data-placement="top" href="https://linkedin.com/DTOstrap">
+                <span class="sr-only">Follow DTOstrap on LinkedIn</span>
+              </a>
+            </li>
+            <li>
+              <a title="Follow DTOstrap on Twitter" data-toggle="tooltip" data-placement="top" href="https://twitter.com/DTOstrap">
+                <span class="sr-only">Follow DTOstrap on Twitter</span>
+              </a>
+            </li>
+            <li>
+              <a title="View DTOstrap on WordPress.org" data-toggle="tooltip" data-placement="top" href="https://wordpress.org/DTOstrap">
+                <span class="sr-only">View DTOstrap on WordPress.org</span>
+              </a>
+            </li>
+            <li>
+              <a title="Follow DTOstrap on WordPress.com" data-toggle="tooltip" data-placement="top" href="https://wordpress.com/DTOstrap">
+                <span class="sr-only">Follow DTOstrap on WordPress.com</span>
+              </a>
+            </li>
+            <li>
+              <a title="Follow DTOstrap on Drupal.org" data-toggle="tooltip" data-placement="top" href="https://drupal.org/DTOstrap">
+                <span class="sr-only">Follow DTOstrap on Drupal.org</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <h2>Inline &mdash; Icons with text</h2>
+      <div class="row">
+        <div class="col-md-12">
+          <ul class="social-media-links list-unstyled">
+            <li>
+              <a href="https://facebook.com/DTOstrap">Facebook</a>
+            </li>
+            <li>
+              <a href="https://dribbble.com/DTOstrap">Dribbble</a>
+            </li>
+            <li>
+              <a href="https://pinterest.com/DTOstrap">Pinterest</a>
+            </li>
+            <li>
+              <a href="https://plus.google.com/DTOstrap">Google Plus</a>
+            </li>
+            <li>
+              <a href="https://github.com/DTOstrap">GitHub</a>
+            </li>
+            <li>
+              <a href="https://tumblr.com/DTOstrap">Tumblr</a>
+            </li>
+            <li>
+              <a href="https://youtube.com/DTOstrap">YouTube</a>
+            </li>
+            <li>
+              <a href="https://flickr.com/DTOstrap">Flickr</a>
+            </li>
+            <li>
+              <a href="https://vimeo.com/DTOstrap">Vimeo</a>
+            </li>
+            <li>
+              <a href="https://instagram.com/DTOstrap">Instagram</a>
+            </li>
+            <li>
+              <a href="https://codepen.io/DTOstrap">CodePen</a>
+            </li>
+            <li>
+              <a href="https://linkedin.com/DTOstrap">LinkdIn</a>
+            </li>
+            <li>
+              <a href="https://twitter.com/DTOstrap">Twitter</a>
+            </li>
+            <li>
+              <a href="https://wordpress.org/DTOstrap">WordPress.org</a>
+            </li>
+            <li>
+              <a href="https://wordpress.com/DTOstrap">WordPress.com</a>
+            </li>
+            <li>
+              <a href="https://drupal.org/DTOstrap">Drupal.org</a>
+            </li>
+          </ul>
         </div>
       </div>
 
@@ -900,10 +1307,10 @@
         <div class="col-sm-4">
           <ul class="list-group">
             <li class="list-group-item repeat-word">
-              <a href="#">
+              <span>
                 <span>Department of</span>
-                Something
-              </a>
+                Something unlinked
+              </span>
             </li>
             <li class="list-group-item repeat-word">
               <a href="#">
@@ -1340,7 +1747,7 @@ response.</textarea>
 
 
       <div class="page-header">
-        <h1>Carousel</h1>
+        <h1>Carousel/Slider</h1>
         <small>Just don&apos;t. <a href="http://shouldiuseacarousel.com/">Read this</a>, and continue not using this.</small>
       </div>
       <div id="carousel-example-generic" class="carousel slide" data-ride="carousel">
@@ -1351,13 +1758,13 @@ response.</textarea>
         </ol>
         <div class="carousel-inner" role="listbox">
           <div class="item active">
-            <img src="https://placehold.it/1140x500//efefef/333333?text=First slide" alt="First slide">
+            <img src="https://placeholdit.imgix.net/~text?txtsize=78&txtclr=efefef&txt=First+slide&w=1140&h=500&txttrack=0" alt="First slide">
           </div>
           <div class="item">
-            <img src="https://placehold.it/1140x500//efefef/333333?text=Second slide" alt="Second slide">
+            <img src="https://placeholdit.imgix.net/~text?txtsize=78&txtclr=efefef&txt=Second+slide&w=1140&h=500&txttrack=0" alt="Second slide">
           </div>
           <div class="item">
-            <img src="https://placehold.it/1140x500//efefef/333333?text=Third slide" alt="Third slide">
+            <img src="https://placeholdit.imgix.net/~text?txtsize=78&txtclr=efefef&txt=Third+slide&w=1140&h=500&txttrack=0" alt="Third slide">
           </div>
         </div>
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
@@ -1439,7 +1846,7 @@ response.</textarea>
       </div>
     </footer>
     <!-- Placed at the end of the document so the pages load faster -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <!-- Just for this demo: -->
     <script src="./js/min/demo-min.js"></script>

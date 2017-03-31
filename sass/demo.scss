@@ -8,9 +8,11 @@
 
 
 // Styles for the demo page
-.nav-tabs,
-.nav-pills {
-  margin: 3.2em 0;
+body > .container {
+  & > .nav-tabs,
+  & > .nav-pills {
+    margin: 3.2em 0;
+  }
 }
 
 p > .btn {
