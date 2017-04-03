@@ -3,8 +3,17 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
+    <!--
+      Tip:
+      Preload resources you have high-confidence will be used in the current page.
+      Prefetch resources likely to be used for future navigations across multiple navigation boundaries.
+     -->
     <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
     <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com/" crossorigin>
+    <link rel="preload"    href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" as="font" crossorigin>
+    <link rel="preload"    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" as="style" crossorigin>
+    <link rel="preload"    href="./img/govicon-white.svg" as="image">
+
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
