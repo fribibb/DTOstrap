@@ -14,7 +14,7 @@ body > header {
   a {
     color: #fff;
     &.has-img {
-      .style-line.brand-heading .label {
+      .brand-heading .label {
         top: -0.4em;
       }
     }
@@ -40,6 +40,7 @@ body > header {
       font-size: 47%;
       padding-bottom: 0.1em;
       line-height: 1.5;
+      top: -4px;
     }
   }
   a.brand {
