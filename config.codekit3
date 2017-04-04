@@ -15,12 +15,6 @@
 		"oAP": "\/.gitignore",
 		"oF": 0
 		},
-	"\/build\/.gitignore": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/build\/.gitignore",
-		"oF": 0
-		},
 	"\/css\/demo.css": {
 		"aP": 0,
 		"bl": 0,
@@ -63,121 +57,75 @@
 		"oAP": "\/css\/dtostrap.css.map",
 		"oF": 0
 		},
-	"\/favicon\/favicon-114.png": {
+	"\/favicons\/android-chrome-192x192.png": {
 		"ft": 32768,
-		"iS": 3498,
+		"iS": 10435,
 		"l": 1,
 		"oA": 0,
-		"oAP": "\/favicon\/favicon-114.png",
+		"oAP": "\/favicons\/android-chrome-192x192.png",
 		"oF": 0,
 		"opt": 1,
 		"q": 100
 		},
-	"\/favicon\/favicon-120.png": {
+	"\/favicons\/android-chrome-512x512.png": {
 		"ft": 32768,
-		"iS": 3723,
+		"iS": 32293,
 		"l": 1,
 		"oA": 0,
-		"oAP": "\/favicon\/favicon-120.png",
+		"oAP": "\/favicons\/android-chrome-512x512.png",
 		"oF": 0,
 		"opt": 1,
 		"q": 100
 		},
-	"\/favicon\/favicon-144.png": {
+	"\/favicons\/apple-touch-icon.png": {
 		"ft": 32768,
-		"iS": 4418,
+		"iS": 9766,
 		"l": 1,
 		"oA": 0,
-		"oAP": "\/favicon\/favicon-144.png",
+		"oAP": "\/favicons\/apple-touch-icon.png",
 		"oF": 0,
 		"opt": 1,
 		"q": 100
 		},
-	"\/favicon\/favicon-152.png": {
-		"ft": 32768,
-		"iS": 4630,
-		"l": 1,
-		"oA": 0,
-		"oAP": "\/favicon\/favicon-152.png",
-		"oF": 0,
-		"opt": 1,
-		"q": 100
-		},
-	"\/favicon\/favicon-16.png": {
-		"ft": 32768,
-		"iS": 1213,
-		"l": 1,
-		"oA": 0,
-		"oAP": "\/favicon\/favicon-16.png",
-		"oF": 0,
-		"opt": 1,
-		"q": 100
-		},
-	"\/favicon\/favicon-256.png": {
-		"ft": 32768,
-		"iS": 7399,
-		"l": 1,
-		"oA": 0,
-		"oAP": "\/favicon\/favicon-256.png",
-		"oF": 0,
-		"opt": 1,
-		"q": 100
-		},
-	"\/favicon\/favicon-32.png": {
-		"ft": 32768,
-		"iS": 1108,
-		"l": 1,
-		"oA": 0,
-		"oAP": "\/favicon\/favicon-32.png",
-		"oF": 0,
-		"opt": 1,
-		"q": 100
-		},
-	"\/favicon\/favicon-48.png": {
-		"ft": 32768,
-		"iS": 1570,
-		"l": 1,
-		"oA": 0,
-		"oAP": "\/favicon\/favicon-48.png",
-		"oF": 0,
-		"opt": 1,
-		"q": 100
-		},
-	"\/favicon\/favicon-57.png": {
-		"ft": 32768,
-		"iS": 1832,
-		"l": 1,
-		"oA": 0,
-		"oAP": "\/favicon\/favicon-57.png",
-		"oF": 0,
-		"opt": 1,
-		"q": 100
-		},
-	"\/favicon\/favicon-64.png": {
-		"ft": 32768,
-		"iS": 1990,
-		"l": 1,
-		"oA": 0,
-		"oAP": "\/favicon\/favicon-64.png",
-		"oF": 0,
-		"opt": 1,
-		"q": 100
-		},
-	"\/favicon\/favicon-72.png": {
-		"ft": 32768,
-		"iS": 2225,
-		"l": 1,
-		"oA": 0,
-		"oAP": "\/favicon\/favicon-72.png",
-		"oF": 0,
-		"opt": 1,
-		"q": 100
-		},
-	"\/favicon\/favicon.ico": {
+	"\/favicons\/browserconfig.xml": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/favicon\/favicon.ico",
+		"oAP": "\/favicons\/browserconfig.xml",
 		"oF": 0
+		},
+	"\/favicons\/favicon.ico": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/favicons\/favicon.ico",
+		"oF": 0
+		},
+	"\/favicons\/manifest.json": {
+		"ft": 524288,
+		"oA": 1,
+		"oAP": "\/favicons\/manifest-min.json",
+		"oF": 0,
+		"oO": 0,
+		"oS": 1
+		},
+	"\/favicons\/mstile-150x150.png": {
+		"ft": 32768,
+		"iS": 2629,
+		"l": 1,
+		"oA": 0,
+		"oAP": "\/favicons\/mstile-150x150.png",
+		"oF": 0,
+		"opt": 1,
+		"q": 100
+		},
+	"\/favicons\/safari-pinned-tab.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/favicons\/safari-pinned-tab.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
 		},
 	"\/Icon\r": {
 		"ft": 8192,
@@ -224,6 +172,26 @@
 		"opt": 0,
 		"plM": 3758088159,
 		"prP": 0
+		},
+	"\/img\/govicon-touch.svg": {
+		"ft": 2097152,
+		"miP": 0,
+		"oA": 2,
+		"oAP": "\/img\/govicon-touch.svg",
+		"oF": 0,
+		"opt": 0,
+		"plM": 3758088159,
+		"prP": 0
+		},
+	"\/img\/govicon-white.png": {
+		"ft": 32768,
+		"iS": 4451,
+		"l": 1,
+		"oA": 0,
+		"oAP": "\/img\/govicon-white.png",
+		"oF": 0,
+		"opt": 0,
+		"q": 100
 		},
 	"\/img\/govicon-white.svg": {
 		"ft": 2097152,
@@ -315,6 +283,19 @@
 		"ma": 0,
 		"oA": 1,
 		"oAP": "\/css\/_dtostrap-elements.css",
+		"oF": 0,
+		"oS": 0,
+		"uL": 1
+		},
+	"\/sass\/_dtostrap-extra-elements.scss": {
+		"aP": 0,
+		"bl": 0,
+		"dP": 10,
+		"dS": 0,
+		"ft": 4,
+		"ma": 0,
+		"oA": 1,
+		"oAP": "\/css\/_dtostrap-extra-elements.css",
 		"oF": 0,
 		"oS": 0,
 		"uL": 1

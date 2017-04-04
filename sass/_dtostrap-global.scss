@@ -113,21 +113,25 @@ body > header {
       float: right;
       width: 2.9em;
     }
-    &:hover,
-    &:active,
-    &:focus {
-      opacity: 1;
-      text-decoration: none;
-      &:before {
-        right: 7.62em;
-      }
-    }
     &.brand-heading {
       padding-bottom: 20px;
       .label {
         opacity: 1;
       }
     }
+  }
+  .brand {
+      &:hover,
+      &:active,
+      &:focus {
+        .style-line {
+          opacity: 1;
+          text-decoration: none;
+          &:before {
+            right: 7.62em;
+          }
+        }
+      }
   }
 
   // Header search

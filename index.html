@@ -3,40 +3,28 @@
 <html lang="en">
   <head>
     <meta charset="utf-8">
-    <!--
-      Tip:
-      Preload resources you have high-confidence will be used in the current page.
-      Prefetch resources likely to be used for future navigations across multiple navigation boundaries.
-     -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
     <link rel="preconnect" href="https://maxcdn.bootstrapcdn.com/" crossorigin>
     <link rel="preload"    href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" as="font" crossorigin>
     <link rel="preload"    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" as="style" crossorigin>
+    <link rel="preload"    href="./css/dtostrap.css" as="style">
     <link rel="preload"    href="./img/govicon-white.svg" as="image">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <!-- <meta name="description" content=""> -->
-    <!-- <meta name="author" content=""> -->
+    <!--
+      Tip:
+      Preload resources you have high-confidence will be used in the current page.
+      Prefetch resources likely to be used for future navigations across multiple navigation boundaries.
+    -->
     <title>DTOstrap</title>
+
     <!-- Favicons -->
-    <link rel="icon" sizes="16x16 32x32 48x48 64x64" href="favicon/favicon.ico"/>
-    <!--[if IE]>
-      <link rel="shortcut icon" href="favicon.ico"/>
-    <![endif]-->
-    <!-- Optional: Android & iPhone-->
-    <link rel="apple-touch-icon-precomposed" href="favicon/favicon-152.png"/>
-    <!-- Optional: IE10 Tile -->
-    <meta name="msapplication-TileColor" content="#ffffff"/>
-    <meta name="msapplication-TileImage" content="favicon/favicon-144.png"/>
-    <!-- Optional: iOS + Androids &hellip;-->
-    <link rel="apple-touch-icon-precomposed" sizes="152x152" href="favicon/favicon-152.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="favicon/favicon-144.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="120x120" href="favicon/favicon-120.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="favicon/favicon-114.png"/>
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="favicon/favicon-72.png"/>
-    <link rel="apple-touch-icon-precomposed" href="favicon/favicon-57.png"/>
+    <link rel="apple-touch-icon" sizes="180x180" href="./favicons/apple-touch-icon.png">
+    <link rel="manifest" href="./favicons/manifest.json">
+    <link rel="mask-icon" href="./favicons/safari-pinned-tab.svg" color="#146577">
+    <link rel="shortcut icon" href="./favicons/favicon.ico">
+    <meta name="msapplication-config" content="./favicons/browserconfig.xml">
+    <meta name="theme-color" content="#ffffff">
 
     <!-- Bootstrap core CSS, inclues glyphicons -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
@@ -50,49 +38,11 @@
     <!-- Styles for this theme -->
     <link href="./css/dtostrap.css" rel="stylesheet">
 
-    <!-- Styles for this demo - YOU DONT NEED THIS -->
+    <!-- Styles for this demo - YOU DON'T NEED THIS -->
     <link href="./css/demo.css" rel="stylesheet">
   </head>
 
   <body>
-    <!-- <header class="navbar">
-      <div class="container">
-        <div class="navbar-header">
-          <h1 class="brand brand-name navbar-left has-img style-line CoT-ignore">
-           <a href="/">
-             <img src="./img/govicon-white.svg" alt="logo" height="70">
-             DTOstrap
-             <span class="label">beta</span>
-           </a>
-         </h1>
-        </div>
-        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-          <span class="sr-only">Toggle navigation</span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-        </button>
-        <nav class="navbar-collapse collapse">
-          <ul class="nav navbar-nav navbar-right">
-            <li class="active"><a href="/">Home</a></li>
-            <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-              <ul class="dropdown-menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li role="separator" class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-              </ul>
-            </li>
-            <li><a href="https://github.com/fribibb/DTOstrap">View on GitHub</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header> -->
-
     <header class="navbar">
       <div class="container">
         <div class="row vcenter">
@@ -158,7 +108,7 @@
         <div class="demo-ToC col-md-12">
           <!--
             JS will populate this,
-            &hellip;because basically, I'm too lazy (/efficient?) to actually create the anchors in the content.
+            ...because basically, I'm too lazy (/efficient?) to actually create the anchors in the content.
           -->
         </div>
       </div>
@@ -521,40 +471,6 @@
       </div>
       <div class="row">
         <div class="col-md-6">
-<!--
-          <h2>Striped</h2>
-          <table class="table table-striped">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td>Larry</td>
-                <td>the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h2>Default</h2> -->
           <table class="table">
             <thead>
               <tr>
@@ -597,73 +513,6 @@
               </tr>
             </tbody>
           </table>
-
-          <!-- <h2>Bordered</h2>
-          <table class="table table-bordered">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td rowspan="2">1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@TwBootstrap</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h2>Condensed</h2>
-          <table class="table table-condensed">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>First Name</th>
-                <th>Last Name</th>
-                <th>Username</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>1</td>
-                <td>Mark</td>
-                <td>Otto</td>
-                <td>@mdo</td>
-              </tr>
-              <tr>
-                <td>2</td>
-                <td>Jacob</td>
-                <td>Thornton</td>
-                <td>@fat</td>
-              </tr>
-              <tr>
-                <td>3</td>
-                <td colspan="2">Larry the Bird</td>
-                <td>@twitter</td>
-              </tr>
-            </tbody>
-          </table> -->
         </div>
       </div>
 
@@ -1130,20 +979,6 @@
       </ul>
 
 
-      <!-- <div class="page-header">
-        <h1>Dropdown menus</h1>
-      </div>
-      <div class="dropdown clearfix">
-        <a id="dropdownMenu1" href="#" class="sr-only dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Dropdown <span class="caret"></span></a>
-        <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-          <li class="active"><a href="#">Action</a></li>
-          <li><a href="#">Another action</a></li>
-          <li><a href="#">Something else here</a></li>
-          <li role="separator" class="divider"></li>
-          <li><a href="#">Separated link</a></li>
-        </ul>
-      </div> -->
-
 
       <div class="page-header">
         <h1>Navs</h1>
@@ -1170,25 +1005,6 @@
       <div class="page-header">
         <h1>Breadcrumbs</h1>
       </div>
-      <!-- <h2>Default Bootsrap</h2>
-      <ul class="breadcrumb">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Page</a></li>
-        <li class="active">Sub Page</li>
-      </ul>
-      <h2>
-        DTO's Style<br>
-        <small>with SVG divider (meaning another HTTP request)</small>
-      </h2>
-      <ul class="breadcrumb dto">
-        <li><a href="#">Home</a></li>
-        <li><a href="#">Page</a></li>
-        <li class="active">Sub Page</li>
-      </ul>
-      <h2>
-        Alternate Style<br>
-        <small>with CSS divider, matching DTO's style</small>
-      </h2> -->
       <ul class="breadcrumb">
         <li><a href="#">Home</a></li>
         <li><a href="#">Page</a></li>
