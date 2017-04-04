@@ -67,12 +67,21 @@ h6 {
   }
 }
 
-.ToC {
-  margin-top: 1em;
+.demo-ToC {
+  // margin-top: 1em;
   h1 {
     margin-bottom: 0.5em;
   }
 }
+
+// 404 page
+.page-404 {
+  .try-search {
+    margin-top: 2em;
+    min-height: calc( 100vh - 62.9em ); // make it full screen
+  }
+}
+
 
 
 // Add a bit more space before the page footer

@@ -255,6 +255,9 @@ a {
     }
   }
 }
+.jumbotron {
+  margin-bottom: 3em;
+}
 
 
 .page-header {
@@ -877,6 +880,11 @@ form {
 select.form-control {
   margin-bottom: 10px;
 }
+.input-group-btn {
+  .btn {
+    padding: 9px 15px;
+  }
+}
 
 
 
@@ -963,4 +971,9 @@ kbd {
     color: $primary-dark;
     font-weight: 500;
   }
+}
+// Tooltips
+.tooltip {
+  border-radius: $radius;
+  min-width: 10em;
 }
