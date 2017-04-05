@@ -20,6 +20,7 @@ $success:                #007554;                // done
 $info:                   $primary-highlight;     // highlight
 $danger:                 #cc0000;                // error
 $warning:                #f9c642;                // warning
+$warning-dark:           darken(#f9c642, 25%);   // warning darker - just barely a11y @ 3.3
 $beta:                   #880e48;                // used for 'beta' label in their example
 
 // Used only in header background gradient
@@ -31,6 +32,9 @@ $gradient-dark:          $primary-darker;
 $radius-small:           1px;                    // .wells etc
 $radius:                 3px;                    // default
 $radius-large:           ($radius * 4);          // for labels
+
+// For better readability
+$max-readable-width:     48em;
 
 // Font families
 $font-serif:             'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;

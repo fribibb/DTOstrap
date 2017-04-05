@@ -2,15 +2,10 @@
 
 
 
-
-
 // Skip link
 .skiplink {
   background-color: $grey-dark;
   color: #fff;
-  // #skippy {
-  //   transition: all 0.3s;
-  // }
 }
 
 
@@ -232,7 +227,7 @@ a {
   color: darken($info, 15%);  // darker for a11y
 }
 .text-warning {
-  color: darken($warning, 15%); // darker to atempt a11y - but please, just don't use this
+  color: $warning-dark; // darker to atempt a11y - but please, just don't use this
 }
 .text-danger {
   color: $danger;
@@ -429,6 +424,9 @@ a {
 
 // Forms
 form {
+  max-width: $max-readable-width;
+}
+form {
   [type='text'],
   [type='number'],
   [type='tel'],
@@ -440,7 +438,7 @@ form {
   optgroup,
   textarea {
     font: inherit;
-    padding: 1.1em 0.7em;
+    padding: 1.12em 0.7em;
     &:active,
     &:focus {
       outline: 2px solid $primary-bright;
@@ -493,7 +491,7 @@ form {
   &.checkbox-inline label,
   &.radio label,
   &.radio-inline label {
-    color: $warning;
+    color: $warning-dark;
   }
 }
 .has-error {
@@ -899,6 +897,17 @@ select.form-control {
     padding: 9px 15px;
   }
 }
+
+// checkbox align
+.checkbox input[type=checkbox],
+.checkbox-inline input[type=checkbox],
+.radio input[type=radio],
+.radio-inline input[type=radio] {
+  margin-top: 6px;
+}
+// .checkbox {
+//   margin: 10px 0;
+// }
 
 
 
