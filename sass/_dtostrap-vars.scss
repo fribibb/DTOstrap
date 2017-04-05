@@ -18,9 +18,10 @@ $grey-dark:              #313131;                // near black text
 // Status colours
 $success:                #007554;                // done
 $info:                   $primary-highlight;     // highlight
+$info-dark:              darken($info, 15%);     // highlight
 $danger:                 #cc0000;                // error
 $warning:                #f9c642;                // warning
-$warning-dark:           darken(#f9c642, 25%);   // warning darker - just barely a11y @ 3.3
+$warning-dark:           darken($warning, 25%);  // warning darker - just barely a11y @ 3.3
 $beta:                   #880e48;                // used for 'beta' label in their example
 
 // Used only in header background gradient

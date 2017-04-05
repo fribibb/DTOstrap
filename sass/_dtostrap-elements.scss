@@ -83,36 +83,38 @@
 // Labels
 .label {
   font-weight: $font-weight-normal;
-  border-radius: $radius-large;
+  border-radius: $radius;
+  border: 1px solid $grey-border; // fallback for old browsers
+  border-color: currentColor;
+  background-color: transparent;
 }
 .label-default {
-  background-color: $grey;
+  color: $grey;
 }
 .label-primary {
-  background-color: $primary;
+  color: $primary;
 }
 .label-success {
-  background-color: $success;
+  color: $success;
 }
 .label-info {
-  background-color: $info;
+  color: $info-dark;
 }
 .label-warning {
-  background-color: $warning;
-  color: $grey-dark;
+  color: $warning-dark;
 }
 .label-danger {
-  background-color: $danger;
+  color: $danger;
 }
 .label-alpha {
-  background-color: $grey-dark;
+  color: $grey-dark;
 }
 .label-beta {
-  background-color: $beta;
+  color: $beta;
 }
 .label-hover {
-  opacity: 0.8;
   text-decoration: none !important;
+  color: #fff;
 }
 a {
   &:hover,
@@ -120,24 +122,87 @@ a {
   &:focus {
     .label {
       @extend .label-hover;
+      &.label-default {
+        background-color: $grey;
+        border-color: $grey;
+      }
+      &.label-primary {
+        background-color: $primary;
+        border-color: $primary;
+      }
+      &.label-success {
+        background-color: $success;
+        border-color: $success;
+      }
+      &.label-info {
+        background-color: $info-dark;
+        border-color: $info-dark;
+      }
+      &.label-warning {
+        background-color: $warning-dark;
+        border-color: $warning-dark;
+      }
+      &.label-danger {
+        background-color: $danger;
+        border-color: $danger;
+      }
+      &.label-alpha {
+        background-color: $grey-dark;
+        border-color: $grey-dark;
+      }
+      &.label-beta {
+        background-color: $beta;
+        border-color: $beta;
+      }
     }
   }
   &.label {
-    border-bottom: none;
     &:hover,
     &:active,
     &:focus {
       @extend .label-hover;
+      &.label-default {
+        background-color: $grey;
+        border-color: $grey;
+      }
+      &.label-primary {
+        background-color: $primary;
+        border-color: $primary;
+      }
+      &.label-success {
+        background-color: $success;
+        border-color: $success;
+      }
+      &.label-info {
+        background-color: $info-dark;
+        border-color: $info-dark;
+      }
+      &.label-warning {
+        background-color: $warning-dark;
+        border-color: $warning-dark;
+      }
+      &.label-danger {
+        background-color: $danger;
+        border-color: $danger;
+      }
+      &.label-alpha {
+        background-color: $grey-dark;
+        border-color: $grey-dark;
+      }
+      &.label-beta {
+        background-color: $beta;
+        border-color: $beta;
+      }
     }
   }
-  &.label-warning[href] {
-    &:hover,
-    &:active,
-    &:focus {
-      color: $grey-dark;
-      background-color: $warning;
-    }
-  }
+  // &.label-warning[href] {
+  //   &:hover,
+  //   &:active,
+  //   &:focus {
+  //     color: $grey-dark;
+  //     background-color: $warning;
+  //   }
+  // }
 }
 
 
