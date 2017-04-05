@@ -12,7 +12,7 @@
 
 // Buttons
 .btn {
-  border-radius: $radius-small;
+  border-radius: $radius;
   transition: 0.16s all;
 }
 .btn-default {
@@ -107,7 +107,7 @@
   color: $danger;
 }
 .label-alpha {
-  color: $grey-dark;
+  color: $alpha;
 }
 .label-beta {
   color: $beta;
@@ -123,36 +123,28 @@ a {
     .label {
       @extend .label-hover;
       &.label-default {
-        background-color: $grey;
-        border-color: $grey;
+        @include button-colours($grey, #fff, 0);
       }
       &.label-primary {
-        background-color: $primary;
-        border-color: $primary;
+        @include button-colours($primary, #fff, 0);
       }
       &.label-success {
-        background-color: $success;
-        border-color: $success;
+        @include button-colours($success, #fff, 0);
       }
       &.label-info {
-        background-color: $info-dark;
-        border-color: $info-dark;
+        @include button-colours($info-dark, #fff, 0);
       }
       &.label-warning {
-        background-color: $warning-dark;
-        border-color: $warning-dark;
+        @include button-colours($warning-dark, #fff, 0);
       }
       &.label-danger {
-        background-color: $danger;
-        border-color: $danger;
+        @include button-colours($danger, #fff, 0);
       }
       &.label-alpha {
-        background-color: $grey-dark;
-        border-color: $grey-dark;
+        @include button-colours($alpha, #fff, 0);
       }
       &.label-beta {
-        background-color: $beta;
-        border-color: $beta;
+        @include button-colours($beta, #fff, 0);
       }
     }
   }
@@ -162,36 +154,28 @@ a {
     &:focus {
       @extend .label-hover;
       &.label-default {
-        background-color: $grey;
-        border-color: $grey;
+        @include button-colours($grey, #fff, 0);
       }
       &.label-primary {
-        background-color: $primary;
-        border-color: $primary;
+        @include button-colours($primary, #fff, 0);
       }
       &.label-success {
-        background-color: $success;
-        border-color: $success;
+        @include button-colours($success, #fff, 0);
       }
       &.label-info {
-        background-color: $info-dark;
-        border-color: $info-dark;
+        @include button-colours($info-dark, #fff, 0);
       }
       &.label-warning {
-        background-color: $warning-dark;
-        border-color: $warning-dark;
+        @include button-colours($warning-dark, #fff, 0);
       }
       &.label-danger {
-        background-color: $danger;
-        border-color: $danger;
+        @include button-colours($danger, #fff, 0);
       }
       &.label-alpha {
-        background-color: $grey-dark;
-        border-color: $grey-dark;
+        @include button-colours($alpha, #fff, 0);
       }
       &.label-beta {
-        background-color: $beta;
-        border-color: $beta;
+        @include button-colours($beta, #fff, 0);
       }
     }
   }

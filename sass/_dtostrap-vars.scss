@@ -23,6 +23,7 @@ $danger:                 #cc0000;                // error
 $warning:                #f9c642;                // warning
 $warning-dark:           darken($warning, 25%);  // warning darker - just barely a11y @ 3.3
 $beta:                   #880e48;                // used for 'beta' label in their example
+$alpha:                  $grey-dark;             // used for 'alpha' label in their example
 
 // Used only in header background gradient
 $gradient-angle:         200deg;
