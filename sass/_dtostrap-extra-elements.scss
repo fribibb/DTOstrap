@@ -152,11 +152,34 @@
 
 
 
-label {
-  width: 100%;
-  .optional {
-    float: right;
-    color: $primary-dark;
+// DTO's CTA link
+.cta-link {
+  display: inline-block;
+  position: relative;
+  font-size: 21px;
+  margin-bottom: 1.6em;
+  margin-right: 0.45em;
+  padding: 2px 5px;
+  font-weight: bold;
+  &::after {
+    content: '›';
+    display: inline-block;
+    margin-left: 0.3em;
+    transition: all 0.2s ease-in;
     font-weight: 400;
+    color: $primary-highlight;
+    font-size: 150%;
+    margin-top: -0.1em;
+  }
+  &:hover,
+  &:active,
+  &:focus {
+    margin-right: 0;
+    &::after {
+      color: $grey-dark;
+      margin-left: 0.45em;
+      // tweaked, couldn't help meself.. :D
+      transform: scale(1.2);
+    }
   }
 }

@@ -77,6 +77,15 @@
     border-radius: $radius;
   }
 }
+// Form labels
+label {
+  width: 100%;
+  .optional {
+    float: right;
+    color: $primary-dark;
+    font-weight: 400;
+  }
+}
 
 
 
