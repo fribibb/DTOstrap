@@ -69,219 +69,6 @@
   }
 }
 
-// Large forms (commentted out = super large, full width form)
-.input-group-lg > {
-  .form-control,
-  .input-group-addon,
-  .input-group-btn > .btn {
-    border-radius: $radius;
-  }
-}
-// Form labels
-label {
-  width: 100%;
-  .optional {
-    float: right;
-    color: $primary-dark;
-    font-weight: 400;
-  }
-}
-
-// Form inputs
-// ...inspired by the DTO version, but in my bias opinion, made better
-
-// Checkboxes
-.checkbox {
-  input[type=checkbox] {
-    position: relative;
-    top: -0.6rem;
-    left: -1rem;
-    margin: 0 1rem 0 -1.5em;
-    cursor: pointer;
-    outline: none;
-    &:before {
-      transition: all 0.1s ease-out;
-      content: "";
-      position: absolute;
-      left: 0;
-      z-index: 1;
-      width: $checkbox-size;
-      height: $checkbox-size;
-    }
-    &:checked:before {
-      transform: rotate(-45deg);
-      width: 1.3em;
-      height: 0.6em;
-      border: 3px solid #fff;
-      border-top-style: none;
-      border-right-style: none;
-      top: 0.25em;
-      left: 0.15em;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      top: -0.125rem;
-      left: 0;
-      width: $checkbox-size;
-      height: $checkbox-size;
-      background: #fff;
-      cursor: pointer;
-      border: 2px solid $grey-dark;
-    }
-    &:checked:after {
-      background: $grey-dark;
-      border-color: $grey-dark;
-    }
-  }
-  input[type=checkbox] {
-    &:active,
-    &:focus {
-      &:before,
-      &:after {
-        border-color: $primary-highlight;
-      }
-    }
-  }
-  input[type=checkbox]:checked {
-    &:active,
-    &:focus {
-      &:after {
-        border-color: $grey-dark;
-      }
-    }
-  }
-  &:hover {
-    input[type=checkbox] {
-      &:after {
-        border-color: $primary;
-      }
-    }
-  }
-  label {
-    position: relative;
-    margin: .5rem .5rem .5rem 1em;
-    line-height: 135%;
-    cursor: pointer;
-  }
-  &.disabled {
-    cursor: not-allowed;
-    label {
-      color: $grey;
-    }
-    input:disabled {
-      &:before,
-      &:after {
-        cursor: not-allowed;
-      }
-      &:after {
-        border-color: $grey-border;
-        background-color: $grey-light;
-      }
-    }
-  }
-}
-
-// Radio buttons
-// .radio {
-//   input[type=radio] {
-//     position: relative;
-//     top: -0.6rem;
-//     left: -1rem;
-//     margin: 0 1rem 0 -1.5em;
-//     cursor: pointer;
-//     outline: none;
-//     &:before {
-//       border-radius: 100%;
-//       transition: all 0.1s ease-out;
-//       content: "";
-//       position: absolute;
-//       left: 0;
-//       z-index: 1;
-//       width: $checkbox-size;
-//       height: $checkbox-size;
-//     }
-//     &:checked:before {
-//       // transform: rotate(-45deg);
-//       width: 1em;
-//       height: 1em;
-//       border: 3px solid #fff;
-//       border-top-style: none;
-//       border-right-style: none;
-//       top: 0.25em;
-//       left: 0.15em;
-//     }
-//     &:after {
-//       border-radius: 100%;
-//       content: "";
-//       position: absolute;
-//       top: -0.125rem;
-//       left: 0;
-//       width: $checkbox-size;
-//       height: $checkbox-size;
-//       background: #fff;
-//       cursor: pointer;
-//       border: 2px solid $grey-dark;
-//     }
-//     &:checked:after {
-//       background: $grey-dark;
-//       border-color: $grey-dark;
-//     }
-//   }
-//   input[type=radio] {
-//     &:active,
-//     &:focus {
-//       &:before,
-//       &:after {
-//         border-color: $primary-highlight;
-//       }
-//     }
-//   }
-//   input[type=radio]:checked {
-//     &:active,
-//     &:focus {
-//       &:after {
-//         border-color: $grey-dark;
-//       }
-//     }
-//   }
-//   &:hover {
-//     input[type=radio] {
-//       &:after {
-//         border-color: $primary;
-//       }
-//     }
-//   }
-//   label {
-//     position: relative;
-//     margin: .5rem .5rem .5rem 1em;
-//     line-height: 135%;
-//     cursor: pointer;
-//   }
-//   &.disabled {
-//     cursor: not-allowed;
-//     label {
-//       color: $grey;
-//     }
-//     input:disabled {
-//       &:before,
-//       &:after {
-//         cursor: not-allowed;
-//       }
-//       &:after {
-//         border-color: $grey-border;
-//         background-color: $grey-light;
-//       }
-//     }
-//   }
-// }
-
-
-
-
-
-
-
 
 
 
@@ -774,95 +561,268 @@ form {
   border-radius: $radius-small;
 }
 
-// TODO:
+// more padding
+.checkbox,
+.radio {
+  margin-top: 20px;
+  margin-bottom: 15px;
+}
+
+// Forms
+.input-group-addon {
+    border-radius: $radius;
+}
+.input-group-addon {
+  color: $grey;
+  background-color: $grey-light;
+  border: 1px solid $grey-border;
+}
+.form-control {
+  color: $grey;
+  border: 1px solid $grey-border;
+}
+select.form-control {
+  margin-bottom: 10px;
+}
+.input-group-btn {
+  .btn {
+    padding: 9px 15px;
+  }
+}
+
+// checkbox align
+.checkbox input[type=checkbox],
+.checkbox-inline input[type=checkbox],
+.radio input[type=radio],
+.radio-inline input[type=radio] {
+  margin-top: 6px;
+}
+
+// Large forms (commentted out = super large, full width form)
+.input-group-lg > {
+  .form-control,
+  .input-group-addon,
+  .input-group-btn > .btn {
+    border-radius: $radius;
+  }
+}
+// Form labels
+label {
+  width: 100%;
+  .optional {
+    float: right;
+    color: $primary-dark;
+    font-weight: 400;
+  }
+}
+
+
+
 // Custom styled radio btns and checkboxes
-// form input {
-//   &[type='radio'],
-//   &[type='checkbox'] {
-//     height: 1px;
-//     left: -10000px;
-//     position: absolute;
-//     visibility: visible;
-//     width: 1px;
-//   }
-//   &[type='radio']:focus + label,
-//   &[type='checkbox']:focus + label {
-//     outline: 1px solid $grey-border;
-//   }
-//   &[type='radio']:invalid + label,
-//   &[type='checkbox']:invalid + label {
-//     color: $danger;
-//   }
-//   &[type='radio']:invalid + label:before,
-//   &[type='checkbox']:invalid + label:before {
-//     border-color: $danger;
-//   }
-//   &[type='radio'] + label,
-//   &[type='checkbox'] + label {
-//     display: inline-block;
-//     float: left;
-//     width: 100%;
-//     margin-left: 0.8em;
-//   }
-//   &[type='radio'] + label:before,
-//   &[type='checkbox'] + label:before {
-//     display: inline-block;
-//     float: left;
-//     height: 27px;
-//     width: 27px;
-//     text-align: center;
-//     margin-right: 14px;
-//   }
-//   &[type='radio'] {
-//     + label:before {
-//       border: 2px solid $grey-dark;
-//       border-radius: 50%;
-//       content: '';
-//       left: 18px;
-//     }
-//     &:checked + label {
-//       font-weight: bold;
-//       &:before {
-//         border-radius: 50%;
-//         content: "";
-//       }
-//       &:after {
-//         width: 17px;
-//         height: 17px;
-//         background-color: $grey-dark;
-//         border: 1px solid transparent;
-//         border-radius: 50%;
-//         content: '';
-//         float: left;
-//         margin-left: -36px;
-//         margin-top: 5px;
-//       }
-//     }
-//   }
-//   &[type='checkbox'] {
-//     + label:before {
-//       border: 2px solid $grey-dark;
+// ...inspired by the DTO version, but in my bias opinion, made better
+//
+// NOTE: requires "transform: rotate()" and ":before"/":after" support,
+//       but really... ¯\_(ツ)_/¯
+//       https://caniuse.com/#feat=transforms2d
+//       thats <=IE8, which MS even disowned + Opera Mini, which the less used version of the least used browser :P
+
+// Checkboxes
+.checkbox {
+  input[type=checkbox] {
+    position: relative;
+    top: -0.6rem;
+    left: -1rem;
+    margin: 0 1rem 0 -1.5em;
+    cursor: pointer;
+    outline: none;
+    &:before {
+      transition: all 0.1s ease-out;
+      content: "";
+      position: absolute;
+      left: 0;
+      z-index: 1;
+      width: $checkbox-size;
+      height: $checkbox-size;
+    }
+    &:checked:before {
+      transform: rotate(-45deg);
+      width: 1.3em;
+      height: 0.6em;
+      border: 3px solid #fff;
+      border-top-style: none;
+      border-right-style: none;
+      top: 0.25em;
+      left: 0.15em;
+    }
+    &:after {
+      content: "";
+      position: absolute;
+      top: -0.125rem;
+      left: 0;
+      width: $checkbox-size;
+      height: $checkbox-size;
+      background: #fff;
+      cursor: pointer;
+      border: 2px solid $grey-dark;
+    }
+    &:checked:after {
+      background: $grey-dark;
+      border-color: $grey-dark;
+    }
+  }
+  input[type=checkbox] {
+    &:active,
+    &:focus {
+      &:before,
+      &:after {
+        border-color: $primary-highlight;
+      }
+    }
+  }
+  input[type=checkbox]:checked {
+    &:active,
+    &:focus {
+      &:after {
+        border-color: $grey-dark;
+      }
+    }
+  }
+  &:hover {
+    input[type=checkbox] {
+      &:after {
+        border-color: $primary;
+      }
+    }
+  }
+  label {
+    position: relative;
+    margin: .5rem .5rem .5rem 1em;
+    line-height: 135%;
+    cursor: pointer;
+  }
+  // TODO:
+  // account for if fieldset is .disabled
+  &.disabled {
+    cursor: not-allowed;
+    label {
+      color: $grey;
+    }
+    input:disabled {
+      &:before,
+      &:after {
+        cursor: not-allowed;
+      }
+      &:after {
+        border-color: $grey-border;
+        background-color: $grey-light;
+      }
+    }
+  }
+  // TODO:
+  // colour according to validation state colours
+}
+
+// TODO:
+// Radio buttons
+// .radio {
+//   input[type=radio] {
+//     position: relative;
+//     top: -0.6rem;
+//     left: -1rem;
+//     margin: 0 1rem 0 -1.5em;
+//     cursor: pointer;
+//     outline: none;
+//     &:before {
+//       border-radius: 100%;
+//       transition: all 0.1s ease-out;
 //       content: "";
+//       position: absolute;
+//       left: 0;
+//       z-index: 1;
+//       width: $checkbox-size;
+//       height: $checkbox-size;
 //     }
-//     &:checked + label {
-//       font-weight: bold;
-//       &:before {
-//         font-size: 18px;
-//         content: "";
+//     &:checked:before {
+//       // transform: rotate(-45deg);
+//       width: 1em;
+//       height: 1em;
+//       border: 3px solid #fff;
+//       border-top-style: none;
+//       border-right-style: none;
+//       top: 0.25em;
+//       left: 0.15em;
+//     }
+//     &:after {
+//       border-radius: 100%;
+//       content: "";
+//       position: absolute;
+//       top: -0.125rem;
+//       left: 0;
+//       width: $checkbox-size;
+//       height: $checkbox-size;
+//       background: #fff;
+//       cursor: pointer;
+//       border: 2px solid $grey-dark;
+//     }
+//     &:checked:after {
+//       background: $grey-dark;
+//       border-color: $grey-dark;
+//     }
+//   }
+//   input[type=radio] {
+//     &:active,
+//     &:focus {
+//       &:before,
+//       &:after {
+//         border-color: $primary-highlight;
+//       }
+//     }
+//   }
+//   input[type=radio]:checked {
+//     &:active,
+//     &:focus {
+//       &:after {
+//         border-color: $grey-dark;
+//       }
+//     }
+//   }
+//   &:hover {
+//     input[type=radio] {
+//       &:after {
+//         border-color: $primary;
+//       }
+//     }
+//   }
+//   label {
+//     position: relative;
+//     margin: .5rem .5rem .5rem 1em;
+//     line-height: 135%;
+//     cursor: pointer;
+//   }
+//   &.disabled {
+//     cursor: not-allowed;
+//     label {
+//       color: $grey;
+//     }
+//     input:disabled {
+//       &:before,
+//       &:after {
+//         cursor: not-allowed;
 //       }
 //       &:after {
-//         width: 17px;
-//         height: 17px;
-//         background-color: $grey-dark;
-//         border: 1px solid transparent;
-//         content: '';
-//         float: left;
-//         margin-left: -36px;
-//         margin-top: 5px;
+//         border-color: $grey-border;
+//         background-color: $grey-light;
 //       }
 //     }
 //   }
 // }
+
+
+// TODO:
+// Dropdown menus (<select>)
+
+
+
 
 
 
@@ -1136,40 +1096,6 @@ form {
   }
 }
 
-
-
-// Forms
-.input-group-addon {
-    border-radius: $radius;
-}
-.input-group-addon {
-  color: $grey;
-  background-color: $grey-light;
-  border: 1px solid $grey-border;
-}
-.form-control {
-  color: $grey;
-  border: 1px solid $grey-border;
-}
-select.form-control {
-  margin-bottom: 10px;
-}
-.input-group-btn {
-  .btn {
-    padding: 9px 15px;
-  }
-}
-
-// checkbox align
-.checkbox input[type=checkbox],
-.checkbox-inline input[type=checkbox],
-.radio input[type=radio],
-.radio-inline input[type=radio] {
-  margin-top: 6px;
-}
-// .checkbox {
-//   margin: 10px 0;
-// }
 
 
 
