@@ -76,7 +76,7 @@ body > header {
       }
     }
     .dropdown-menu li.dropdown-header {
-      color: $primary-light;
+      color: $grey;
     }
   }
   .caret {
@@ -148,7 +148,109 @@ body > header {
       }
     }
   }
-} // Header
+
+  // CTA links
+  .cta-link {
+    border-bottom: 1px solid $primary-highlight;
+    &:hover,
+    &:active,
+    &:focus {
+      background-color: #fff;
+      border-bottom-color: transparent; // 0 will cause jumping
+    }
+  } // .cta-link
+
+  // Colour schemes
+  // as per http://uikit.apps.staging.digital.gov.au/packages/header/tests/site/
+  // ...minus the "hero" class versions
+
+  // Light
+  &.light {
+    background: $grey-light;  // can't just use background-color, due to gradient
+    color: $grey-dark;
+    a {
+      color: $grey-dark;
+    }
+    .caret {
+      border-top-color: $grey-dark;
+    }
+    a.brand {
+      &:hover,
+      &:active,
+      &:focus {
+        color: $grey-dark;
+      }
+    }
+    .label {
+      background-color: $grey;
+    }
+    .style-line {
+      &:before {
+        background-color: $grey;
+      }
+      &:after {
+        background: linear-gradient(to left, $grey-dark 0, $grey-dark 25%, $grey-border 25%, $grey-border 75%, $grey 75%) no-repeat;
+        background-size: 2.4em 7px;
+      }
+    }
+    .cta-link {
+      &:hover,
+      &:active,
+      &:focus {
+        background-color: $primary-highlight;
+        color: $grey-dark;
+        border-bottom: 1px solid $primary-highlight;
+        &:after {
+          color: $grey-dark;
+        }
+      }
+    }
+  } // .light
+
+  // Dark
+  &.dark {
+    background: $grey-dark;   // can't just use background-color, due to gradient
+    .label {
+      background-color: $grey-light;
+      color: $grey-dark;
+    }
+    .style-line {
+      &:before {
+        background-color: $grey-border;
+      }
+      &:after {
+        background: linear-gradient(to left, $grey 0, $grey 25%, $grey-light 25%, $grey-light 75%, $grey-border 75%) no-repeat;
+        background-size: 2.4em 7px;
+      }
+    }
+  } // .dark
+
+  // Hero class. Just one, regardless of colour scheme
+  &.hero {
+    .container .row {
+      padding: 3.5em 0;
+    }
+    .navbar-header {
+      display: block;
+      width: 100%;
+      float: none;
+    }
+    .brand-heading {
+      font-size: 44px;
+      width: 100%;
+      .label {
+        top: -5px;
+      }
+    }
+    .tagline {
+      margin-top: 3.1em;
+      font-size: 20px;
+    }
+  }
+  p + p .cta-link {
+    margin-top: 0.75em; // makgive the cta-link some space if there's a p tag (tagline) above it
+  } // .hero
+} // header
 
 // Nav bar under header
 .main-nav {

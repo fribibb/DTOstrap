@@ -158,7 +158,7 @@
   position: relative;
   font-size: 21px;
   margin-bottom: 1.6em;
-  margin-right: 0.45em;
+  margin-right: 0.2em;
   padding: 2px 5px;
   font-weight: bold;
   &::after {
@@ -175,8 +175,9 @@
   &:active,
   &:focus {
     margin-right: 0;
+    color: $primary-darker;
     &::after {
-      color: $grey-dark;
+      // color: $grey-dark;
       margin-left: 0.45em;
       // tweaked, couldn't help meself.. :D
       transform: scale(1.2);

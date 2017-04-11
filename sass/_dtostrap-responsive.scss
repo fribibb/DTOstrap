@@ -26,15 +26,17 @@
 
 
 @media (min-width: 768px) {
-  // header {
-  //   .navbar-header {
-  //     width: 45%;
-  //     .brand-name a {
-  //       margin-top: 0.25em;
-  //       display: block;
-  //     }
-  //   }
-  // }
+  header {
+    &.hero {
+      .container .row {
+        padding: 8em 0;
+      }
+      .tagline {
+        font-size: 18px;
+      }
+    }
+  }
+
   // Vertical center alignment - used in header
   .vcenter {
     display: flex;
@@ -256,6 +258,8 @@
       margin-left: auto;
       margin-right: auto;
     }
+    p,
+    .cta-link,
     .tagline {
       text-align: center;
     }
