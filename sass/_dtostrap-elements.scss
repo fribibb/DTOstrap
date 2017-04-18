@@ -575,12 +575,6 @@ fieldset[disabled] .form-control,
   background-color: $grey-light;
   color: $grey;
 }
-// label + .form-control input:disabled {
-//   color: lime !Important;
-// }
-// label + .form-control input[not(:disabled)] {
-//   color: red !Important;
-// }
 
 // More padding
 .checkbox,
@@ -751,7 +745,7 @@ fieldset:disabled .checkbox,  // account for if fieldset is .disabled
 .checkbox.disabled {
   cursor: not-allowed;
   label {
-    color: $grey;
+    color: $grey-border;
   }
   input:disabled {
     &:before,
@@ -851,7 +845,7 @@ fieldset:disabled .radio,  // account for if fieldset is .disabled
 .radio.disabled {
   cursor: not-allowed;
   label {
-    color: $grey;
+    color: $grey-border;
   }
   input:disabled {
     &:before,
@@ -948,9 +942,6 @@ select.form-control {
 select.form-control:disabled,
 fieldset:disabled { // account for if fieldset is .disabled
   cursor: not-allowed;
-  label {
-    color: $grey-border;
-  }
 } // disabled
 
 
