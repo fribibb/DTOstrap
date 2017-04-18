@@ -799,10 +799,10 @@
         <h1>Media object</h1>
       </div>
       <div class="row">
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="media">
             <div class="media-left">
-              <img alt="64x64" class="media-object" src="https://placeholdit.imgix.net/~text?txtsize=8&bg=efefef&txtclr=333333&txt=64%C3%9764&w=64&h=64">
+              <img alt="64x64" class="media-object" src="https://placeholdit.imgix.net/~text?txtsize=8&bg=efefef&txtclr=333333&txt=64%C3%9764&w=64&h=64" srcset="https://placeholdit.imgix.net/~text?txtsize=15&bg=efefef&txtclr=333333&txt=HiDPI%20of%2064&w=128&h=128 2x">
             </div>
             <div class="media-body">
               <h4 class="media-heading">Media heading</h4>
@@ -810,11 +810,11 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="media">
             <div class="media-left">
               <a href="#">
-                <img alt="128x128" class="media-object" src="https://placeholdit.imgix.net/~text?txtsize=8&bg=efefef&txtclr=333333&txt=128%C3%97128&w=128&h=128">
+                <img alt="128x128" class="media-object" src="https://placeholdit.imgix.net/~text?txtsize=8&bg=efefef&txtclr=333333&txt=128%C3%97128&w=128&h=128" srcset="https://placeholdit.imgix.net/~text?txtsize=25&bg=efefef&txtclr=333333&txt=HiDPI%20of%20128&w=256&h=256 2x">
               </a>
             </div>
             <div class="media-body">
@@ -823,11 +823,11 @@
             </div>
           </div>
         </div>
-        <div class="col-sm-6 col-md-4">
+        <div class="col-sm-12 col-md-6 col-lg-4">
           <div class="media">
             <div class="media-left">
               <a href="#">
-                <img alt="256x256" class="media-object" src="https://placeholdit.imgix.net/~text?txtsize=8&bg=efefef&txtclr=333333&txt=256%C3%97256&w=256&h=256">
+                <img alt="256x256" class="media-object" src="https://placeholdit.imgix.net/~text?txtsize=8&bg=efefef&txtclr=333333&txt=256%C3%97256&w=256&h=256" srcset="https://placeholdit.imgix.net/~text?txtsize=40&bg=efefef&txtclr=333333&txt=HiDPI%20of%20256&w=512&h=512 2x">
               </a>
             </div>
             <div class="media-body">
@@ -1560,7 +1560,7 @@
           <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
         </div>
         <div class="form-group">
-          <label for="exampleInputFile">File input</label>
+          <label for="exampleInputFile">File input/upload</label>
           <input type="file" id="exampleInputFile">
           <p class="help-block">Example block-level help text here.</p>
         </div>
@@ -1612,6 +1612,14 @@ response.</textarea>
           <option>4</option>
           <option>5</option>
         </select>
+        <label for="select-disabled disabled">Disabled select label</label>
+        <select id="select-disabled" class="form-control" disabled>
+          <option>1</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
         <label for="multiselect">Multiselect label</label>
         <select id="multiselect" multiple class="form-control">
           <option>1</option>
@@ -1645,8 +1653,12 @@ response.</textarea>
       <form>
         <fieldset disabled>
           <div class="form-group">
-            <label for="disabledTextInput">Disabled input</label>
-            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input">
+            <label for="disabledTextInput">Disabled input with placeholder</label>
+            <input type="text" id="disabledTextInput" class="form-control" placeholder="Disabled input with placeholder">
+          </div>
+          <div class="form-group">
+            <label for="disabledTextInput2">Disabled input with content</label>
+            <input type="text" id="disabledTextInput2" class="form-control" value="Disabled input with content">
           </div>
           <div class="form-group">
             <label for="disabledSelect">Disabled select menu</label>
@@ -1654,12 +1666,36 @@ response.</textarea>
               <option>Disabled select</option>
             </select>
           </div>
+          <div class="form-group">
+            <label for="disabledMultiSelect">Disabled select menu</label>
+            <select id="disabledMultiSelect" multiple class="form-control">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </div>
           <div class="checkbox">
             <label>
               <input type="checkbox"> Can't check this
             </label>
           </div>
-          <button type="submit" class="btn btn-primary">Disabled</button>
+          <label for="textarea">Text area</label>
+          <textarea id="textareaDisabled" class="form-control" rows="3">For a longer,
+multi-line
+response.</textarea>
+          <div class="radio">
+            <label>
+              <input type="radio"> Can't choose this
+            </label>
+          </div>
+          <div class="radio">
+            <label>
+              <input type="radio"> Can't choose this either
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">Disabled primary button</button>
         </fieldset>
       </form>
 

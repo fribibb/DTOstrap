@@ -107,6 +107,7 @@ ul.social-media-links-circle {
   li {
     display: inline-block;
     margin-right: 10px;
+    margin-bottom: 0.8em;
     text-align: center;
     &:last-of-type {
       margin-right: 0;
@@ -120,7 +121,7 @@ ul.social-media-links-circle {
       border: none;
       &:before {
         display: inline-block;
-        padding: 6px 0 0 0;
+        padding: 7px 0 0 0;
         font-size: 28px;
         color: #fff;
         top: 1px;
