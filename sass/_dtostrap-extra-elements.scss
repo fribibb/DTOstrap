@@ -35,6 +35,48 @@
 }
 
 
+.repeat-word {
+  & > span,
+  a {
+    font-size: 150%;
+    font-weight: $font-weight-bold;
+    line-height: 1.4;
+    display: inline-block;
+    span {
+      display: block;
+      font-size: 65%;
+    }
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    a {
+      font-size: 100%;
+    }
+  }
+}
+
+
+// TODO:
+.progress-indicator {
+  .active {
+    //
+  }
+  .doing {
+    //
+  }
+  .done {
+    //
+  }
+  span {
+    //
+  }
+}
+
+
 
 
 

@@ -1,5 +1,21 @@
 // Responsive styles
 
+
+// HiDPI only styles
+
+// e.g.:
+// @include hidpi(2) {
+//   .class {
+//     color: red;
+//   }
+// }
+
+
+
+
+
+// Width based styles
+
 @media (min-width: 992px) {
   // .navbar-header {
   //   width: 50%
