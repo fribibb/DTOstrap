@@ -60,19 +60,85 @@
 }
 
 
-// TODO:
+
 .progress-indicator {
-  .active {
-    //
-  }
-  .doing {
-    //
-  }
-  .done {
-    //
-  }
-  span {
-    //
+  .list-group-item {
+    $indent: 11px;
+    padding-left: $indent + 70px;
+    &:before {
+      // content: "\2014"; // emdash
+      // content: "\25A1"; // empty square
+      content: "\2022"; // "•"
+      color: lighten($grey, 10%);
+      position: absolute;
+      left: $indent + 26px;
+      // padding-left: 10px;
+      top: 0.42em;
+      width: $indent + 50px;
+      font-size: 150%;
+    }
+    .label {
+      padding-top: 3px;
+      background-color: transparent;
+      border-color: $grey;
+      color: $grey;
+    }
+    &.progress-indicator--active {
+      border-left: $radius solid $primary;
+      padding-left: $indent + 70 - $radius;
+      &:before {
+        left: $indent + 18 - $radius;
+      }
+    }
+    &.progress-indicator--doing {
+      &:before {
+        left: $indent + 13px;
+        top: 0.42em;
+        content: "\2022\2022\2022"; // "•••"
+        font-size: 150%;
+        color: $primary-dark;
+      }
+      .progress-indicator--heading {
+        color: $primary-dark;
+      }
+      .label {
+        border-color: $primary;
+        color: $primary;
+      }
+    }
+    &.progress-indicator--done {
+      &:before {  // check/tick
+        content: ""; // not using this way
+        transform: rotate(-45deg);
+        width: 24px;
+        height: 12px;
+        border: $radius solid lighten($grey, 10%);
+        border-top-style: none;
+        border-right-style: none;
+        top: 15px;
+        left: $indent + 18px;
+      }
+    }
+    .progress-indicator--heading {
+      font-size: 18px;
+      margin: 5px 3em 8px 0;
+      word-break: break-word;
+      a {
+        padding-left: 0;
+        line-height: 1.1;
+        display: inline-block;
+        &:hover,
+        &:active,
+        &:focus {
+          background-color: rgba(#00bfe9,0.7);
+        }
+      }
+    }
+    .progress-indicator--status {
+      position: absolute;
+      top: 13px;
+      right: 15px;
+    }
   }
 }
 
