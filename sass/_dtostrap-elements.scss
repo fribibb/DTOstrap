@@ -491,24 +491,6 @@ form {
   select.form-control option {
     // font-size: 17px;
   }
-  [type='text']:invalid,
-  [type='number']:invalid,
-  [type='tel']:invalid,
-  [type='email']:invalid,
-  [type='password']:invalid,
-  textarea:invalid,
-  input[type='radio']:invalid,
-  input[type='checkbox']:invalid,
-  .invalid[type='text'],
-  .invalid[type='number'],
-  .invalid[type='tel'],
-  .invalid[type='email'],
-  .invalid[type='password'],
-  textarea.invalid,
-  input.invalid[type='radio'],
-  input.invalid[type='checkbox'] {
-      outline: 2px solid $danger;
-  }
   input[type=file] {
     line-height: 0;
     margin-top: 10px;
