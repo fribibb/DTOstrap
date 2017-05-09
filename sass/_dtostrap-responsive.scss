@@ -178,6 +178,19 @@
       }
     }
   }
+
+  // Footer
+  body > footer {
+    .list-inline {
+      li {
+        margin-bottom: 5px;
+      }
+    }
+    small {
+      margin-top: 1.4em;
+    }
+  }
+
 } // max-width: 768px
 
 
