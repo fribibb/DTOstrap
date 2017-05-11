@@ -1034,6 +1034,7 @@ fieldset:disabled { // account for if fieldset is .disabled
     border-top-right-radius: $radius-small;
     .panel-title {
       padding: 1.5em 1em;
+      font-size: 100%;
     }
     a.panel-title { // Yes, that's right - the a tag is the title. Heading needs to be nested unless http://caniuse.com/#feat=css-has or silimar car be used 😒
       display: block;
@@ -1042,15 +1043,19 @@ fieldset:disabled { // account for if fieldset is .disabled
       &:active,
       &:focus {
         background-color: $grey-border;
+        &:after {
+          color: $primary;
+        }
       }
       &:after {   // ">" symbol
         font-family:'Glyphicons Halflings';
         content: "\e113";
         float: right;
-        color: $grey;
+        color: $primary-darker;
+        transition: all 0.2s;
       }
       &.collapsed:after {
-        content: "\e114";
+        transform: rotate(180deg);
       }
       & > * {   // Stop the h4 etc from stuffing up the ">" symbol location
         display: inline;
