@@ -402,13 +402,12 @@ a {
       &:hover,
       &:active,
       &:focus {
-        color: $grey-dark;
+        // color: $grey-dark;
         color: $primary-dark;
         background-color: $grey-light;
         border: 1px solid $primary;
       }
-      &:active,
-      &:focus {
+      &:active {
         color: $grey-dark;
         background-color: $primary-bright;
         border-color: $grey;
@@ -1045,6 +1044,10 @@ fieldset:disabled { // account for if fieldset is .disabled
         background-color: $grey-border;
         &:after {
           color: $primary;
+        }
+        & > * {
+          padding-bottom: 2px;
+          border-bottom: solid 1px $primary-highlight;
         }
       }
       &:after {   // ">" symbol

@@ -21,7 +21,8 @@ $info:                   $primary-highlight;     // highlight
 $info-dark:              darken($info, 15%);     // highlight
 $danger:                 #cc0000;                // error
 $warning:                #f9c642;                // warning
-$warning-dark:           darken($warning, 25%);  // warning darker - just barely a11y @ 3.3
+// $warning-dark:           darken($warning, 25%);  // warning darker - just barely a11y @ 3.3
+$warning-dark:           #b75a00;                // warning-ish colour that actually meets a11y (4.7)
 $beta:                   #880e48;                // used for 'beta' label in their example
 $alpha:                  $grey-dark;             // used for 'alpha' label in their example
 
