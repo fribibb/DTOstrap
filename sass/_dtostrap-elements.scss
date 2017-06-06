@@ -1146,7 +1146,8 @@ fieldset:disabled { // account for if fieldset is .disabled
         &:active,
         &:focus {
           .icon {
-            color: $primary-bright;
+            // color: $primary-bright;
+            color: $primary-highlight;
           }
         }
         .icon {
