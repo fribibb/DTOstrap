@@ -7,7 +7,7 @@
 		"uuidString": "4DD66D05-F34D-4DAC-B315-7A7FC4F40CD5"
 		}
 	],
-"creatorBuild": "25813",
+"creatorBuild": "25849",
 "files": {
 	"\/.gitignore": {
 		"ft": 8192,
@@ -69,7 +69,7 @@
 		"oA": 0,
 		"oAP": "\/favicons\/android-chrome-192x192.png",
 		"oF": 0,
-		"oIPL": 0,
+		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
@@ -122,7 +122,7 @@
 		"oA": 0,
 		"oAP": "\/favicons\/mstile-150x150.png",
 		"oF": 0,
-		"oIPL": 0,
+		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
@@ -159,7 +159,7 @@
 		"oA": 0,
 		"oAP": "\/img\/favicon-base.png",
 		"oF": 0,
-		"oIPL": 0,
+		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
@@ -180,7 +180,7 @@
 		"oA": 0,
 		"oAP": "\/img\/govicon-gradient.png",
 		"oF": 0,
-		"oIPL": 0,
+		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
@@ -211,8 +211,8 @@
 		"oA": 0,
 		"oAP": "\/img\/govicon-white.png",
 		"oF": 0,
-		"oIPL": 0,
-		"opt": 0,
+		"oIPL": 1,
+		"opt": 1,
 		"oT": 1,
 		"q": 100
 		},
@@ -232,7 +232,7 @@
 		"oA": 0,
 		"oAP": "\/img\/govicon.png",
 		"oF": 0,
-		"oIPL": 0,
+		"oIPL": 1,
 		"opt": 1,
 		"oT": 1,
 		"q": 100
@@ -2374,6 +2374,7 @@
 		},
 	"languageDefaultsUserDefined": [
 		],
+	"overrideExternalServerCSS": 0,
 	"previewPathAddition": "",
 	"skippedFoldersString": "log, _logs, logs, _cache, cache, \/storage\/framework\/sessions, node_modules",
 	"sourceFolderName": "source",
