@@ -21,46 +21,10 @@
 		"oAP": "\/404.html",
 		"oF": 0
 		},
-	"\/css\/demo.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/css\/demo-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/css\/dto.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/css\/dto-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/css\/dto.css.map": {
+	"\/build\/.gitignore": {
 		"ft": 8192,
 		"oA": 2,
-		"oAP": "\/css\/dto.css.map",
-		"oF": 0
-		},
-	"\/css\/dtostrap.css": {
-		"aP": 0,
-		"bl": 0,
-		"ft": 16,
-		"ma": 0,
-		"oA": 2,
-		"oAP": "\/css\/dtostrap-min.css",
-		"oF": 0,
-		"oS": 0
-		},
-	"\/css\/dtostrap.css.map": {
-		"ft": 8192,
-		"oA": 2,
-		"oAP": "\/css\/dtostrap.css.map",
+		"oAP": "\/build\/.gitignore",
 		"oF": 0
 		},
 	"\/favicons\/android-chrome-192x192.png": {
@@ -438,7 +402,7 @@
 	"displayValue": "DTOstrap",
 	"displayValueWasSetByUser": 0,
 	"iconImageName": "\/img\/govicon.png",
-	"lastBuiltDate": 520053894
+	"lastBuiltDate": 520323664
 	},
 "projectSettings": {
 	"abortBuildOnError": 1,
