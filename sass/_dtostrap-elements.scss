@@ -65,6 +65,7 @@ abbr {
 }
 .btn-link {
   color: $grey-dark;
+  border-radius: 0;
   border-bottom: solid 1px $primary-bright;
   transition: 0.1s all ease-in-out;
   &:not(:disabled) {
@@ -74,6 +75,15 @@ abbr {
       color: $grey-dark;
       background-color: $primary-bright;
       text-decoration: none;
+    }
+  }
+  &[disabled],
+  fieldset[disabled] & {
+    &:hover,
+    &:focus,
+    &:active {
+      background-color: $grey-light;
+      border-bottom-color: $grey-border;
     }
   }
 }
