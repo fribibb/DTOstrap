@@ -251,6 +251,12 @@
 		"sC": 1,
 		"tS": 0
 		},
+	"\/message.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/message.html",
+		"oF": 0
+		},
 	"\/README.html": {
 		"ft": 8192,
 		"oA": 2,
