@@ -130,7 +130,7 @@
         &:hover,
         &:active,
         &:focus {
-          background-color: rgba(#00bfe9,0.7);
+          background-color: rgba($primary-highlight, 0.7);
         }
       }
     }
@@ -141,6 +141,51 @@
     }
   }
 }
+
+
+.list-group.list-group-icon {
+  .list-group-item {
+    font-size: 18px;  // Visually like a h4
+    font-weight: bold;
+    padding: 1.3em 30px; // Extra padding ...for some reason (requested by SDT)
+    padding-left: 82px;
+    & > a {
+      display: inline-block;
+      &:hover,
+      &:active,
+      &:focus {
+        .fa,
+        .glyphicon,
+        .icon {
+          color: $primary-highlight;
+        }
+      }
+      .glyphicon,
+      .icon {
+        top: 0.6em;
+      }
+    }
+    .fa,
+    .glyphicon,
+    .icon {
+      margin-right: 0;
+      margin-left: -61px;
+      color: $grey;
+      font-size: 35px;
+      top: 0.6em;
+      position: absolute;
+      &:before {
+        margin-right: 0.5em;
+      }
+    }
+    .list-group-item-heading {
+      margin-top: 5px;
+    }
+    .list-group-item-text {
+      margin-bottom: 0;
+    }
+  }
+} // icon
 
 
 

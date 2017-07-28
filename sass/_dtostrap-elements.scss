@@ -1151,36 +1151,6 @@ fieldset:disabled { // account for if fieldset is .disabled
   .list-group-item.active {
     background-color: $primary;
   }
-  &.list-group-icon {
-    margin-top: 2em;
-    .list-group-item {
-      font-size: 18px;  // Visually like a h4
-      font-weight: bold;
-      padding: 0.8em 0 1.6em 30px; // Extra padding ...for some reason (requested by SDT)
-      a {
-        padding: 2px;
-        margin-left: 45px;
-        &:hover,
-        &:active,
-        &:focus {
-          .icon {
-            // color: $primary-bright;
-            color: $primary-highlight;
-          }
-        }
-        .icon {
-          margin-left: -65px;
-          color: $grey;
-          font-size: 35px;
-          top: 7px;
-          position: relative;
-          &:before {
-            margin-right: 0.5em;
-          }
-        }
-      }
-    }
-  }
 }
 .list-group-item {
   border: 1px solid $grey-border;
