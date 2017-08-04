@@ -7,10 +7,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="preconnect" href="https://fonts.googleapis.com/" crossorigin>
     <link rel="preconnect" href="https://cdnjs.cloudflare.com/" crossorigin>
-    <!-- <link rel="preload"    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" as="style" crossorigin> -->
     <link rel="preload"    href="./css/dtostrap.css" as="style">
+    <link rel="preload"    href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css" as="style">
     <link rel="preload"    href="./img/govicon-white.svg" as="image">
-    <!-- <link rel="preload"    href="https://fonts.googleapis.com/css?family=Open+Sans:400,400i,700" as="style" crossorigin> -->
     <!--
       Tip:
       Preload resources you have high-confidence will be used in the current page.
@@ -113,22 +112,20 @@
           A drop-in Bootstrap v3 stylesheet in the style of the Australian Government DTO's <a href="https://gov-au-ui-kit.apps.staging.digital.gov.au/">UI-Kit</a>.
         </p>
         <small class="meta">
-          Last updated: July 2017
+          Last updated: <time datetime="2017-08-04">August 2017</time>
         </small>
       </div>
     </div>
 
     <div class="container" role="main">
-
       <div class="row">
         <div class="demo-ToC col-md-12">
           <!--
             JS will populate this,
-            ...because basically, I'm too lazy (/efficient? :P) to actually create the anchors in the content.
+            ...because basically, I'm too lazy (🤔 efficient? 😛) to actually create the anchors in the content..
           -->
         </div>
       </div>
-
 
       <div class="page-header" id="content-jump">
         <h1>Header options</h1>
@@ -574,6 +571,18 @@
           <p>
             Paragraph text that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.
           </p>
+          <p>
+            <del datetime="2017-08-04">this text has been deleted</del> <br>
+            <ins datetime="2017-08-04">this text has been inserted</ins>  <br>
+            <s>this text is no longer accurate/relevant</s> <br>
+            <samp>sample text</samp>  <br>
+            <mark>mark text</mark> <br>
+            <var>varName</var> = 0 <br>
+            <data value="123456789">Data attr</data> <br>
+            <sub>sub</sub> text <sup>sup</sup> text <br>
+          </p>
+
+          <br>
 
           <h1 class="CoT-ignore">
             <a href="#">Linked heading 1 that is far to long and therefore wraps over multiple lines, testing whether the line height has been set to something appropriate or not.</a>
@@ -605,7 +614,7 @@
         <small>Apparently only default and primary should be used though&hellip;</small>
       </div>
       <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-12">
           <p>
             <button type="button" class="btn btn-lg btn-default">Default</button>
             <button type="button" class="btn btn-lg btn-primary">Primary</button>
@@ -1926,21 +1935,21 @@ response.</textarea>
       </div>
       <ul class="calendar-list">
         <li class="calendar-item">
-          <div class="calendar-date">
+          <time class="calendar-date" time="2017-04-14">
             Fri
             <span class="calendar-number">14</span>
             Apr
-          </div>
+          </time>
           <div class="calendar-title">
             Good Friday
           </div>
         </li>
         <li class="calendar-item">
-          <div class="calendar-date">
+          <time class="calendar-date" time="2017-04-15">
             Sat
             <span class="calendar-number">15</span>
             Apr
-          </div>
+          </time>
           <div class="calendar-title">
             Easter Saturday
             <span class="calendar-note">This is a note about this specific calendar event.</span>
