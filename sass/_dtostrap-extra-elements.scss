@@ -1,362 +1,363 @@
 // Things that aren't Bootstrap, but may be useful...
 
 
+// Table of contents
 .index-links {
-  margin: 1.6em 0;
-  border-left: 0.4em solid $grey-light;
-  padding: 0 0 1.2em 1.2em;   // yes, this is uneven. Should be: '0 0 0 1.2em' imo, but sticking to their look.
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    font-size: 1em;
-    margin-top: 1.6em;
-    padding-bottom: 1.2em;
-    color: $grey;
-    font-weight: $font-weight-normal;
-  }
-  a {
-    font-weight: bold;
-  }
-  ul,
-  ol {
-    padding-left: 0;
-    list-style: none;
-    ul,
-    ol {
-      padding-left: 2em;  // in case of nesting
-    }
-  }
-  li:not(:last-of-type) {
-    margin-bottom: 1.5em;
-  }
+	margin: 1.6em 0;
+	border-left: 0.4em solid $grey-light;
+	padding: 0 0 1.2em 1.2em;	 // yes, this is uneven. Should be: '0 0 0 1.2em' imo, but sticking to their look.
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		font-size: 1em;
+		margin-top: 1.6em;
+		padding-bottom: 1.2em;
+		color: $grey;
+		font-weight: $font-weight-normal;
+	}
+	a {
+		font-weight: bold;
+	}
+	ul,
+	ol {
+		padding-left: 0;
+		list-style: none;
+		ul,
+		ol {
+			padding-left: 2em;	// in case of nesting
+		}
+	}
+	li:not(:last-of-type) {
+		margin-bottom: 1.5em;
+	}
 }
 
 
+
+// Repeating word pattern
 .repeat-word {
-  & > span,
-  a {
-    font-size: 150%;
-    font-weight: $font-weight-bold;
-    line-height: 1.4;
-    display: inline-block;
-    span {
-      display: block;
-      font-size: 65%;
-    }
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    a {
-      font-size: 100%;
-    }
-  }
+	& > span,
+	a {
+		font-size: 150%;
+		font-weight: $font-weight-bold;
+		line-height: 1.4;
+		display: inline-block;
+		span {
+			display: block;
+			font-size: 65%;
+		}
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		a {
+			font-size: 100%;
+		}
+	}
 }
 
 
 
+// Progress indicator list
 .progress-indicator {
-  .list-group-item {
-    $indent: 11px;
-    padding-left: $indent + 70px;
-    &:before {
-      // content: "\2014"; // emdash
-      // content: "\25A1"; // empty square
-      content: "\2022"; // "•"
-      color: lighten($grey, 10%);
-      position: absolute;
-      left: $indent + 26px;
-      // padding-left: 10px;
-      top: 0.42em;
-      width: $indent + 50px;
-      font-size: 150%;
-    }
-    .label {
-      padding-top: 3px;
-      background-color: transparent;
-      border-color: $grey;
-      color: $grey;
-    }
-    &.progress-indicator--active {
-      border-left: $radius solid $primary;
-      padding-left: $indent + 70 - $radius;
-      &:before {
-        left: $indent + 18 - $radius;
-      }
-    }
-    &.progress-indicator--doing {
-      &:before {
-        left: $indent + 13px;
-        top: 0.42em;
-        content: "\2022\2022\2022"; // "•••"
-        font-size: 150%;
-        color: $primary-dark;
-      }
-      .progress-indicator--heading {
-        color: $primary-dark;
-      }
-      .label {
-        border-color: $primary;
-        color: $primary;
-      }
-    }
-    &.progress-indicator--done {
-      &:before {  // check/tick
-        content: ""; // not using this way
-        transform: rotate(-45deg);
-        width: 24px;
-        height: 12px;
-        border: $radius solid lighten($grey, 10%);
-        border-top-style: none;
-        border-right-style: none;
-        top: 15px;
-        left: $indent + 18px;
-      }
-    }
-    .progress-indicator--heading {
-      font-size: 18px;
-      margin: 5px 3em 8px 0;
-      word-break: break-word;
-      a {
-        padding-left: 0;
-        line-height: 1.1;
-        display: inline-block;
-        &:hover,
-        &:active,
-        &:focus {
-          background-color: rgba($primary-highlight, 0.7);
-        }
-      }
-    }
-    .progress-indicator--status {
-      position: absolute;
-      top: 13px;
-      right: 15px;
-    }
-  }
+	.list-group-item {
+		$indent: 11px;
+		padding-left: $indent + 70px;
+		&:before {
+			// content: "\2014"; // emdash
+			// content: "\25A1"; // empty square
+			content: "\2022"; // "•"
+			color: lighten($grey, 10%);
+			position: absolute;
+			left: $indent + 26px;
+			// padding-left: 10px;
+			top: 0.42em;
+			width: $indent + 50px;
+			font-size: 150%;
+		}
+		.label {
+			padding-top: 3px;
+			background-color: transparent;
+			border-color: $grey;
+			color: $grey;
+		}
+		&.progress-indicator--active {
+			border-left: $radius solid $primary;
+			padding-left: $indent + 70 - $radius;
+			&:before {
+				left: $indent + 18 - $radius;
+			}
+		}
+		&.progress-indicator--doing {
+			&:before {
+				left: $indent + 13px;
+				top: 0.42em;
+				content: "\2022\2022\2022"; // "•••"
+				font-size: 150%;
+				color: $primary-dark;
+			}
+			.progress-indicator--heading {
+				color: $primary-dark;
+			}
+			.label {
+				border-color: $primary;
+				color: $primary;
+			}
+		}
+		&.progress-indicator--done {
+			&:before {	// check/tick
+				content: ""; // not using this way
+				transform: rotate(-45deg);
+				width: 24px;
+				height: 12px;
+				border: $radius solid lighten($grey, 10%);
+				border-top-style: none;
+				border-right-style: none;
+				top: 15px;
+				left: $indent + 18px;
+			}
+		}
+		.progress-indicator--heading {
+			font-size: 18px;
+			margin: 5px 3em 8px 0;
+			word-break: break-word;
+			a {
+				padding-left: 0;
+				line-height: 1.1;
+				display: inline-block;
+				&:hover,
+				&:active,
+				&:focus {
+					background-color: rgba($primary-highlight, 0.7);
+				}
+			}
+		}
+		.progress-indicator--status {
+			position: absolute;
+			top: 13px;
+			right: 15px;
+		}
+	}
 }
 
-
+// Lists
 .list-group.list-group-icon {
-  .list-group-item {
-    font-size: 18px;  // Visually like a h4
-    font-weight: bold;
-    padding: 1.3em 30px; // Extra padding ...for some reason (requested by SDT)
-    padding-left: 82px;
-    & > a {
-      display: inline-block;
-      &:hover,
-      &:active,
-      &:focus {
-        .fa,
-        .glyphicon,
-        .icon {
-          color: $primary-highlight;
-        }
-      }
-      .glyphicon,
-      .icon {
-        top: 0.6em;
-      }
-    }
-    .fa,
-    .glyphicon,
-    .icon {
-      margin-right: 0;
-      margin-left: -61px;
-      color: $grey;
-      font-size: 35px;
-      top: 0.6em;
-      position: absolute;
-      &:before {
-        margin-right: 0.5em;
-      }
-    }
-    .list-group-item-heading {
-      margin-top: 5px;
-    }
-    .list-group-item-text {
-      margin-bottom: 0;
-    }
-  }
-} // icon
-
-
+	.list-group-item {
+		font-size: 18px;	// Visually like a h4
+		font-weight: bold;
+		padding: 1.3em 30px; // Extra padding ...for some reason (requested by SDT)
+		padding-left: 82px;
+		& > a {
+			display: inline-block;
+			&:hover,
+			&:active,
+			&:focus {
+				.fa,
+				.glyphicon,
+				.icon {
+					color: $primary-highlight;
+				}
+			}
+			.glyphicon,
+			.icon {
+				top: 0.6em;
+			}
+		}
+		.fa,
+		.glyphicon,
+		.icon {
+			margin-right: 0;
+			margin-left: -61px;
+			color: $grey;
+			font-size: 35px;
+			top: 0.6em;
+			position: absolute;
+			&:before {
+				margin-right: 0.5em;
+			}
+		}
+		.list-group-item-heading {
+			margin-top: 5px;
+		}
+		.list-group-item-text {
+			margin-bottom: 0;
+		}
+	}
+}
 
 
 
 // Dashboard
 .dashboard-item {
-  margin: 1em 0 3em 0;
-  .dashboard-icon {
-    font-size: 8em;
-    color: $primary;
-    margin-bottom: 0.2em;
-  }
-  .dashboard-title {
-    margin: 0;
-    padding-bottom: 0.5em;
-  }
-  .dashboard-more-info {
-    line-height: 1.1;
-    outline: 0;
-    transition: all .2s;
-    font-size: 80%;
-    color: #fff;
-    border-bottom: none;
-    top: -3px;
-    position: relative;
-    &:before {
-      content: "i";
-      font-family: $font-serif;
-      font-style: italic;
-      color: $primary;
-      border: 2px solid $primary;
-      border-radius: 100%;
-      padding: 0 9px;
-      font-size: 20px;
-    }
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: transparent;
-      &:before {
-        color: $grey-dark;
-        text-decoration: none;
-        background-color: $primary-highlight;
-        border-color: $primary-highlight;
-      }
-    }
-  }
-  .dashboard-more-info-qmark {
-    &:before {
-      content: "?";
-      font-style: normal;
-      font-family: $font-family-base;
-    }
-  }
-  .dashboard-highlight {
-    color: $primary;
-    display: block;
-    font-size: 180%;
-    margin: 0.5em 0;
-    a {
-      padding: 0.5em 0.1em 0;
-      color: $primary;
-      &:hover,
-      &:active,
-      &:focus{
-        color: $grey-dark;
-      }
-    }
-    strong {
-      font-size: 180%;
-      a {
-        padding: 0;
-      }
-    }
-  }
-  .dashboard-extra {
-    color: $grey-dark;
-  }
+	margin: 1em 0 3em 0;
+	.dashboard-icon {
+		font-size: 8em;
+		color: $primary;
+		margin-bottom: 0.2em;
+	}
+	.dashboard-title {
+		margin: 0;
+		padding-bottom: 0.5em;
+	}
+	.dashboard-more-info {
+		line-height: 1.1;
+		outline: 0;
+		transition: all .2s;
+		font-size: 80%;
+		color: #fff;
+		border-bottom: none;
+		top: -3px;
+		position: relative;
+		&:before {
+			content: "i";
+			font-family: $font-serif;
+			font-style: italic;
+			color: $primary;
+			border: 2px solid $primary;
+			border-radius: 100%;
+			padding: 0 9px;
+			font-size: 20px;
+		}
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: transparent;
+			&:before {
+				color: $grey-dark;
+				text-decoration: none;
+				background-color: $primary-highlight;
+				border-color: $primary-highlight;
+			}
+		}
+	}
+	.dashboard-more-info-qmark {
+		&:before {
+			content: "?";
+			font-style: normal;
+			font-family: $font-family-base;
+		}
+	}
+	.dashboard-highlight {
+		color: $primary;
+		display: block;
+		font-size: 180%;
+		margin: 0.5em 0;
+		a {
+			padding: 0.5em 0.1em 0;
+			color: $primary;
+			&:hover,
+			&:active,
+			&:focus{
+				color: $grey-dark;
+			}
+		}
+		strong {
+			font-size: 180%;
+			a {
+				padding: 0;
+			}
+		}
+	}
+	.dashboard-extra {
+		color: $grey-dark;
+	}
 }
-
-
 
 
 
 // Date layout - mostly stolen from previous work on australia.gov.au
 .calendar-list {
-  max-width: 48em;
-  padding-left: 0;
-  .calendar-item {
-    display: table;
-    width: 100%;
-    background-color: $grey-light;
-    border-bottom: 1px solid #fff;
-    .calendar-number {
-      display: block;
-      margin: 6px 0;
-      color: $primary;
-      font-size: 1.8em;
-    }
-    .calendar-title {
-      padding: 0 0 0 20px;
-      line-height: 1.4;
-      padding-top: 3px;
-      font-size: 1.25em;
-    }
-    .calendar-note {
-      font-size: 14px;
-      display: block;
-      margin: 3px 0;
-      padding-right: 10px;
-      color: $grey-dark;
-    }
-    .calendar-date,
-    .calendar-name {
-      width: 70px;
-      text-align: center;
-      text-transform: uppercase;
-      line-height: 0.8;
-      padding: 12px 10px;
-      border-right: 1px solid #fff;
-    }
-    .calendar-date,
-    .calendar-title {
-      display: table-cell;
-      vertical-align: middle;
-    }
-  }
+	max-width: 48em;
+	padding-left: 0;
+	.calendar-item {
+		display: table;
+		width: 100%;
+		background-color: $grey-light;
+		border-bottom: 1px solid #fff;
+		.calendar-number {
+			display: block;
+			margin: 6px 0;
+			color: $primary;
+			font-size: 1.8em;
+		}
+		.calendar-title {
+			padding: 0 0 0 20px;
+			line-height: 1.4;
+			padding-top: 3px;
+			font-size: 1.25em;
+		}
+		.calendar-note {
+			font-size: 14px;
+			display: block;
+			margin: 3px 0;
+			padding-right: 10px;
+			color: $grey-dark;
+		}
+		.calendar-date,
+		.calendar-name {
+			width: 70px;
+			text-align: center;
+			text-transform: uppercase;
+			line-height: 0.8;
+			padding: 12px 10px;
+			border-right: 1px solid #fff;
+		}
+		.calendar-date,
+		.calendar-title {
+			display: table-cell;
+			vertical-align: middle;
+		}
+	}
 }
 
 
 
 // DTO's CTA link
 .cta-link {
-  display: inline-block;
-  position: relative;
-  font-size: 21px;
-  margin-bottom: 1.6em;
-  margin-right: 0.2em;
-  padding: 2px 5px;
-  font-weight: bold;
-  &::after {
-    content: '›';
-    display: inline-block;
-    margin-left: 0.3em;
-    transition: all 0.2s ease-in;
-    font-weight: 400;
-    color: $primary-highlight;
-    font-size: 150%;
-    margin-top: -0.1em;
-  }
-  &:hover,
-  &:active,
-  &:focus {
-    margin-right: 0;
-    color: $primary-darker;
-    &::after {
-      color: $primary-darker;
-      margin-left: 0.45em;
-      // tweaked, couldn't help meself.. :D
-      transform: scale(1.2);
-    }
-  }
+	display: inline-block;
+	position: relative;
+	font-size: 21px;
+	margin-bottom: 1.6em;
+	margin-right: 0.2em;
+	padding: 2px 5px;
+	font-weight: bold;
+	&::after {
+		content: '›';
+		display: inline-block;
+		margin-left: 0.3em;
+		transition: all 0.2s ease-in;
+		font-weight: 400;
+		color: $primary-highlight;
+		font-size: 150%;
+		margin-top: -0.1em;
+	}
+	&:hover,
+	&:active,
+	&:focus {
+		margin-right: 0;
+		color: $primary-darker;
+		&::after {
+			color: $primary-darker;
+			margin-left: 0.45em;
+			// tweaked, couldn't help meself.. :D
+			transform: scale(1.2);
+		}
+	}
 }
+
 
 
 // See message.html for example
 .full-page {
-  padding: 0;
-  .container {
-    margin: 25vh auto;
-    height: 50vh;
-  }
+	padding: 0;
+	.container {
+		margin: 25vh auto;
+		height: 50vh;
+	}
 }

@@ -10,13 +10,13 @@
 // Mixins
 @import 'dtostrap-mixins';
 
-// Header, footer, etc
+// Header, footer and 'site wide' things
 @import 'dtostrap-global';
 
 // Text size etc
 @import 'dtostrap-typography';
 
-// All elements, such as btns, wells etc
+// All elements, such as .btns, .wells etc.
 @import 'dtostrap-elements';
 @import 'dtostrap-extra-elements';
 
@@ -26,5 +26,5 @@
 // Responsive styles
 @import 'dtostrap-responsive';
 
-// Basically just for IE
+// Browser specific work around ...but basically just for IE & Edge
 @import 'dtostrap-browser-hacks';

@@ -4,8 +4,8 @@
 
 // Skip link
 .skiplink {
-  background-color: $grey-dark;
-  color: #fff;
+	background-color: $grey-dark;
+	color: #fff;
 }
 
 
@@ -13,79 +13,79 @@
 abbr[data-original-title],
 abbr[title],
 abbr {
-  text-decoration: none;    // stop Chrome overriding
-  // border-bottom: none;   // alternate for when many browsers support "text-decoration: underline dotted;"
+	text-decoration: none;		// stop Chrome overriding
+	// border-bottom: none;	 // alternate for when many browsers support "text-decoration: underline dotted;"
 }
 
 
 // Buttons
 .btn {
-  border-radius: $radius;
-  transition: 0.16s all;
-  font-size: 17px;
+	border-radius: $radius;
+	font-size: 17px;
+	transition: 0.16s all;
 }
 .btn-default {
-  // can't use mixin here as its different pattern to the others - has a transparent bg, etc.
-  background-color: transparent;
-  color: $primary;
-  border-color: $primary;
-  &:hover,
-  &:active,
-  &:focus {
-    background-color: $primary-dark;
-    color: #fff;
-    border-color: darken($primary-dark, 10%);
-  }
-  &.disabled,
-  &[disabled],
-  fieldset[disabled] & {
-    &:hover,
-    &.focus,
-    &:focus {
-      background-color: #fff;
-      color: $primary;
-      border-color: $primary;
-    }
-  }
+	// can't use mixin here as its different pattern to the others - has a transparent bg, etc.
+	background-color: transparent;
+	border-color: $primary;
+	color: $primary;
+	&:hover,
+	&:active,
+	&:focus {
+		background-color: $primary-dark;
+		border-color: darken($primary-dark, 10%);
+		color: #fff;
+	}
+	&.disabled,
+	&[disabled],
+	fieldset[disabled] & {
+		&:hover,
+		&.focus,
+		&:focus {
+			background-color: #fff;
+			border-color: $primary;
+			color: $primary;
+		}
+	}
 }
 .btn-primary {
-  @include button-colours($primary-dark, #fff);
+	@include button-colours($primary-dark, #fff);
 }
 .btn-success {
-  @include button-colours($success, #fff);
+	@include button-colours($success, #fff);
 }
 .btn-info {
-  @include button-colours($info, $grey-dark);
+	@include button-colours($info, $grey-dark);
 }
 .btn-warning {
-  @include button-colours($warning, $grey-dark);
+	@include button-colours($warning, $grey-dark);
 }
 .btn-danger {
-  @include button-colours($danger, #fff);
+	@include button-colours($danger, #fff);
 }
 .btn-link {
-  color: $grey-dark;
-  border-radius: 0;
-  border-bottom: solid 1px $primary-bright;
-  transition: 0.1s all ease-in-out;
-  &:not(:disabled) {
-    &:hover,
-    &:focus,
-    &:active {
-      color: $grey-dark;
-      background-color: $primary-bright;
-      text-decoration: none;
-    }
-  }
-  &[disabled],
-  fieldset[disabled] & {
-    &:hover,
-    &:focus,
-    &:active {
-      background-color: $grey-light;
-      border-bottom-color: $grey-border;
-    }
-  }
+	border-bottom: solid 1px $primary-bright;
+	border-radius: 0;
+	color: $grey-dark;
+	transition: 0.1s all ease-in-out;
+	&:not(:disabled) {
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $primary-bright;
+			color: $grey-dark;
+			text-decoration: none;
+		}
+	}
+	&[disabled],
+	fieldset[disabled] & {
+		&:hover,
+		&:focus,
+		&:active {
+			background-color: $grey-light;
+			border-bottom-color: $grey-border;
+		}
+	}
 }
 
 
@@ -93,204 +93,196 @@ abbr {
 
 // Labels
 .label {
-  font-weight: $font-weight-normal;
-  border-radius: $radius;
-  border: 1px solid $grey-border; // fallback for old browsers
-  border-color: currentColor;
-  background-color: transparent;
+	background-color: transparent;
+	border: 1px solid $grey-border; // fallback for old browsers
+	border-color: currentColor;
+	border-radius: $radius;
+	font-weight: $font-weight-normal;
 }
 .label-default {
-  color: $grey;
+	color: $grey;
 }
 .label-primary {
-  color: $primary;
+	color: $primary;
 }
 .label-success {
-  color: $success;
+	color: $success;
 }
 .label-info {
-  color: $info-dark;
+	color: $info-dark;
 }
 .label-warning {
-  color: $warning-dark;
+	color: $warning-dark;
 }
 .label-danger {
-  color: $danger;
+	color: $danger;
 }
 .label-alpha {
-  color: $alpha;
+	color: $alpha;
 }
 .label-beta {
-  color: $beta;
+	color: $beta;
 }
 .label-hover {
-  text-decoration: none !important;
-  color: #fff;
+	color: #fff;
+	text-decoration: none !important;
 }
 a {
-  &:hover,
-  &:active,
-  &:focus {
-    .label {
-      @extend .label-hover;
-      &.label-default {
-        @include button-colours($grey, #fff, 0);
-      }
-      &.label-primary {
-        @include button-colours($primary, #fff, 0);
-      }
-      &.label-success {
-        @include button-colours($success, #fff, 0);
-      }
-      &.label-info {
-        @include button-colours($info-dark, #fff, 0);
-      }
-      &.label-warning {
-        @include button-colours($warning-dark, #fff, 0);
-      }
-      &.label-danger {
-        @include button-colours($danger, #fff, 0);
-      }
-      &.label-alpha {
-        @include button-colours($alpha, #fff, 0);
-      }
-      &.label-beta {
-        @include button-colours($beta, #fff, 0);
-      }
-    }
-  }
-  &.label {
-    &:hover,
-    &:active,
-    &:focus {
-      @extend .label-hover;
-      &.label-default {
-        @include button-colours($grey, #fff, 0);
-      }
-      &.label-primary {
-        @include button-colours($primary, #fff, 0);
-      }
-      &.label-success {
-        @include button-colours($success, #fff, 0);
-      }
-      &.label-info {
-        @include button-colours($info-dark, #fff, 0);
-      }
-      &.label-warning {
-        @include button-colours($warning-dark, #fff, 0);
-      }
-      &.label-danger {
-        @include button-colours($danger, #fff, 0);
-      }
-      &.label-alpha {
-        @include button-colours($alpha, #fff, 0);
-      }
-      &.label-beta {
-        @include button-colours($beta, #fff, 0);
-      }
-    }
-  }
-  // &.label-warning[href] {
-  //   &:hover,
-  //   &:active,
-  //   &:focus {
-  //     color: $grey-dark;
-  //     background-color: $warning;
-  //   }
-  // }
+	&:hover,
+	&:active,
+	&:focus {
+		.label {
+			@extend .label-hover;
+			&.label-default {
+				@include button-colours($grey, #fff, 0);
+			}
+			&.label-primary {
+				@include button-colours($primary, #fff, 0);
+			}
+			&.label-success {
+				@include button-colours($success, #fff, 0);
+			}
+			&.label-info {
+				@include button-colours($info-dark, #fff, 0);
+			}
+			&.label-warning {
+				@include button-colours($warning-dark, #fff, 0);
+			}
+			&.label-danger {
+				@include button-colours($danger, #fff, 0);
+			}
+			&.label-alpha {
+				@include button-colours($alpha, #fff, 0);
+			}
+			&.label-beta {
+				@include button-colours($beta, #fff, 0);
+			}
+		}
+	}
+	&.label {
+		&:hover,
+		&:active,
+		&:focus {
+			@extend .label-hover;
+			&.label-default {
+				@include button-colours($grey, #fff, 0);
+			}
+			&.label-primary {
+				@include button-colours($primary, #fff, 0);
+			}
+			&.label-success {
+				@include button-colours($success, #fff, 0);
+			}
+			&.label-info {
+				@include button-colours($info-dark, #fff, 0);
+			}
+			&.label-warning {
+				@include button-colours($warning-dark, #fff, 0);
+			}
+			&.label-danger {
+				@include button-colours($danger, #fff, 0);
+			}
+			&.label-alpha {
+				@include button-colours($alpha, #fff, 0);
+			}
+			&.label-beta {
+				@include button-colours($beta, #fff, 0);
+			}
+		}
+	}
 }
 
 
 
 // Progress bars
 .progress-bar {
-  background-color: $beta;  //  ¯\_(ツ)_/¯ ...I needed another colour
+	background-color: $beta;	//	¯\_(ツ)_/¯ ...I needed another colour
 }
 .progress-bar-default {
-  background-color: $grey;
+	background-color: $grey;
 }
 .progress-bar-primary {
-  background-color: $primary;
+	background-color: $primary;
 }
 .progress-bar-success {
-  background-color: $success;
+	background-color: $success;
 }
 .progress-bar-info {
-  background-color: $info;
+	background-color: $info;
 }
 .progress-bar-warning {
-  background-color: $warning;
+	background-color: $warning;
 }
 .progress-bar-danger {
-  background-color: $danger;
+	background-color: $danger;
 }
 
 
 // Badges
 .badge {
-  background-color: $grey;
+	background-color: $grey;
 }
 
 
 // Alert
 .alert {
-  border-radius: $radius-small;
-  padding: 1.2em;
-  box-shadow: 0 0 8px $grey-border;
-  color: $grey-dark;
-  background: transparent;
-  border: none;
+	background: transparent;
+	border: none;
+	border-radius: $radius-small;
+	box-shadow: 0 0 8px $grey-border;
+	color: $grey-dark;
+	padding: 1.2em;
 }
 .alert-default {
-  padding-left: 1.6em;
+	padding-left: 1.6em;
 }
 .alert-primary {
-  border-left: 0.4em solid $primary;
+	border-left: 0.4em solid $primary;
 }
 .alert-success {
-  border-left: 0.4em solid $success;
+	border-left: 0.4em solid $success;
 }
 .alert-info {
-  border-left: 0.4em solid $info;
+	border-left: 0.4em solid $info;
 }
 .alert-warning {
-  border-left: 0.4em solid $warning;
+	border-left: 0.4em solid $warning;
 }
 .alert-danger {
-  border-left: 0.4em solid $danger;
+	border-left: 0.4em solid $danger;
 }
 
 .alert-calendar {
-  border-left: 0.4em solid $primary;
-  .calendar-date,
-  .calendar-name {
-    display: block;
-    font-size: 32px;
-    line-height: 1.2;
-  }
-  .calendar-date {
-    font-weight: $font-weight-bold;
-  }
+	border-left: 0.4em solid $primary;
+	.calendar-date,
+	.calendar-name {
+		display: block;
+		font-size: 32px;
+		line-height: 1.2;
+	}
+	.calendar-date {
+		font-weight: $font-weight-bold;
+	}
 }
 
 // Basically the p tag equiv of above
 .text-muted {
-  color: $grey;
+	color: $grey;
 }
 .text-primary {
-  color: $primary;
+	color: $primary;
 }
 .text-success {
-  color: $success;
+	color: $success;
 }
 .text-info {
-  color: darken($info, 15%);  // darker for a11y
+	color: darken($info, 15%);	// darker for a11y
 }
 .text-warning {
-  color: $warning-dark; // darker to atempt a11y - but please, just don't use this
+	color: $warning-dark; // darker to atempt a11y - but please, just don't use this
 }
 .text-danger {
-  color: $danger;
+	color: $danger;
 }
 
 
@@ -299,38 +291,38 @@ a {
 // Jumbotrons and Wells
 .jumbotron,
 .well {
-  border-radius: $radius-small;
-  border: 0;
-  background-color: $grey-light;
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    &:first-child {
-      margin-top: 0;
-      margin-bottom: 0.8em;
-    }
-    &:last-child {
-      margin-bottom: 0;
-    }
-  }
+	background-color: $grey-light;
+	border: 0;
+	border-radius: $radius-small;
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		&:first-child {
+			margin-bottom: 0.8em;
+			margin-top: 0;
+		}
+		&:last-child {
+			margin-bottom: 0;
+		}
+	}
 }
 .container {
-  .jumbotron{
-    h1 {
-      font-size: 230%;
-    }
-  }
+	.jumbotron{
+		h1 {
+			font-size: 230%;
+		}
+	}
 }
 .jumbotron {
-  margin-bottom: 3em;
+	margin-bottom: 3em;
 }
 
 
 .page-header {
-  border-bottom: 1px solid $grey-light;
+	border-bottom: 1px solid $grey-light;
 }
 
 
@@ -340,70 +332,70 @@ a {
 // Inline list of links
 .nav-tabs,
 .nav-pills {
-  border-bottom: 1px solid $grey;
-  li {
-    list-style: none;
-    a {
-      border-radius: 0;
-      border: none;
-      border-bottom: solid 4px transparent;
-      &:active,
-      &:focus,
-      &:hover {
-        // background-color: $primary-highlight;   // it's just too much
-        background-color: $primary-light;
-        // border-bottom-color: $primary;
-        border-bottom-color: $primary-highlight;
-        border-bottom: 4px solid $primary;  // can't just do colour because of .nav-tabs
-      }
-    }
-    &.active {
-      & > a {
-        color: $primary;
-        background-color: $primary-light;
-        margin-right: 0;
-        border: none;
-        border-bottom: 4px solid $primary;  // can't just do colour because of .nav-tabs
-        &:active,
-        &:focus,
-        &:hover {
-          color: $primary;
-          background-color: $primary-light;
-          border: none;
-          border-bottom: 4px solid $primary;  // can't just do colour because of .nav-tabs
-        }
-        .badge {
-          background-color: $primary;
-          color: #fff;
-        }
-      }
-    }
-    & + li {
-      margin-left: 0;
-    }
-  }
+	border-bottom: 1px solid $grey;
+	li {
+		list-style: none;
+		a {
+			border: none;
+			border-bottom: solid 4px transparent;
+			border-radius: 0;
+			&:active,
+			&:focus,
+			&:hover {
+				// background-color: $primary-highlight;	 // it's just too much
+				background-color: $primary-light;
+				border-bottom: 4px solid $primary;	// can't just do colour because of .nav-tabs
+				// border-bottom-color: $primary;
+				border-bottom-color: $primary-highlight;
+			}
+		}
+		&.active {
+			& > a {
+				background-color: $primary-light;
+				border: none;
+				border-bottom: 4px solid $primary;	// can't just do colour because of .nav-tabs
+				color: $primary;
+				margin-right: 0;
+				&:active,
+				&:focus,
+				&:hover {
+					background-color: $primary-light;
+					border: none;
+					border-bottom: 4px solid $primary;	// can't just do colour because of .nav-tabs
+					color: $primary;
+				}
+				.badge {
+					background-color: $primary;
+					color: #fff;
+				}
+			}
+		}
+		& + li {
+			margin-left: 0;
+		}
+	}
 }
 .nav-tabs.nav-justified > li > a {
-  border-radius: 0;
+	border-radius: 0;
 }
 
 
 
 // Breadcrumbs
 .breadcrumb {
-  background-color: transparent;
-  padding: 10px 0;
-  .active {
-    color: $grey-dark;
-  }
-  li {
-    margin-bottom: 2px;
-    & + li:before {
-      content: "\0203A";
-      color: $grey;
-      padding: 0 15px;
-    }
-  }
+	background-color: transparent;
+	padding: 10px 0;
+	.active {
+		color: $grey-dark;
+	}
+	li {
+		margin-bottom: 2px;
+		& + li:before {
+			color: $grey;
+			content: "\0203A";
+			padding: 0 15px;
+		}
+	}
 }
 
 
@@ -411,71 +403,71 @@ a {
 // Pagination
 .pagination,
 .pager {
-  & > li {
-    & > a,
-    & > span {
-      color: $primary;
-      background-color: #fff;
-      border: 1px solid $grey-border;
-      &:hover,
-      &:active,
-      &:focus {
-        // color: $grey-dark;
-        color: $primary-dark;
-        background-color: $grey-light;
-        border: 1px solid $primary;
-      }
-      &:active {
-        color: $grey-dark;
-        background-color: $primary-bright;
-        border-color: $grey;
-      }
-    }
-    &:first-child > {
-      a,
-      span {
-        border-top-left-radius: $radius-small;
-        border-bottom-left-radius: $radius-small;
-      }
-    }
-    &:last-child > {
-      a,
-      span {
-        border-top-right-radius: $radius-small;
-        border-bottom-right-radius: $radius-small;
-      }
-    }
-    &.active {
-      a,
-      span {
-        background-color: $primary-dark;
-        border-color: $primary-dark;
-        &:hover,
-        &:active,
-        &:focus {
-          color: #fff;
-          background-color: $primary-dark;
-          border-color: $primary-dark;
-        }
-      }
-    }
-    &.disabled {
-      a,
-      span {
-        color: $grey;
-        background-color: #fff;
-        border-color: $grey-border;
-      }
-    }
-  }
+	& > li {
+		& > a,
+		& > span {
+			background-color: #fff;
+			border: 1px solid $grey-border;
+			color: $primary;
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: $grey-light;
+				border: 1px solid $primary;
+				// color: $grey-dark;
+				color: $primary-dark;
+			}
+			&:active {
+				background-color: $primary-bright;
+				border-color: $grey;
+				color: $grey-dark;
+			}
+		}
+		&:first-child > {
+			a,
+			span {
+				border-bottom-left-radius: $radius-small;
+				border-top-left-radius: $radius-small;
+			}
+		}
+		&:last-child > {
+			a,
+			span {
+				border-bottom-right-radius: $radius-small;
+				border-top-right-radius: $radius-small;
+			}
+		}
+		&.active {
+			a,
+			span {
+				background-color: $primary-dark;
+				border-color: $primary-dark;
+				&:hover,
+				&:active,
+				&:focus {
+					background-color: $primary-dark;
+					border-color: $primary-dark;
+					color: #fff;
+				}
+			}
+		}
+		&.disabled {
+			a,
+			span {
+				background-color: #fff;
+				border-color: $grey-border;
+				color: $grey;
+			}
+		}
+	}
 }
 .pager {
-  li {
-    a,
-    span {
-      border-radius: $radius-small;
-    }
-  }
+	li {
+		a,
+		span {
+			border-radius: $radius-small;
+		}
+	}
 }
 
 
@@ -483,126 +475,126 @@ a {
 
 // Forms
 form {
-  max-width: $max-readable-width;
+	max-width: $max-readable-width;
 }
 form {
-  [type='text'],
-  [type='number'],
-  [type='tel'],
-  [type='email'],
-  [type='password'],
-  input[type='radio'],
-  input[type='checkbox']
-  select,
-  optgroup,
-  textarea {
-    font: inherit;
-    font-size: 17px;
-    padding: 1.12em 0.7em;
-    &:active,
-    &:focus {
-      outline: 2px solid $primary-bright;
-    }
-  }
-  select.form-control,
-  select.form-control option {
-    // font-size: 17px;
-  }
-  input[type=file] {
-    line-height: 0;
-    margin-top: 10px;
-  }
-  label {
-    margin-bottom: 3px;
-    margin-top: 6px;
-  }
+	[type='text'],
+	[type='number'],
+	[type='tel'],
+	[type='email'],
+	[type='password'],
+	input[type='radio'],
+	input[type='checkbox']
+	select,
+	optgroup,
+	textarea {
+		font: inherit;
+		font-size: 17px;
+		padding: 1.12em 0.7em;
+		&:active,
+		&:focus {
+			outline: 2px solid $primary-bright;
+		}
+	}
+	select.form-control,
+	select.form-control option {
+		// font-size: 17px;
+	}
+	input[type=file] {
+		line-height: 0;
+		margin-top: 10px;
+	}
+	label {
+		margin-bottom: 3px;
+		margin-top: 6px;
+	}
 }
 .help-block {
-  color: $grey;
+	color: $grey;
 }
 .has-success {
-  .checkbox,
-  .checkbox-inline,
-  .control-label,
-  .help-block,
-  .radio,
-  .radio-inline,
-  &.checkbox label,
-  &.checkbox-inline label,
-  &.radio label,
-  &.radio-inline label {
-    color: $success;
-  }
+	.checkbox,
+	.checkbox-inline,
+	.control-label,
+	.help-block,
+	.radio,
+	.radio-inline,
+	&.checkbox label,
+	&.checkbox-inline label,
+	&.radio label,
+	&.radio-inline label {
+		color: $success;
+	}
 }
 .has-warning {
-  .checkbox,
-  .checkbox-inline,
-  .control-label,
-  .help-block,
-  .radio,
-  .radio-inline,
-  &.checkbox label,
-  &.checkbox-inline label,
-  &.radio label,
-  &.radio-inline label {
-    color: $warning-dark;
-  }
+	.checkbox,
+	.checkbox-inline,
+	.control-label,
+	.help-block,
+	.radio,
+	.radio-inline,
+	&.checkbox label,
+	&.checkbox-inline label,
+	&.radio label,
+	&.radio-inline label {
+		color: $warning-dark;
+	}
 }
 .has-error {
-  .checkbox,
-  .checkbox-inline,
-  .control-label,
-  .help-block,
-  .radio,
-  .radio-inline,
-  &.checkbox label,
-  &.checkbox-inline label,
-  &.radio label,
-  &.radio-inline label {
-    color: $danger;
-  }
+	.checkbox,
+	.checkbox-inline,
+	.control-label,
+	.help-block,
+	.radio,
+	.radio-inline,
+	&.checkbox label,
+	&.checkbox-inline label,
+	&.radio label,
+	&.radio-inline label {
+		color: $danger;
+	}
 }
 .form-control {
-  border-radius: $radius-small;
-  box-shadow: none;
-  font-size: 17px;
+	border-radius: $radius-small;
+	box-shadow: none;
+	font-size: 17px;
 }
 
 // Disabled form elements
 fieldset[disabled] .form-control,
 .form-control:disabled {
-  background-color: $grey-light;
-  color: $grey;
+	background-color: $grey-light;
+	color: $grey;
 }
 
 // More padding
 .checkbox,
 .radio {
-  margin-top: 20px;
-  margin-bottom: 15px;
+	margin-bottom: 15px;
+	margin-top: 20px;
 }
 
 // Forms
 .input-group-addon {
-    border-radius: $radius;
+		border-radius: $radius;
 }
 .input-group-addon {
-  color: $grey;
-  background-color: $grey-light;
-  border: 1px solid $grey-border;
+	background-color: $grey-light;
+	border: 1px solid $grey-border;
+	color: $grey;
 }
 .form-control {
-  color: $grey;
-  border: 1px solid $grey-border;
+	border: 1px solid $grey-border;
+	color: $grey;
 }
 select.form-control {
-  margin-bottom: 10px;
-  min-height: 2.3em;
+	margin-bottom: 10px;
+	min-height: 2.3em;
 }
 .input-group-btn {
-  .btn {
-    padding: 7px 15px;
-  }
+	.btn {
+		padding: 7px 15px;
+	}
 }
 
 // checkbox align
@@ -610,25 +602,25 @@ select.form-control {
 .checkbox-inline input[type=checkbox],
 .radio input[type=radio],
 .radio-inline input[type=radio] {
-  margin-top: 6px;
+	margin-top: 6px;
 }
 
 // Large forms (commentted out = super large, full width form)
 .input-group-lg > {
-  .form-control,
-  .input-group-addon,
-  .input-group-btn > .btn {
-    border-radius: $radius;
-  }
+	.form-control,
+	.input-group-addon,
+	.input-group-btn > .btn {
+		border-radius: $radius;
+	}
 }
 // Form labels
 label {
-  width: 100%;
-  .optional {
-    float: right;
-    color: $primary-dark;
-    font-weight: 400;
-  }
+	width: 100%;
+	.optional {
+		color: $primary-dark;
+		float: right;
+		font-weight: 400;
+	}
 }
 
 
@@ -637,310 +629,310 @@ label {
 // ...inspired by the DTO version, but in my bias opinion, made better
 //
 // NOTE: requires "transform: rotate()" and ":before"/":after" support,
-//       but really... ¯\_(ツ)_/¯
-//       https://caniuse.com/#feat=transforms2d
-//       thats <=IE8, which MS even disowned + Opera Mini, which the less used version of the least used browser :P
+//			 but really... ¯\_(ツ)_/¯
+//			 https://caniuse.com/#feat=transforms2d
+//			 thats <=IE8, which MS even disowned + Opera Mini, which the less used version of the least used browser :P
 
 // Checkboxes
 .checkbox {
-  input[type=checkbox] {
-    position: relative;
-    top: -8px;
-    left: -12px;
-    margin: 0 6px 0 -25px;
-    cursor: pointer;
-    &:before {
-      transition: all 0.1s ease-out;
-      content: "";
-      position: absolute;
-      left: 0;
-      z-index: 1;
-      width: $checkbox-size;
-      height: $checkbox-size;
-    }
-    &:checked:before {
-      transform: rotate(-45deg);
-      width: 19px;
-      height: 10px;
-      border: 4px solid #fff;
-      border-top-style: none;
-      border-right-style: none;
-      top: 5px;
-      left: 4px;
-    }
-    &:after {
-      content: "";
-      position: absolute;
-      top: -1px;
-      left: 0;
-      width: $checkbox-size;
-      height: $checkbox-size;
-      background: #fff;
-      cursor: pointer;
-      border: 2px solid $grey-dark;
-    }
-    &:checked:after {
-      background: $grey-dark;
-      border-color: $grey-dark;
-    }
-  }
-  input[type=checkbox] {
-    &:active,
-    &:focus {
-      outline: none;
-      &:before,
-      &:after {
-        border-color: $primary-highlight;
-      }
-    }
-  }
-  input[type=checkbox]:checked {
-    &:active,
-    &:focus {
-      &:after {
-        border-color: $grey-dark;
-      }
-    }
-  }
-  &:hover {
-    input[type=checkbox] {
-      &:after {
-        border-color: $primary;
-      }
-    }
-  }
-  label {
-    position: relative;
-    margin: .5rem .5rem .5rem 1em;
-    line-height: 135%;
-    cursor: pointer;
-  }
+	input[type=checkbox] {
+		cursor: pointer;
+		left: -12px;
+		margin: 0 6px 0 -25px;
+		position: relative;
+		top: -8px;
+		&:before {
+			content: "";
+			height: $checkbox-size;
+			left: 0;
+			position: absolute;
+			transition: all 0.1s ease-out;
+			width: $checkbox-size;
+			z-index: 1;
+		}
+		&:checked:before {
+			border: 4px solid #fff;
+			border-right-style: none;
+			border-top-style: none;
+			height: 10px;
+			left: 4px;
+			top: 5px;
+			transform: rotate(-45deg);
+			width: 19px;
+		}
+		&:after {
+			background: #fff;
+			border: 2px solid $grey-dark;
+			content: "";
+			cursor: pointer;
+			height: $checkbox-size;
+			left: 0;
+			position: absolute;
+			top: -1px;
+			width: $checkbox-size;
+		}
+		&:checked:after {
+			background: $grey-dark;
+			border-color: $grey-dark;
+		}
+	}
+	input[type=checkbox] {
+		&:active,
+		&:focus {
+			outline: none;
+			&:before,
+			&:after {
+				border-color: $primary-highlight;
+			}
+		}
+	}
+	input[type=checkbox]:checked {
+		&:active,
+		&:focus {
+			&:after {
+				border-color: $grey-dark;
+			}
+		}
+	}
+	&:hover {
+		input[type=checkbox] {
+			&:after {
+				border-color: $primary;
+			}
+		}
+	}
+	label {
+		cursor: pointer;
+		line-height: 135%;
+		margin: .5rem .5rem .5rem 1em;
+		position: relative;
+	}
 }
 
 // colour according to validation state colours
 .has-success {
-  .checkbox {
-    input:after {
-      border-color: $success;
-    }
-  }
+	.checkbox {
+		input:after {
+			border-color: $success;
+		}
+	}
 }
 .has-warning {
-  .checkbox {
-    input:after {
-      border-color: $warning-dark;
-    }
-  }
+	.checkbox {
+		input:after {
+			border-color: $warning-dark;
+		}
+	}
 }
 .has-error {
-  .checkbox {
-    input:after {
-      border-color: $danger;
-    }
-  }
+	.checkbox {
+		input:after {
+			border-color: $danger;
+		}
+	}
 }
 
-fieldset:disabled .checkbox,  // account for if fieldset is .disabled
+fieldset:disabled .checkbox,	// account for if fieldset is .disabled
 .checkbox.disabled {
-  cursor: not-allowed;
-  label {
-    color: $grey-border;
-  }
-  input:disabled {
-    &:before,
-    &:after {
-      cursor: not-allowed;
-    }
-    &:after {
-      border-color: $grey-border;
-      background-color: $grey-light;
-    }
-  }
+	cursor: not-allowed;
+	label {
+		color: $grey-border;
+	}
+	input:disabled {
+		&:before,
+		&:after {
+			cursor: not-allowed;
+		}
+		&:after {
+			background-color: $grey-light;
+			border-color: $grey-border;
+		}
+	}
 }
 
 // Radio buttons
 .radio {
-  input[type=radio] {
-    position: relative;
-    top: -0.6rem;
-    top: -9px;
-    left: -11px;
-    margin: 0 0 0 -19px;
-    cursor: pointer;
-    outline: none;
-    transition: all 0.1s ease;
-    outline: none;
-    &:active,
-    &:focus {
-      outline: none;
-    }
-    &:before {
-      border-radius: 100%;
-      content: "";
-      position: absolute;
-      left: 0;
-      z-index: 1;
-      width: $checkbox-size;
-      height: $checkbox-size;
-      width: 19px;
-      height: 19px;
-      border: 3px solid #fff;
-      top: 4px;
-      left: -3px;
-      transition: all 0.16s ease;
-      transform: scale(0);
-    }
-    &:checked:before {
-      transform: scale(1);
-    }
-    &:after {
-      border-radius: 100%;
-      content: "";
-      position: absolute;
-      left: -7px;
-      width: $checkbox-size;
-      height: $checkbox-size;
-      background: #fff;
-      cursor: pointer;
-      border: 2px solid $grey-dark;
-    }
-    &:checked:after {
-      background: $grey-dark;
-      border-color: $grey-dark;
-    }
-  }
-  input[type=radio] {
-    &:active,
-    &:focus {
-      &:before,
-      &:after {
-        border-color: $primary-highlight;
-      }
-    }
-  }
-  input[type=radio]:checked {
-    &:active,
-    &:focus {
-      &:after {
-        border-color: $grey-dark;
-      }
-    }
-  }
-  &:hover {
-    input[type=radio] {
-      &:after {
-        border-color: $primary;
-      }
-    }
-  }
-  label {
-    position: relative;
-    margin: .5rem .5rem .5rem 1em;
-    line-height: 135%;
-    cursor: pointer;
-  }
+	input[type=radio] {
+		cursor: pointer;
+		left: -11px;
+		margin: 0 0 0 -19px;
+		outline: none;
+		outline: none;
+		position: relative;
+		top: -0.6rem;
+		top: -9px;
+		transition: all 0.1s ease;
+		&:active,
+		&:focus {
+			outline: none;
+		}
+		&:before {
+			border: 3px solid #fff;
+			border-radius: 100%;
+			content: "";
+			height: $checkbox-size;
+			height: 19px;
+			left: 0;
+			left: -3px;
+			position: absolute;
+			top: 4px;
+			transform: scale(0);
+			transition: all 0.16s ease;
+			width: $checkbox-size;
+			width: 19px;
+			z-index: 1;
+		}
+		&:checked:before {
+			transform: scale(1);
+		}
+		&:after {
+			background: #fff;
+			border: 2px solid $grey-dark;
+			border-radius: 100%;
+			content: "";
+			cursor: pointer;
+			height: $checkbox-size;
+			left: -7px;
+			position: absolute;
+			width: $checkbox-size;
+		}
+		&:checked:after {
+			background: $grey-dark;
+			border-color: $grey-dark;
+		}
+	}
+	input[type=radio] {
+		&:active,
+		&:focus {
+			&:before,
+			&:after {
+				border-color: $primary-highlight;
+			}
+		}
+	}
+	input[type=radio]:checked {
+		&:active,
+		&:focus {
+			&:after {
+				border-color: $grey-dark;
+			}
+		}
+	}
+	&:hover {
+		input[type=radio] {
+			&:after {
+				border-color: $primary;
+			}
+		}
+	}
+	label {
+		cursor: pointer;
+		line-height: 135%;
+		margin: .5rem .5rem .5rem 1em;
+		position: relative;
+	}
 } // .radio
-fieldset:disabled .radio,  // account for if fieldset is .disabled
+fieldset:disabled .radio,	// account for if fieldset is .disabled
 .radio.disabled {
-  cursor: not-allowed;
-  label {
-    color: $grey-border;
-  }
-  input:disabled {
-    &:before,
-    &:after {
-      cursor: not-allowed;
-    }
-    &:after {
-      border-color: $grey-border;
-      background-color: $grey-light;
-    }
-  }
+	cursor: not-allowed;
+	label {
+		color: $grey-border;
+	}
+	input:disabled {
+		&:before,
+		&:after {
+			cursor: not-allowed;
+		}
+		&:after {
+			background-color: $grey-light;
+			border-color: $grey-border;
+		}
+	}
 } // disabled
 
 
 // Dropdown menus (<select>)
 select.form-control {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border-radius: $radius-small;
-  color: $grey-dark;
-  background-image:
-    linear-gradient(45deg, transparent 50%, $grey-dark 50%),
-    linear-gradient(135deg, $grey-dark 50%, transparent 50%);
-    // linear-gradient(to right, #ccc, #ccc); // divider
-  background-position:
-    calc(100% - 15px) calc(0.9em + 2px),
-    calc(100% - 10px) calc(0.9em + 2px);
-    // calc(100% - 2.5em) 0.5em;  // divider
-  background-size:
-    6px 6px,
-    6px 6px;
-    // 1px 1.5em;  // divider
-  background-repeat: no-repeat;
-  &:active,
-  &:focus {
-    background-image:
-      linear-gradient(45deg, transparent 50%, $primary-highlight 50%),
-      linear-gradient(135deg, $primary-highlight 50%, transparent 50%);
-    border-color: $primary-highlight;
-  }
-  &:hover {
-    background-image:
-      linear-gradient(45deg, transparent 50%, $primary 50%),
-      linear-gradient(135deg, $primary 50%, transparent 50%);
-    border-color: $primary;
-  }
-  // ...but not on multiselect list items.
-  &[multiple] {
-    background: none;
-    padding: 0;
-    option {
-      margin: 0;
-      padding: 5px 15px;
-      &:checked,
-      &:active,
-      &:focus {
-        color: $grey-dark;  // TODO: make this take effect in all situations
-        box-shadow: inset 1000px 1000px $primary-highlight; // pushes the browsers bg-color out of site
-      }
-    }
-  }
-  &:disabled {
-    background-image:
-      linear-gradient(45deg, transparent 50%, $grey-border 50%),
-      linear-gradient(135deg, $grey-border 50%, transparent 50%);
-    border-color: $grey-border;
-    color: $grey;
-    background-color: $grey-light;
-    &:before,
-    &:after {
-      cursor: not-allowed;
-    }
-    &:after {
-      border-color: $grey-border;
-      background-color: $grey-light;
-    }
-    &:active,
-    &:focus,
-    &:hover {
-      background-image:
-        linear-gradient(45deg, transparent 50%, $grey-border 50%),
-        linear-gradient(135deg, $grey-border 50%, transparent 50%);
-      border-color: $grey-border;
-    }
-    // ...but, again; not on multiselect list items.
-    &[multiple] {
-      background: $grey-light;
-    }
-  }
+	-moz-appearance: none;
+	-moz-box-sizing: border-box;
+	-webkit-appearance: none;
+	-webkit-box-sizing: border-box;
+	background-image:
+		linear-gradient(45deg, transparent 50%, $grey-dark 50%),
+		linear-gradient(135deg, $grey-dark 50%, transparent 50%);
+		// linear-gradient(to right, #ccc, #ccc); // divider
+	background-position:
+		calc(100% - 15px) calc(0.9em + 2px),
+		calc(100% - 10px) calc(0.9em + 2px);
+		// 1px 1.5em;	// divider
+	background-repeat: no-repeat;
+		// calc(100% - 2.5em) 0.5em;	// divider
+	background-size:
+		6px 6px,
+		6px 6px;
+	border-radius: $radius-small;
+	box-sizing: border-box;
+	color: $grey-dark;
+	&:active,
+	&:focus {
+		background-image:
+			linear-gradient(45deg, transparent 50%, $primary-highlight 50%),
+			linear-gradient(135deg, $primary-highlight 50%, transparent 50%);
+		border-color: $primary-highlight;
+	}
+	&:hover {
+		background-image:
+			linear-gradient(45deg, transparent 50%, $primary 50%),
+			linear-gradient(135deg, $primary 50%, transparent 50%);
+		border-color: $primary;
+	}
+	// ...but not on multiselect list items.
+	&[multiple] {
+		background: none;
+		padding: 0;
+		option {
+			margin: 0;
+			padding: 5px 15px;
+			&:checked,
+			&:active,
+			&:focus {
+				box-shadow: inset 1000px 1000px $primary-highlight; // pushes the browsers bg-color out of site
+				color: $grey-dark;	// TODO: make this take effect in all situations
+			}
+		}
+	}
+	&:disabled {
+		background-color: $grey-light;
+		background-image:
+			linear-gradient(45deg, transparent 50%, $grey-border 50%),
+			linear-gradient(135deg, $grey-border 50%, transparent 50%);
+		border-color: $grey-border;
+		color: $grey;
+		&:before,
+		&:after {
+			cursor: not-allowed;
+		}
+		&:after {
+			background-color: $grey-light;
+			border-color: $grey-border;
+		}
+		&:active,
+		&:focus,
+		&:hover {
+			background-image:
+				linear-gradient(45deg, transparent 50%, $grey-border 50%),
+				linear-gradient(135deg, $grey-border 50%, transparent 50%);
+			border-color: $grey-border;
+		}
+		// ...but, again; not on multiselect list items.
+		&[multiple] {
+			background: $grey-light;
+		}
+	}
 } // select
 select.form-control:disabled,
-fieldset:disabled { // account for if fieldset is .disabled
-  cursor: not-allowed;
+fieldset:disabled {
+	cursor: not-allowed; // account for if fieldset is .disabled
 } // disabled
 
 
@@ -951,42 +943,42 @@ fieldset:disabled { // account for if fieldset is .disabled
 
 // Tables
 .table {
-  & > tbody > tr:nth-of-type(even) {
-    background-color: $grey-light;
-  }
+	& > tbody > tr:nth-of-type(even) {
+		background-color: $grey-light;
+	}
 }
 .table {
-  & > thead,
-  & > tbody,
-  & > tfoot {
-    & > tr {
-      &>td,
-      &>th {
-        border-top: 1px solid $grey-light;
-        padding: 1em;
-      }
-      & > td {
-        border-bottom: solid 1px $grey-border;
-      }
-    }
-  }
-  & > thead > tr > th {
-    vertical-align: bottom;
-    border-bottom: solid 2px $grey;
-  }
+	& > thead,
+	& > tbody,
+	& > tfoot {
+		& > tr {
+			&>td,
+			&>th {
+				border-top: 1px solid $grey-light;
+				padding: 1em;
+			}
+			& > td {
+				border-bottom: solid 1px $grey-border;
+			}
+		}
+	}
+	& > thead > tr > th {
+		border-bottom: solid 2px $grey;
+		vertical-align: bottom;
+	}
 }
 .table-bordered {
-  border: 1px solid $grey-light;
-  & > thead,
-  & > tbody,
-  & > tfoot {
-    & > tr {
-      &>td,
-      &>th {
-        border: 1px solid $grey-light;
-      }
-    }
-  }
+	border: 1px solid $grey-light;
+	& > thead,
+	& > tbody,
+	& > tfoot {
+		& > tr {
+			&>td,
+			&>th {
+				border: 1px solid $grey-light;
+			}
+		}
+	}
 }
 
 
@@ -995,185 +987,185 @@ fieldset:disabled { // account for if fieldset is .disabled
 .img-circle,
 .img-rounded,
 .img-thumbnail {
-  border: 1px solid $grey-light;
+	border: 1px solid $grey-light;
 }
 .img-rounded,
 .img-thumbnail {
-  border-radius: $radius;
+	border-radius: $radius;
 }
 
 // Thumbnails
 .thumbnail {
-  padding: 0;
-  border: 1px solid $grey-light;
-  .caption {
-    padding: 9px 13px;
-    .meta,
-    time,
-    small {
-      @extend .meta;
-      padding: 0.8em 0;
-      display: inline-block;
-    }
-  }
+	border: 1px solid $grey-light;
+	padding: 0;
+	.caption {
+		padding: 9px 13px;
+		.meta,
+		time,
+		small {
+			display: inline-block;
+			padding: 0.8em 0;
+			@extend .meta;
+		}
+	}
 }
 
 // Misc. ".meta" text
 .meta {
-  color: $grey;
+	color: $grey;
 }
 
 // Media
 .media {
-  margin-bottom: 2.5em;
+	margin-bottom: 2.5em;
 }
 .media-heading {
-  margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 .media-left {
-  a {
-    border-bottom: 0;
-    display: inline-block;
-  }
+	a {
+		border-bottom: 0;
+		display: inline-block;
+	}
 }
 
 
 // Panels / accordions / collapsible navigation
 .panel {
-  .panel-heading,
-  .panel-footer {
-    background-color: $grey-light;
-  }
-  .panel-heading {
-    color: #fff;
-    padding: 0;
-    border-top-left-radius: $radius-small;
-    border-top-right-radius: $radius-small;
-    .panel-title {
-      padding: 1.5em 1em;
-      font-size: 100%;
-    }
-    a.panel-title { // Yes, that's right - the a tag is the title. Heading needs to be nested unless http://caniuse.com/#feat=css-has or silimar car be used 😒
-      display: block;
-      border-bottom: none;
-      &:hover,
-      &:active,
-      &:focus {
-        background-color: $grey-border;
-        &:after {
-          color: $primary;
-        }
-        & > * {
-          padding-bottom: 2px;
-          border-bottom: solid 1px $primary-highlight;
-        }
-      }
-      &:after {   // ">" symbol
-        font-family:'Glyphicons Halflings';
-        content: "\e113";
-        float: right;
-        color: $primary-darker;
-        transition: all 0.2s;
-      }
-      &.collapsed:after {
-        transform: rotate(180deg);
-      }
-      & > * {   // Stop the h4 etc from stuffing up the ">" symbol location
-        display: inline;
-      }
-    }
-  }
-  .panel-body {
-    padding: 1.5em 1em;
-  }
-  .panel-footer {
-    border-top: 1px solid $grey-border;
-    padding: 1.2em 1em;
-    border-bottom-right-radius: $radius-small;
-    border-bottom-left-radius: $radius-small;
-  }
+	.panel-heading,
+	.panel-footer {
+		background-color: $grey-light;
+	}
+	.panel-heading {
+		border-top-left-radius: $radius-small;
+		border-top-right-radius: $radius-small;
+		color: #fff;
+		padding: 0;
+		.panel-title {
+			font-size: 100%;
+			padding: 1.5em 1em;
+		}
+		a.panel-title {
+			border-bottom: none; // Yes, that's right - the a tag is the title. Heading needs to be nested unless http://caniuse.com/#feat=css-has or silimar car be used 😒
+			display: block;
+			&:hover,
+			&:active,
+			&:focus {
+				background-color: $grey-border;
+				&:after {
+					color: $primary;
+				}
+				& > * {
+					border-bottom: solid 1px $primary-highlight;
+					padding-bottom: 2px;
+				}
+			}
+			&:after {
+				color: $primary-darker;
+				content: "\e113";	 // ">" symbol
+				float: right;
+				font-family:'Glyphicons Halflings';
+				transition: all 0.2s;
+			}
+			&.collapsed:after {
+				transform: rotate(180deg);
+			}
+			& > * {
+				display: inline;	 // Stop the h4 etc from stuffing up the ">" symbol location
+			}
+		}
+	}
+	.panel-body {
+		padding: 1.5em 1em;
+	}
+	.panel-footer {
+		border-bottom-left-radius: $radius-small;
+		border-bottom-right-radius: $radius-small;
+		border-top: 1px solid $grey-border;
+		padding: 1.2em 1em;
+	}
 }
 
 // Panel types
 .panel-default {
-  border-color: $grey-border;
-  .panel-heading {
-    color: $grey-dark;
-    border: none;
-  }
-  .panel-body {
-    border-top: 1px solid $grey-border !important;
-  }
+	border-color: $grey-border;
+	.panel-heading {
+		border: none;
+		color: $grey-dark;
+	}
+	.panel-body {
+		border-top: 1px solid $grey-border !important;
+	}
 }
 .panel-primary {
-  border-color: $primary;
-  .panel-heading {
-    background-color: $primary;
-    border-color: $primary;
-  }
+	border-color: $primary;
+	.panel-heading {
+		background-color: $primary;
+		border-color: $primary;
+	}
 }
 .panel-success {
-  border-color: $success;
-  .panel-heading {
-    background-color: $success;
-    border-color: $success;
-  }
+	border-color: $success;
+	.panel-heading {
+		background-color: $success;
+		border-color: $success;
+	}
 }
 .panel-info {
-  border-color: $info;
-  .panel-heading {
-    background-color: $info;
-    border-color: $info;
-    color: $grey-dark;  // for a11y
-  }
+	border-color: $info;
+	.panel-heading {
+		background-color: $info;
+		border-color: $info;
+		color: $grey-dark;	// for a11y
+	}
 }
 .panel-warning {
-  border-color: $warning;
-  .panel-heading {
-    background-color: $warning;
-    border-color: $warning;
-    color: $grey-dark;  // for a11y
-  }
+	border-color: $warning;
+	.panel-heading {
+		background-color: $warning;
+		border-color: $warning;
+		color: $grey-dark;	// for a11y
+	}
 }
 .panel-danger {
-  border-color: $danger;
-  .panel-heading {
-    background-color: $danger;
-    border-color: $danger;
-  }
+	border-color: $danger;
+	.panel-heading {
+		background-color: $danger;
+		border-color: $danger;
+	}
 }
 
 
 
 // List groups
 .list-group {
-  border-radius: 0;
-  .list-group-item.active {
-    background-color: $primary;
-  }
+	border-radius: 0;
+	.list-group-item.active {
+		background-color: $primary;
+	}
 }
 .list-group-item {
-  border: 1px solid $grey-border;
-  border-left: none;
-  border-right: none;
-  &:first-child,
-  &:last-child {
-    border-radius: 0;
-  }
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6 {
-    margin-top: 10px;
-  }
-  .list-group-item-text {
-    margin-bottom: 10px;
-  }
+	border: 1px solid $grey-border;
+	border-left: none;
+	border-right: none;
+	&:first-child,
+	&:last-child {
+		border-radius: 0;
+	}
+	h1,
+	h2,
+	h3,
+	h4,
+	h5,
+	h6 {
+		margin-top: 10px;
+	}
+	.list-group-item-text {
+		margin-bottom: 10px;
+	}
 }
 .list-group-item-heading {
-    margin-bottom: 10px;
+		margin-bottom: 10px;
 }
 
 
@@ -1182,32 +1174,32 @@ fieldset:disabled { // account for if fieldset is .disabled
 
 // Dropdown Menus
 .dropdown-menu {
-  margin-bottom: 1.5em;
-  li {
-    margin: 0;
-    padding: 0;
-    a {
-      padding: 1em;
-      margin: 0;
-      color: $primary-dark;
-      &:hover,
-      &:active,
-      &:focus {
-        color: $grey-dark;
-      }
-    }
-    &.dropdown-header {
-      padding: 15px 20px 5px 0.5em;
-      color: $grey-dark;
-    }
-  }
+	margin-bottom: 1.5em;
+	li {
+		margin: 0;
+		padding: 0;
+		a {
+			color: $primary-dark;
+			margin: 0;
+			padding: 1em;
+			&:hover,
+			&:active,
+			&:focus {
+				color: $grey-dark;
+			}
+		}
+		&.dropdown-header {
+			color: $grey-dark;
+			padding: 15px 20px 5px 0.5em;
+		}
+	}
 }
 
 
 
 // Caret
 .caret {
-  border-top-color: $primary-dark;
+	border-top-color: $primary-dark;
 }
 
 
@@ -1215,22 +1207,22 @@ fieldset:disabled { // account for if fieldset is .disabled
 // Code snippets
 pre,
 code {
-  background-color: $grey-light;
+	background-color: $grey-light;
 }
 kbd {
-  display: inline-block;
-  border: solid 1px $primary-bright;
-  border-radius: 3px;
-  box-shadow: 0 1px 0 0 $primary-bright;
-  background-color: $grey-light;
-  color: $primary;
-  text-align: center;
-  font-size: 87.5%;
-  padding: 0 0.8em;
-  margin: 1px 0.4em;
-  kbd {
-    border: none;
-  }
+	background-color: $grey-light;
+	border: solid 1px $primary-bright;
+	border-radius: 3px;
+	box-shadow: 0 1px 0 0 $primary-bright;
+	color: $primary;
+	display: inline-block;
+	font-size: 87.5%;
+	margin: 1px 0.4em;
+	padding: 0 0.8em;
+	text-align: center;
+	kbd {
+		border: none;
+	}
 }
 
 
@@ -1238,14 +1230,14 @@ kbd {
 
 // Slider/Carousel
 .carousel {
-  .carousel-control {
-    border-bottom: none;
-    &:hover,
-    &:active,
-    &:focus {
-      background-color: transparent;
-    }
-  }
+	.carousel-control {
+		border-bottom: none;
+		&:hover,
+		&:active,
+		&:focus {
+			background-color: transparent;
+		}
+	}
 }
 
 
@@ -1253,18 +1245,18 @@ kbd {
 
 // Popovers
 .popover {
-  border-radius: $radius;
-  &.right > .arrow {
-    left: -11px;
-  }
-  .popover-title {
-    background-color: $grey-light;
-    color: $primary-dark;
-    font-weight: 500;
-  }
+	border-radius: $radius;
+	&.right > .arrow {
+		left: -11px;
+	}
+	.popover-title {
+		background-color: $grey-light;
+		color: $primary-dark;
+		font-weight: 500;
+	}
 }
 // Tooltips
 .tooltip {
-  border-radius: $radius;
-  min-width: 10em;
+	border-radius: $radius;
+	min-width: 10em;
 }
