@@ -112,7 +112,7 @@
 					A drop-in Bootstrap v3 stylesheet in the style of the Australian Government DTO's <a href="https://gov-au-ui-kit.apps.staging.digital.gov.au/">UI-Kit</a>.
 				</p>
 				<small class="meta">
-					Last updated: 
+					Last updated:
 					<time datetime="2017-09-12">September 2017</time>
 				</small>
 			</div>
@@ -1879,19 +1879,26 @@ response.</textarea>
 			</form>
 
 			<h2>Validation states</h2>
+			<small>The validation icons used can use any icon library, but <code>top</code> value may need to be tweaked if not using Glyphicons or Font Awesome.</small>
 			<form>
-				<div class="form-group has-success">
+				<div class="form-group has-success has-feedback">
 					<label class="control-label" for="inputSuccess1">Input with success</label>
 					<input type="text" class="form-control" id="inputSuccess1" aria-describedby="helpBlock2">
 					<span id="helpBlock2" class="help-block">A block of help text that breaks onto a new line and may extend beyond one line.</span>
+					<!-- <span class="form-control-feedback glyphicon glyphicon-ok"></span> -->
+					<span class="form-control-feedback fa fa-check-circle"></span>
 				</div>
-				<div class="form-group has-warning">
+				<div class="form-group has-warning has-feedback">
 					<label class="control-label" for="inputWarning1">Input with warning</label>
 					<input type="text" class="form-control" id="inputWarning1">
+					<!-- <span class="form-control-feedback glyphicon glyphicon-warning-sign"></span> -->
+					<span class="form-control-feedback fa fa-exclamation-circle"></span>
 				</div>
-				<div class="form-group has-error">
+				<div class="form-group has-error has-feedback">
 					<label class="control-label" for="inputError1">Input with error</label>
 					<input type="text" class="form-control" id="inputError1">
+					<!-- <span class="form-control-feedback glyphicon glyphicon-remove"></span> -->
+					<span class="form-control-feedback fa fa-times-circle"></span>
 				</div>
 				<div class="has-success">
 					<div class="checkbox">
@@ -1937,6 +1944,17 @@ response.</textarea>
 				<small>Non-standard Bootstrap class</small>
 			</div>
 			<ul class="calendar-list">
+				<li class="calendar-item calendar-item-past">
+					<time class="calendar-date" datetime="2017-04-14">
+						Thu
+						<span class="calendar-number">13</span>
+						Apr
+					</time>
+					<div class="calendar-title">
+						A Past Event
+						<span class="calendar-note">This is a note about this specific calendar event.</span>
+					</div>
+				</li>
 				<li class="calendar-item">
 					<time class="calendar-date" datetime="2017-04-14">
 						Fri
@@ -1955,6 +1973,28 @@ response.</textarea>
 					</time>
 					<div class="calendar-title">
 						Easter Saturday
+						<span class="calendar-note">This is a note about this specific calendar event.</span>
+					</div>
+				</li>
+				<li class="calendar-item calendar-item-current">
+					<time class="calendar-date" datetime="2017-04-14">
+						Mon
+						<span class="calendar-number">21</span>
+						Sep
+					</time>
+					<div class="calendar-title">
+						A Current Event
+						<span class="calendar-note">This is a note about this specific calendar event.</span>
+					</div>
+				</li>
+				<li class="calendar-item">
+					<time class="calendar-date" datetime="2017-04-15">
+						Sun
+						<span class="calendar-number">25</span>
+						Nov
+					</time>
+					<div class="calendar-title">
+						Another Event
 						<span class="calendar-note">This is a note about this specific calendar event.</span>
 					</div>
 				</li>

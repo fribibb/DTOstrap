@@ -1,6 +1,7 @@
 // Variables.
 
 // Primary colours:
+$primary-lighter:				#F2FBFD;							 // very light blue, used as a more subtle background colour
 $primary-light:					#dff4f8;							 // light blue, used as a background colour
 $primary-bright:				#5bcbe3;							 // like $primary-highlight, but a little more subtle
 $primary-highlight:			#00bfe9;							 // 'Spiro Disco Ball' blue, awesome colour name, used as a highlight
@@ -12,6 +13,7 @@ $primary-darker:				#043751;							 // as above but super dark, use sparingly
 // Four shades of grey:
 $grey-light:						#f0f3f5;							 // faint background colour
 $grey-border:						#bbb;									 // a lighter grey mainly for borders for borders
+$grey-medium:						#8b8b8b;							 // lightest a11y compliant for large text
 $grey:									#6e6e6e;							 // lightest a11y compliant body text
 $grey-dark:							#313131;							 // near black text
 $grey-black:						#212121;							 // near black text
@@ -36,12 +38,9 @@ $radius-small:					1px;										// .wells etc
 $radius:								3px;										// default
 $radius-large:					($radius * 4);					// for labels
 
-
+// Sizing
 $checkbox-size:					1.6em;
-
-
-// For better readability:
-$max-readable-width:		48em;
+$max-readable-width:		48em;										// for better readability
 
 // Font families:
 $font-serif:						'Book Antiqua', Georgia, 'Bitstream Vera Serif', serif;
@@ -62,7 +61,7 @@ $font-sans-serif-system: -apple-system, BlinkMacSystemFont,
 $font-weight-normal:		400;
 $font-weight-bold:			700;
 
-// Leading/line-height
+// Leading/line-height:
 $base-leading:					1.6;
 $base-heading-leading:	1.4;
 $small-leading:					1.2;

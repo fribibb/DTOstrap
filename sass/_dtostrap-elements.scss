@@ -498,7 +498,8 @@ form {
 	color: $grey;
 }
 .has-success {
-	 &.checkbox label,
+	label,
+	&.checkbox label,
 	&.checkbox-inline label,
 	&.radio label,
 	&.radio-inline label,
@@ -507,12 +508,17 @@ form {
 	.control-label,
 	.help-block,
 	.radio,
-	.radio-inline {
+	.radio-inline,
+	.form-control-feedback {
 		color: $success;
+	}
+	.form-control {
+		border-color: $success;
 	}
 }
 .has-warning {
-	 &.checkbox label,
+	label,
+	&.checkbox label,
 	&.checkbox-inline label,
 	&.radio label,
 	&.radio-inline label,
@@ -521,12 +527,17 @@ form {
 	.control-label,
 	.help-block,
 	.radio,
-	.radio-inline {
+	.radio-inline,
+	.form-control-feedback {
 		color: $warning-dark;
+	}
+	.form-control {
+    border-color: $warning-dark;
 	}
 }
 .has-error {
-	 &.checkbox label,
+	label,
+	&.checkbox label,
 	&.checkbox-inline label,
 	&.radio label,
 	&.radio-inline label,
@@ -535,9 +546,24 @@ form {
 	.control-label,
 	.help-block,
 	.radio,
-	.radio-inline {
+	.radio-inline,
+	.form-control-feedback {
 		color: $danger;
 	}
+	.form-control {
+		border-color: $danger;
+	}
+}
+.has-feedback label~.form-control-feedback {
+  &.glyphicon {
+		top: 2.3em;
+	}
+  &.fa {
+		top: 2.75em;
+	}
+  // &.icon {
+	// 	top: 2.5em;
+	// }
 }
 .form-control {
 	border-radius: $radius-small;
@@ -577,18 +603,29 @@ select.form-control {
 	.btn {
 		padding: 7px 15px;
 	}
+	&:last-child {
+		&>.btn,
+		&>.btn-group {
+			border-radius: $radius-small;
+		}
+	}
 }
 
 
 // Checkbox align
-.checkbox input[type=checkbox],
-.checkbox-inline input[type=checkbox],
-.radio input[type=radio],
-.radio-inline input[type=radio] {
-	margin-top: 6px;
+.checkbox,
+.checkbox-inline,
+.radio,
+.radio-inline {
+	input {
+		&[type=radio],
+		&[type=checkbox] {
+			margin-top: 6px;
+		}
+	}
 }
 
-// Large forms (commentted out = super large, full width form)
+// Large forms
 .input-group-lg > {
 	.form-control,
 	.input-group-addon,

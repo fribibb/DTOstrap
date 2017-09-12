@@ -307,6 +307,30 @@
 			display: table-cell;
 			vertical-align: middle;
 		}
+		&.calendar-item-past {
+			.calendar-number,
+			.calendar-title {
+				color: $grey-medium;
+			}
+			.calendar-date {
+				color: $grey;
+			}
+			.calendar-note {
+				color: $grey;
+			}
+		}
+		&.calendar-item-current {
+			background-color: $primary-lighter;
+			.calendar-number,
+			.calendar-title {
+				// color: $info-dark;
+				color: $primary-dark;
+			}
+			.calendar-date,
+			.calendar-note {
+				// color: $primary-dark;
+			}
+		}
 	}
 }
 
