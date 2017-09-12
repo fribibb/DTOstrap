@@ -1,3 +1,6 @@
+// Browser specific styles
+// Avoid when possible.
+
 @media all and (-ms-high-contrast:none) {
 	.brand a::before, .brand a::after { background: transparent !important; } /* IE10 */
 	.brand, .brand a img { margin-top: 0; } /* IE10 */

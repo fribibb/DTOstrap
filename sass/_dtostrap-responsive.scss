@@ -1,8 +1,6 @@
 // Responsive styles
 
-
-// HiDPI only styles
-
+// HiDPI only styles     ------------
 // e.g.:
 // @include hidpi(2) {
 //	 .class {
@@ -11,10 +9,7 @@
 // }
 
 
-
-
-
-// Width based styles
+// Width based styles    ------------
 
 @media (max-width: 991px) {
 	.brand {
@@ -44,7 +39,6 @@
 			}
 		}
 	}
-
 	// Vertical center alignment - used in header
 	.vcenter {
 		align-items: center;
@@ -157,7 +151,6 @@
 			margin-left: -10px;
 		}
 	}
-
 	// Date layouts
 	.calendar-list {
 		.calendar-item {
@@ -167,7 +160,6 @@
 			}
 		}
 	}
-
 	// Footer
 	body > footer {
 		.list-inline {
@@ -179,10 +171,7 @@
 			margin-top: 1.4em;
 		}
 	}
-
 } // max-width: 768px
-
-
 
 
 @media screen and (min-width: 768px) {
@@ -233,7 +222,6 @@
 		display: inline-block;
 	}
 } // min-width 431px
-
 
 
 // Center align the header

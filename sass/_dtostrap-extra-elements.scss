@@ -1,11 +1,10 @@
 // Things that aren't Bootstrap, but may be useful...
 
-
 // Table of contents
 .index-links {
 	margin: 1.6em 0;
 	border-left: 0.4em solid $grey-light;
-	padding: 0 0 1.2em 1.2em;	 // yes, this is uneven. Should be: '0 0 0 1.2em' imo, but sticking to their look.
+	padding: 0 0 1.2em 1.2em;	 // Yes, this is uneven. Should be: '0 0 0 1.2em' imo, but sticking to their look.
 	h1,
 	h2,
 	h3,
@@ -27,7 +26,7 @@
 		list-style: none;
 		ul,
 		ol {
-			padding-left: 2em;	// in case of nesting
+			padding-left: 2em;	// in case of nesting.
 		}
 	}
 	li:not(:last-of-type) {
@@ -36,8 +35,7 @@
 }
 
 
-
-// Repeating word pattern
+// Repeating word pattern:
 .repeat-word {
 	& > span,
 	a {
@@ -63,7 +61,6 @@
 }
 
 
-
 // Progress indicator list
 .progress-indicator {
 	.list-group-item {
@@ -76,7 +73,6 @@
 			color: lighten($grey, 10%);
 			position: absolute;
 			left: $indent + 26px;
-			// padding-left: 10px;
 			top: 0.42em;
 			width: $indent + 50px;
 			font-size: 150%;
@@ -192,7 +188,6 @@
 }
 
 
-
 // Dashboard
 .dashboard-item {
 	margin: 1em 0 3em 0;
@@ -270,7 +265,6 @@
 }
 
 
-
 // Date layout - mostly stolen from previous work on australia.gov.au
 .calendar-list {
 	max-width: 48em;
@@ -317,8 +311,7 @@
 }
 
 
-
-// DTO's CTA link
+// DTO's CTA link style:
 .cta-link {
 	display: inline-block;
 	position: relative;
@@ -345,15 +338,14 @@
 		&::after {
 			color: $primary-darker;
 			margin-left: 0.45em;
-			// tweaked, couldn't help meself.. :D
-			transform: scale(1.2);
+			transform: scale(1.2);  // Tweaked from DTO version, I couldn't help meself.. :D
 		}
 	}
 }
 
 
-
-// See message.html for example
+// Fullpage message style.
+// See message.html for example.
 .full-page {
 	padding: 0;
 	.container {

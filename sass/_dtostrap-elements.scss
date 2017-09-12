@@ -1,37 +1,36 @@
-// Elements
+// Elements.
+// Overwrites for elements that are part of Bootstrap
 
-
-
-// Skip link
+// Skip link:
 .skiplink {
 	background-color: $grey-dark;
 	color: #fff;
 }
 
 
-
+// Abbreviations:
+abbr,
 abbr[data-original-title],
-abbr[title],
-abbr {
-	text-decoration: none;		// stop Chrome overriding
-	// border-bottom: none;	 // alternate for when many browsers support "text-decoration: underline dotted;"
+abbr[title] {
+	text-decoration: none;    // Stop Chrome overriding
+	// border-bottom: none;	  // TODO: alternate for when many browsers support "text-decoration: underline dotted;"
 }
 
 
-// Buttons
+// Buttons:
 .btn {
 	border-radius: $radius;
 	font-size: 17px;
 	transition: 0.16s all;
 }
 .btn-default {
-	// can't use mixin here as its different pattern to the others - has a transparent bg, etc.
+	// Can't use mixin here as its different pattern to the others - has a transparent bg, etc.
 	background-color: transparent;
 	border-color: $primary;
 	color: $primary;
-	&:hover,
 	&:active,
-	&:focus {
+	&:focus,
+	&:hover {
 		background-color: $primary-dark;
 		border-color: darken($primary-dark, 10%);
 		color: #fff;
@@ -39,9 +38,9 @@ abbr {
 	&.disabled,
 	&[disabled],
 	fieldset[disabled] & {
-		&:hover,
 		&.focus,
-		&:focus {
+		&:focus,
+		&:hover {
 			background-color: #fff;
 			border-color: $primary;
 			color: $primary;
@@ -69,9 +68,9 @@ abbr {
 	color: $grey-dark;
 	transition: 0.1s all ease-in-out;
 	&:not(:disabled) {
-		&:hover,
+		&:active,
 		&:focus,
-		&:active {
+		&:hover {
 			background-color: $primary-bright;
 			color: $grey-dark;
 			text-decoration: none;
@@ -79,9 +78,9 @@ abbr {
 	}
 	&[disabled],
 	fieldset[disabled] & {
-		&:hover,
+		&:active,
 		&:focus,
-		&:active {
+		&:hover {
 			background-color: $grey-light;
 			border-bottom-color: $grey-border;
 		}
@@ -89,9 +88,7 @@ abbr {
 }
 
 
-
-
-// Labels
+// Labels:
 .label {
 	background-color: transparent;
 	border: 1px solid $grey-border; // fallback for old browsers
@@ -128,41 +125,48 @@ abbr {
 	text-decoration: none !important;
 }
 a {
-	&:hover,
 	&:active,
-	&:focus {
+	&:focus,
+	&:hover {
 		.label {
 			@extend .label-hover;
 			&.label-default {
 				@include button-colours($grey, #fff, 0);
 			}
+
 			&.label-primary {
 				@include button-colours($primary, #fff, 0);
 			}
+
 			&.label-success {
 				@include button-colours($success, #fff, 0);
 			}
+
 			&.label-info {
 				@include button-colours($info-dark, #fff, 0);
 			}
+
 			&.label-warning {
 				@include button-colours($warning-dark, #fff, 0);
 			}
+
 			&.label-danger {
 				@include button-colours($danger, #fff, 0);
 			}
+
 			&.label-alpha {
 				@include button-colours($alpha, #fff, 0);
 			}
+
 			&.label-beta {
 				@include button-colours($beta, #fff, 0);
 			}
 		}
 	}
 	&.label {
-		&:hover,
 		&:active,
-		&:focus {
+		&:focus,
+		&:hover {
 			@extend .label-hover;
 			&.label-default {
 				@include button-colours($grey, #fff, 0);
@@ -193,10 +197,9 @@ a {
 }
 
 
-
-// Progress bars
+// Progress bars:
 .progress-bar {
-	background-color: $beta;	//	¯\_(ツ)_/¯ ...I needed another colour
+	background-color: $beta; //	¯\_(ツ)_/¯ ...I needed another colour
 }
 .progress-bar-default {
 	background-color: $grey;
@@ -218,13 +221,13 @@ a {
 }
 
 
-// Badges
+// Badges:
 .badge {
 	background-color: $grey;
 }
 
 
-// Alert
+// Alert:
 .alert {
 	background: transparent;
 	border: none;
@@ -251,7 +254,6 @@ a {
 .alert-danger {
 	border-left: 0.4em solid $danger;
 }
-
 .alert-calendar {
 	border-left: 0.4em solid $primary;
 	.calendar-date,
@@ -265,7 +267,8 @@ a {
 	}
 }
 
-// Basically the p tag equiv of above
+
+// Basically the p tag equiv of .alert:
 .text-muted {
 	color: $grey;
 }
@@ -276,7 +279,7 @@ a {
 	color: $success;
 }
 .text-info {
-	color: darken($info, 15%);	// darker for a11y
+	color: darken($info, 15%); // darker for a11y
 }
 .text-warning {
 	color: $warning-dark; // darker to atempt a11y - but please, just don't use this
@@ -286,14 +289,13 @@ a {
 }
 
 
-
-
-// Jumbotrons and Wells
+// Jumbotrons and Wells:
 .jumbotron,
 .well {
 	background-color: $grey-light;
 	border: 0;
 	border-radius: $radius-small;
+
 	h1,
 	h2,
 	h3,
@@ -304,13 +306,14 @@ a {
 			margin-bottom: 0.8em;
 			margin-top: 0;
 		}
+
 		&:last-child {
 			margin-bottom: 0;
 		}
 	}
 }
 .container {
-	.jumbotron{
+	.jumbotron {
 		h1 {
 			font-size: 230%;
 		}
@@ -321,17 +324,9 @@ a {
 }
 
 
-.page-header {
-	border-bottom: 1px solid $grey-light;
-}
-
-
-
-
-
-// Inline list of links
-.nav-tabs,
-.nav-pills {
+// Inline list of links:
+.nav-pills,
+.nav-tabs {
 	border-bottom: 1px solid $grey;
 	li {
 		list-style: none;
@@ -344,7 +339,7 @@ a {
 			&:hover {
 				// background-color: $primary-highlight;	 // it's just too much
 				background-color: $primary-light;
-				border-bottom: 4px solid $primary;	// can't just do colour because of .nav-tabs
+				border-bottom: 4px solid $primary; // can't just do colour because of .nav-tabs
 				// border-bottom-color: $primary;
 				border-bottom-color: $primary-highlight;
 			}
@@ -353,7 +348,7 @@ a {
 			& > a {
 				background-color: $primary-light;
 				border: none;
-				border-bottom: 4px solid $primary;	// can't just do colour because of .nav-tabs
+				border-bottom: 4px solid $primary; // can't just do colour because of .nav-tabs
 				color: $primary;
 				margin-right: 0;
 				&:active,
@@ -361,7 +356,7 @@ a {
 				&:hover {
 					background-color: $primary-light;
 					border: none;
-					border-bottom: 4px solid $primary;	// can't just do colour because of .nav-tabs
+					border-bottom: 4px solid $primary; // can't just do colour because of .nav-tabs
 					color: $primary;
 				}
 				.badge {
@@ -380,8 +375,7 @@ a {
 }
 
 
-
-// Breadcrumbs
+// Breadcrumbs:
 .breadcrumb {
 	background-color: transparent;
 	padding: 10px 0;
@@ -399,19 +393,18 @@ a {
 }
 
 
-
-// Pagination
-.pagination,
-.pager {
+// Pagination:
+.pager,
+.pagination {
 	& > li {
 		& > a,
 		& > span {
 			background-color: #fff;
 			border: 1px solid $grey-border;
 			color: $primary;
-			&:hover,
 			&:active,
-			&:focus {
+			&:focus,
+			&:hover {
 				background-color: $grey-light;
 				border: 1px solid $primary;
 				// color: $grey-dark;
@@ -442,9 +435,9 @@ a {
 			span {
 				background-color: $primary-dark;
 				border-color: $primary-dark;
-				&:hover,
 				&:active,
-				&:focus {
+				&:focus,
+				&:hover {
 					background-color: $primary-dark;
 					border-color: $primary-dark;
 					color: #fff;
@@ -471,21 +464,16 @@ a {
 }
 
 
-
-
-// Forms
+// Forms:
 form {
 	max-width: $max-readable-width;
-}
-form {
-	[type='text'],
-	[type='number'],
-	[type='tel'],
 	[type='email'],
+	[type='number'],
 	[type='password'],
+	[type='tel'],
+	[type='text'],
+	input[type='checkbox'] select,
 	input[type='radio'],
-	input[type='checkbox']
-	select,
 	optgroup,
 	textarea {
 		font: inherit;
@@ -496,15 +484,12 @@ form {
 			outline: 2px solid $primary-bright;
 		}
 	}
-	select.form-control,
-	select.form-control option {
-		// font-size: 17px;
-	}
 	input[type=file] {
 		line-height: 0;
 		margin-top: 10px;
 	}
 	label {
+		color: #333;
 		margin-bottom: 3px;
 		margin-top: 6px;
 	}
@@ -513,44 +498,44 @@ form {
 	color: $grey;
 }
 .has-success {
+	 &.checkbox label,
+	&.checkbox-inline label,
+	&.radio label,
+	&.radio-inline label,
 	.checkbox,
 	.checkbox-inline,
 	.control-label,
 	.help-block,
 	.radio,
-	.radio-inline,
-	&.checkbox label,
-	&.checkbox-inline label,
-	&.radio label,
-	&.radio-inline label {
+	.radio-inline {
 		color: $success;
 	}
 }
 .has-warning {
+	 &.checkbox label,
+	&.checkbox-inline label,
+	&.radio label,
+	&.radio-inline label,
 	.checkbox,
 	.checkbox-inline,
 	.control-label,
 	.help-block,
 	.radio,
-	.radio-inline,
-	&.checkbox label,
-	&.checkbox-inline label,
-	&.radio label,
-	&.radio-inline label {
+	.radio-inline {
 		color: $warning-dark;
 	}
 }
 .has-error {
+	 &.checkbox label,
+	&.checkbox-inline label,
+	&.radio label,
+	&.radio-inline label,
 	.checkbox,
 	.checkbox-inline,
 	.control-label,
 	.help-block,
 	.radio,
-	.radio-inline,
-	&.checkbox label,
-	&.checkbox-inline label,
-	&.radio label,
-	&.radio-inline label {
+	.radio-inline {
 		color: $danger;
 	}
 }
@@ -559,24 +544,21 @@ form {
 	box-shadow: none;
 	font-size: 17px;
 }
-
-// Disabled form elements
-fieldset[disabled] .form-control,
-.form-control:disabled {
+// Disabled form elements:
+.form-control:disabled,
+fieldset[disabled] .form-control {
 	background-color: $grey-light;
 	color: $grey;
 }
-
-// More padding
+// More padding:
 .checkbox,
 .radio {
 	margin-bottom: 15px;
 	margin-top: 20px;
 }
-
-// Forms
+// More form styles:
 .input-group-addon {
-		border-radius: $radius;
+	border-radius: $radius;
 }
 .input-group-addon {
 	background-color: $grey-light;
@@ -597,7 +579,8 @@ select.form-control {
 	}
 }
 
-// checkbox align
+
+// Checkbox align
 .checkbox input[type=checkbox],
 .checkbox-inline input[type=checkbox],
 .radio input[type=radio],
@@ -613,6 +596,7 @@ select.form-control {
 		border-radius: $radius;
 	}
 }
+
 // Form labels
 label {
 	width: 100%;
@@ -624,7 +608,6 @@ label {
 }
 
 
-
 // Custom styled radio btns and checkboxes
 // ...inspired by the DTO version, but in my bias opinion, made better
 //
@@ -632,8 +615,7 @@ label {
 //			 but really... ¯\_(ツ)_/¯
 //			 https://caniuse.com/#feat=transforms2d
 //			 thats <=IE8, which MS even disowned + Opera Mini, which the less used version of the least used browser :P
-
-// Checkboxes
+// Checkboxes:
 .checkbox {
 	input[type=checkbox] {
 		cursor: pointer;
@@ -680,8 +662,9 @@ label {
 		&:active,
 		&:focus {
 			outline: none;
-			&:before,
-			&:after {
+
+			&:after,
+			&:before {
 				border-color: $primary-highlight;
 			}
 		}
@@ -689,6 +672,8 @@ label {
 	input[type=checkbox]:checked {
 		&:active,
 		&:focus {
+			color: $primary;
+
 			&:after {
 				border-color: $grey-dark;
 			}
@@ -704,12 +689,18 @@ label {
 	label {
 		cursor: pointer;
 		line-height: 135%;
-		margin: .5rem .5rem .5rem 1em;
+		margin: 0.5rem 0.5rem 0.5rem 1em;
 		position: relative;
 	}
+	label {
+		&:active,
+		&:focus,
+		&:hover {
+			color: $primary-dark;
+		}
+	}
 }
-
-// colour according to validation state colours
+// Colour according to validation state colours:
 .has-success {
 	.checkbox {
 		input:after {
@@ -731,16 +722,16 @@ label {
 		}
 	}
 }
-
-fieldset:disabled .checkbox,	// account for if fieldset is .disabled
-.checkbox.disabled {
+// Account for if fieldset is .disabled:
+.checkbox.disabled,
+fieldset:disabled .checkbox {
 	cursor: not-allowed;
 	label {
 		color: $grey-border;
 	}
 	input:disabled {
-		&:before,
-		&:after {
+		&:after,
+		&:before {
 			cursor: not-allowed;
 		}
 		&:after {
@@ -749,8 +740,7 @@ fieldset:disabled .checkbox,	// account for if fieldset is .disabled
 		}
 	}
 }
-
-// Radio buttons
+// Radio buttons:
 .radio {
 	input[type=radio] {
 		cursor: pointer;
@@ -804,8 +794,8 @@ fieldset:disabled .checkbox,	// account for if fieldset is .disabled
 	input[type=radio] {
 		&:active,
 		&:focus {
-			&:before,
-			&:after {
+			&:after,
+			&:before {
 				border-color: $primary-highlight;
 			}
 		}
@@ -828,19 +818,28 @@ fieldset:disabled .checkbox,	// account for if fieldset is .disabled
 	label {
 		cursor: pointer;
 		line-height: 135%;
-		margin: .5rem .5rem .5rem 1em;
+		margin: 0.5rem 0.5rem 0.5rem 1em;
 		position: relative;
 	}
-} // .radio
-fieldset:disabled .radio,	// account for if fieldset is .disabled
-.radio.disabled {
+	&:active,
+	&:focus,
+	&:hover {
+		label {
+			color: $primary-dark;
+		}
+	}
+}
+
+// Account for if fieldset is .disabled:
+.radio.disabled,
+fieldset:disabled .radio {
 	cursor: not-allowed;
 	label {
 		color: $grey-border;
 	}
 	input:disabled {
-		&:before,
-		&:after {
+		&:after,
+		&:before {
 			cursor: not-allowed;
 		}
 		&:after {
@@ -848,7 +847,7 @@ fieldset:disabled .radio,	// account for if fieldset is .disabled
 			border-color: $grey-border;
 		}
 	}
-} // disabled
+}
 
 
 // Dropdown menus (<select>)
@@ -857,33 +856,23 @@ select.form-control {
 	-moz-box-sizing: border-box;
 	-webkit-appearance: none;
 	-webkit-box-sizing: border-box;
-	background-image:
-		linear-gradient(45deg, transparent 50%, $grey-dark 50%),
-		linear-gradient(135deg, $grey-dark 50%, transparent 50%);
-		// linear-gradient(to right, #ccc, #ccc); // divider
-	background-position:
-		calc(100% - 15px) calc(0.9em + 2px),
-		calc(100% - 10px) calc(0.9em + 2px);
-		// 1px 1.5em;	// divider
+	background-image: linear-gradient(45deg, transparent 50%, $grey-dark 50%), linear-gradient(135deg, $grey-dark 50%, transparent 50%);
+	// linear-gradient(to right, #ccc, #ccc); // divider
+	background-position: calc(100% - 15px) calc(0.9em + 2px), calc(100% - 10px) calc(0.9em + 2px);
+	// 1px 1.5em;	// divider
 	background-repeat: no-repeat;
-		// calc(100% - 2.5em) 0.5em;	// divider
-	background-size:
-		6px 6px,
-		6px 6px;
+	// calc(100% - 2.5em) 0.5em;	// divider
+	background-size: 6px 6px, 6px 6px;
 	border-radius: $radius-small;
 	box-sizing: border-box;
 	color: $grey-dark;
 	&:active,
 	&:focus {
-		background-image:
-			linear-gradient(45deg, transparent 50%, $primary-highlight 50%),
-			linear-gradient(135deg, $primary-highlight 50%, transparent 50%);
+		background-image: linear-gradient(45deg, transparent 50%, $primary-highlight 50%), linear-gradient(135deg, $primary-highlight 50%, transparent 50%);
 		border-color: $primary-highlight;
 	}
 	&:hover {
-		background-image:
-			linear-gradient(45deg, transparent 50%, $primary 50%),
-			linear-gradient(135deg, $primary 50%, transparent 50%);
+		background-image: linear-gradient(45deg, transparent 50%, $primary 50%), linear-gradient(135deg, $primary 50%, transparent 50%);
 		border-color: $primary;
 	}
 	// ...but not on multiselect list items.
@@ -893,23 +882,21 @@ select.form-control {
 		option {
 			margin: 0;
 			padding: 5px 15px;
-			&:checked,
 			&:active,
+			&:checked,
 			&:focus {
 				box-shadow: inset 1000px 1000px $primary-highlight; // pushes the browsers bg-color out of site
-				color: $grey-dark;	// TODO: make this take effect in all situations
+				color: $grey-dark; // TODO: make this take effect in all situations
 			}
 		}
 	}
 	&:disabled {
 		background-color: $grey-light;
-		background-image:
-			linear-gradient(45deg, transparent 50%, $grey-border 50%),
-			linear-gradient(135deg, $grey-border 50%, transparent 50%);
+		background-image: linear-gradient(45deg, transparent 50%, $grey-border 50%), linear-gradient(135deg, $grey-border 50%, transparent 50%);
 		border-color: $grey-border;
 		color: $grey;
-		&:before,
-		&:after {
+		&:after,
+		&:before {
 			cursor: not-allowed;
 		}
 		&:after {
@@ -919,9 +906,7 @@ select.form-control {
 		&:active,
 		&:focus,
 		&:hover {
-			background-image:
-				linear-gradient(45deg, transparent 50%, $grey-border 50%),
-				linear-gradient(135deg, $grey-border 50%, transparent 50%);
+			background-image: linear-gradient(45deg, transparent 50%, $grey-border 50%), linear-gradient(135deg, $grey-border 50%, transparent 50%);
 			border-color: $grey-border;
 		}
 		// ...but, again; not on multiselect list items.
@@ -929,31 +914,28 @@ select.form-control {
 			background: $grey-light;
 		}
 	}
-} // select
-select.form-control:disabled,
-fieldset:disabled {
+}
+
+// Disabled:
+fieldset:disabled,
+select.form-control:disabled {
 	cursor: not-allowed; // account for if fieldset is .disabled
-} // disabled
+}
 
 
-
-
-
-
-
-// Tables
+// Tables:
 .table {
 	& > tbody > tr:nth-of-type(even) {
 		background-color: $grey-light;
 	}
 }
 .table {
-	& > thead,
 	& > tbody,
-	& > tfoot {
+	& > tfoot,
+	& > thead {
 		& > tr {
-			&>td,
-			&>th {
+			& > td,
+			& > th {
 				border-top: 1px solid $grey-light;
 				padding: 1em;
 			}
@@ -969,12 +951,12 @@ fieldset:disabled {
 }
 .table-bordered {
 	border: 1px solid $grey-light;
-	& > thead,
 	& > tbody,
-	& > tfoot {
+	& > tfoot,
+	& > thead {
 		& > tr {
-			&>td,
-			&>th {
+			& > td,
+			& > th {
 				border: 1px solid $grey-light;
 			}
 		}
@@ -982,8 +964,7 @@ fieldset:disabled {
 }
 
 
-
-// Images
+// Images:
 .img-circle,
 .img-rounded,
 .img-thumbnail {
@@ -994,15 +975,16 @@ fieldset:disabled {
 	border-radius: $radius;
 }
 
-// Thumbnails
+
+// Thumbnails:
 .thumbnail {
 	border: 1px solid $grey-light;
 	padding: 0;
 	.caption {
 		padding: 9px 13px;
 		.meta,
-		time,
-		small {
+		small,
+		time {
 			display: inline-block;
 			padding: 0.8em 0;
 			@extend .meta;
@@ -1010,12 +992,14 @@ fieldset:disabled {
 	}
 }
 
-// Misc. ".meta" text
+
+// Misc. ".meta" text:
 .meta {
 	color: $grey;
 }
 
-// Media
+
+// Media:
 .media {
 	margin-bottom: 2.5em;
 }
@@ -1030,10 +1014,10 @@ fieldset:disabled {
 }
 
 
-// Panels / accordions / collapsible navigation
+// Panels / accordions / collapsible navigation:
 .panel {
-	.panel-heading,
-	.panel-footer {
+	.panel-footer,
+	.panel-heading {
 		background-color: $grey-light;
 	}
 	.panel-heading {
@@ -1048,9 +1032,9 @@ fieldset:disabled {
 		a.panel-title {
 			border-bottom: none; // Yes, that's right - the a tag is the title. Heading needs to be nested unless http://caniuse.com/#feat=css-has or silimar car be used 😒
 			display: block;
-			&:hover,
 			&:active,
-			&:focus {
+			&:focus,
+			&:hover {
 				background-color: $grey-border;
 				&:after {
 					color: $primary;
@@ -1062,16 +1046,17 @@ fieldset:disabled {
 			}
 			&:after {
 				color: $primary-darker;
-				content: "\e113";	 // ">" symbol
+				content: "\e113";
+				// ">" symbol
 				float: right;
-				font-family:'Glyphicons Halflings';
+				font-family: 'Glyphicons Halflings';
 				transition: all 0.2s;
 			}
 			&.collapsed:after {
 				transform: rotate(180deg);
 			}
 			& > * {
-				display: inline;	 // Stop the h4 etc from stuffing up the ">" symbol location
+				display: inline; // Stop the h4 etc from stuffing up the ">" symbol location
 			}
 		}
 	}
@@ -1086,7 +1071,8 @@ fieldset:disabled {
 	}
 }
 
-// Panel types
+
+// Panel types:
 .panel-default {
 	border-color: $grey-border;
 	.panel-heading {
@@ -1116,7 +1102,7 @@ fieldset:disabled {
 	.panel-heading {
 		background-color: $info;
 		border-color: $info;
-		color: $grey-dark;	// for a11y
+		color: $grey-dark; // for a11y
 	}
 }
 .panel-warning {
@@ -1124,7 +1110,7 @@ fieldset:disabled {
 	.panel-heading {
 		background-color: $warning;
 		border-color: $warning;
-		color: $grey-dark;	// for a11y
+		color: $grey-dark; // for a11y
 	}
 }
 .panel-danger {
@@ -1136,10 +1122,10 @@ fieldset:disabled {
 }
 
 
-
-// List groups
+// List groups:
 .list-group {
 	border-radius: 0;
+
 	.list-group-item.active {
 		background-color: $primary;
 	}
@@ -1165,14 +1151,11 @@ fieldset:disabled {
 	}
 }
 .list-group-item-heading {
-		margin-bottom: 10px;
+	margin-bottom: 10px;
 }
 
 
-
-
-
-// Dropdown Menus
+// Dropdown Menus:
 .dropdown-menu {
 	margin-bottom: 1.5em;
 	li {
@@ -1182,9 +1165,9 @@ fieldset:disabled {
 			color: $primary-dark;
 			margin: 0;
 			padding: 1em;
-			&:hover,
 			&:active,
-			&:focus {
+			&:focus,
+			&:hover {
 				color: $grey-dark;
 			}
 		}
@@ -1196,17 +1179,15 @@ fieldset:disabled {
 }
 
 
-
-// Caret
+// Caret:
 .caret {
 	border-top-color: $primary-dark;
 }
 
 
-
-// Code snippets
-pre,
-code {
+// Code snippets:
+code,
+pre {
 	background-color: $grey-light;
 }
 kbd {
@@ -1220,30 +1201,27 @@ kbd {
 	margin: 1px 0.4em;
 	padding: 0 0.8em;
 	text-align: center;
+
 	kbd {
 		border: none;
 	}
 }
 
 
-
-
-// Slider/Carousel
+// Slider/Carousel:
 .carousel {
 	.carousel-control {
 		border-bottom: none;
-		&:hover,
 		&:active,
-		&:focus {
+		&:focus,
+		&:hover {
 			background-color: transparent;
 		}
 	}
 }
 
 
-
-
-// Popovers
+// Popovers:
 .popover {
 	border-radius: $radius;
 	&.right > .arrow {
@@ -1255,7 +1233,9 @@ kbd {
 		font-weight: 500;
 	}
 }
-// Tooltips
+
+
+// Tooltips:
 .tooltip {
 	border-radius: $radius;
 	min-width: 10em;

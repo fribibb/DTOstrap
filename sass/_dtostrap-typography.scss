@@ -1,6 +1,6 @@
-//	Typography styles
+//	Typography styles.
 
-// Baseline
+// Baseline:
 html {
 	color: $grey-dark;
 	font-family: $font-family-base;
@@ -13,8 +13,7 @@ body {
 	line-height: 1.6em;
 }
 
-
-// Headings
+// Headings:
 h1 {
 	font-weight: $font-weight-bold;
 }
@@ -31,7 +30,6 @@ h5,
 h6 {
 	font-weight: $font-weight-bold;
 }
-
 h1,
 h2,
 h3,
@@ -61,8 +59,7 @@ h6 {
 	}
 }
 
-
-// Base for a link
+// Base for a link:
 a {
 	color: darken( $primary-highlight, 15% );
 	&:active,
@@ -140,13 +137,7 @@ body > footer {
 	}
 }
 
-
-
-
-
-
-
-// Other typography elements
+// Other typography elements:
 p {
 	font-weight: $font-weight-normal;
 	max-width: $max-readable-width;	 // for readability
@@ -164,9 +155,7 @@ blockquote,
 }
 
 
-
-
-// Blockquotes
+// Blockquotes:
 blockquote {
 	background-color: $grey-light;
 	border-left: none;
@@ -250,4 +239,9 @@ article {
 	h1:first-of-type {
 		margin-top: 0;
 	}
+}
+
+
+.page-header {
+	border-bottom: 1px solid $grey-light;
 }

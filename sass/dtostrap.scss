@@ -4,27 +4,28 @@
 *
 */
 
-// Variables
+// Variables:
 @import 'dtostrap-vars';
 
-// Mixins
+// Mixins:
 @import 'dtostrap-mixins';
 
-// Header, footer and 'site wide' things
+// Header, footer and 'site wide' things:
 @import 'dtostrap-global';
 
-// Text size etc
+// Text size etc.:
 @import 'dtostrap-typography';
 
-// All elements, such as .btns, .wells etc.
+// Bootstrap  elements, such as .btns, .wells, etc.:
 @import 'dtostrap-elements';
+// Non-Bootstrap  elements, such as .cta-link, .progress-indicator, etc.:
 @import 'dtostrap-extra-elements';
 
-// Social icons
+// Social icons:
 @import 'dtostrap-social-icons';
 
-// Responsive styles
+// Responsive styles:
 @import 'dtostrap-responsive';
 
-// Browser specific work around ...but basically just for IE & Edge
+// Browser specific work around ...but basically just for IE & Edge:
 @import 'dtostrap-browser-hacks';

@@ -1,4 +1,4 @@
-// Class and markup free circle social icons
+// Class and markup free circle social icons.
 
 // Expects the following markup:
 //
@@ -21,7 +21,7 @@ ul.social-media-links-circle {
 			font-family: 'FontAwesome';
 			vertical-align: middle;
 		}
-		// Set each icon
+		// Set each icon:
 		&[href*="wordpress.org"],
 		&[href*="wordpress.com"] {
 			&:before {
@@ -95,7 +95,7 @@ ul.social-media-links-circle {
 		}
 		&[href*="drupal.org"] {
 			&:before {
-				content: '\f1a9';				 // Currently FA has the old d7 logo
+				content: '\f1a9';				 // Currently FA has the old d7 logo.
 			}
 		}
 	}
@@ -134,7 +134,7 @@ ul.social-media-links-circle {
 				text-shadow: none;
 			}
 
-			// Set each icon
+			// Set each icon:
 			&[href*="wordpress.org"],
 			&[href*="wordpress.com"] {
 				background-color: #21759b;
@@ -180,9 +180,8 @@ ul.social-media-links-circle {
 			}
 			&[href*="drupal.org"] {
 				background-color: #0077bc;			// d7 'Main drop color'
-				// background-color: #00ade2;	 // d8 colour - once FA updates logo
+				// background-color: #00ade2;	  // d8 colour - once FA updates logo
 			}
-
 			// Change on hover
 			&:hover,
 			&:active,
@@ -195,6 +194,7 @@ ul.social-media-links-circle {
 		}
 	}
 }
+
 
 ul.social-media-links {
 	a {
