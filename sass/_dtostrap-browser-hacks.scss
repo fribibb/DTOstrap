@@ -11,3 +11,10 @@
 	.brand a::before, .brand a::after { background: transparent !important; } /* edge */
 	.brand, .brand a img { margin-top: 0; } /* edge */
 }
+
+
+// For iPhone X.
+.container .row {
+	padding-left: constant(safe-area-inset-left);
+	padding-right: constant(safe-area-inset-right);
+}
