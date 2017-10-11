@@ -9,12 +9,12 @@
 
 // Abbreviations:
 abbr {
-	&,
-	&[data-original-title],
-	&[title] {
-	  text-decoration: none; 		// Stop Chrome overriding
-	  // border-bottom: none;	  // TODO: alternate for when many browsers support "text-decoration: underline dotted;"
-	}
+  &,
+  &[data-original-title],
+  &[title] {
+    text-decoration: none;     // Stop Chrome overriding
+    // border-bottom: none;    // TODO: alternate for when many browsers support "text-decoration: underline dotted;"
+  }
 }
 
 // Buttons:
@@ -197,7 +197,7 @@ a {
 
 // Progress bars:
 .progress-bar {
-  background-color: $beta; //	¯\_(ツ)_/¯ ...I needed another colour
+  background-color: $beta; //  ¯\_(ツ)_/¯ ...I needed another colour
 }
 .progress-bar-default {
   background-color: $grey;
@@ -324,13 +324,13 @@ a {
   li {
     list-style: none;
     a {
-      border: none;
+      border: 0;
       border-bottom: solid 4px transparent;
       border-radius: 0;
       &:active,
       &:focus,
       &:hover {
-        // background-color: $primary-highlight;	 // it's just too much
+        // background-color: $primary-highlight;   // it's just too much
         background-color: $primary-light;
         border-bottom: 4px solid $primary; // can't just do colour because of .nav-tabs
         // border-bottom-color: $primary;
@@ -340,7 +340,7 @@ a {
     &.active {
       & > a {
         background-color: $primary-light;
-        border: none;
+        border: 0;
         border-bottom: 4px solid $primary; // can't just do colour because of .nav-tabs
         color: $primary;
         margin-right: 0;
@@ -348,7 +348,7 @@ a {
         &:focus,
         &:hover {
           background-color: $primary-light;
-          border: none;
+          border: 0;
           border-bottom: 4px solid $primary; // can't just do colour because of .nav-tabs
           color: $primary;
         }
@@ -552,7 +552,7 @@ form {
     top: 2.75em;
   }
   // &.icon {
-  // 	top: 2.5em;
+  //   top: 2.5em;
   // }
 }
 .form-control {
@@ -637,9 +637,9 @@ label {
 // ...inspired by the DTO version, but in my bias opinion, made better
 //
 // NOTE: requires "transform: rotate()" and ":before"/":after" support,
-//			 but really... ¯\_(ツ)_/¯
-//			 https://caniuse.com/#feat=transforms2d
-//			 thats <=IE8, which MS even disowned + Opera Mini, which the less used version of the least used browser :P
+//       but really... ¯\_(ツ)_/¯
+//       https://caniuse.com/#feat=transforms2d
+//       thats <=IE8, which MS even disowned + Opera Mini, which the less used version of the least used browser :P
 // Checkboxes:
 .checkbox {
   input[type="checkbox"] {
@@ -885,9 +885,9 @@ select.form-control {
   // linear-gradient(to right, #ccc, #ccc); // divider
   background-position: calc(100% - 15px) calc(0.9em + 2px),
     calc(100% - 10px) calc(0.9em + 2px);
-  // 1px 1.5em;	// divider
+  // 1px 1.5em;  // divider
   background-repeat: no-repeat;
-  // calc(100% - 2.5em) 0.5em;	// divider
+  // calc(100% - 2.5em) 0.5em;  // divider
   background-size: 6px 6px, 6px 6px;
   border-radius: $radius-small;
   box-sizing: border-box;
@@ -964,8 +964,6 @@ select.form-control:disabled {
   & > tbody > tr:nth-of-type(even) {
     background-color: $grey-light;
   }
-}
-.table {
   & > tbody,
   & > tfoot,
   & > thead {
@@ -1061,7 +1059,7 @@ select.form-control:disabled {
       padding: 1.5em 1em;
     }
     a.panel-title {
-      border-bottom: none; // Yes, that's right - the a tag is the title. Heading needs to be nested unless http://caniuse.com/#feat=css-has or silimar car be used 😒
+      border-bottom: 0; // Yes, that's right - the a tag is the title. Heading needs to be nested unless http://caniuse.com/#feat=css-has or silimar car be used 😒
       display: block;
       &:active,
       &:focus,
@@ -1080,7 +1078,7 @@ select.form-control:disabled {
         content: "\e113";
         // ">" symbol
         float: right;
-        font-family: "Glyphicons Halflings";
+        font-family: 'Glyphicons Halflings';
         transition: all 0.2s;
       }
       &.collapsed:after {
@@ -1106,7 +1104,7 @@ select.form-control:disabled {
 .panel-default {
   border-color: $grey-border;
   .panel-heading {
-    border: none;
+    border: 0;
     color: $grey-dark;
   }
   .panel-body {
@@ -1163,9 +1161,9 @@ select.form-control:disabled {
   &:last-child {
     border-radius: 0;
   }
-	&.active {
-		background-color: $primary;
-	}
+  &.active {
+    background-color: $primary;
+  }
   h1,
   h2,
   h3,
