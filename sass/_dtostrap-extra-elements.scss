@@ -1,5 +1,9 @@
 // Things that aren't Bootstrap, but may be useful...
 
+.meta {
+  line-height: 0.6;
+}
+
 // Table of contents
 .index-links {
   border-left: 0.4em solid $grey-light;
@@ -363,6 +367,10 @@
       ); // Tweaked from DTO version, I couldn't help meself.. :D
     }
   }
+}
+.jumbotron+.cta-link {
+	top: -1em;
+  margin: 0 0 0.7em 0;
 }
 
 // Fullpage message style.

@@ -259,6 +259,18 @@
 		"oAP": "\/message.html",
 		"oF": 0
 		},
+	"\/page-events.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-events.html",
+		"oF": 0
+		},
+	"\/page-home.html": {
+		"ft": 8192,
+		"oA": 2,
+		"oAP": "\/page-home.html",
+		"oF": 0
+		},
 	"\/README.html": {
 		"ft": 8192,
 		"oA": 2,
